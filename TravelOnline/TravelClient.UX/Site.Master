@@ -1,0 +1,195 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="TravelClient.UX.SiteMaster" %>
+
+<!DOCTYPE html>
+<html lang="en">
+<head runat="server">
+    <link href="Content/Site.css" rel="stylesheet" />
+    <meta charset="utf-8" />
+    <title>游记小信使</title>
+    <link rel="icon" href="http://webresource.c-ctrip.com/ResUnionOnline/R3/float/pic/log.png" />
+    <meta name="viewport" content="width=device-width" />
+    <asp:ContentPlaceHolder runat="server" ID="HeadContent" />
+    <div id="top-header" class="header header-show">
+        <div class="container clearfix">
+            <div class="logo-wrap">
+                <a href="http://www.pingwest.com" class="logo">
+                    <img src="http://pic.c-ctrip.com/common/c_logo2013.png"></a>
+                <span class="des"><span>穷游路上... 且行且珍惜</span></span>
+            </div>
+            <a href="javascript:;" class="btn-menu icon-menu"></a>
+            <div class="global-nav">
+                <ul class="main-menu">
+                    <li><a href="http://www.pingwest.com">首页</a></li>
+                    <li class="dropdown nav-dropdown">
+                        <a class="has-drop-menu" href="javascript:;">分类目录</a>
+                        <ul class="dropdown-menu">
+                            <div class="sort channel clearfix">
+                                <p class="title">分类</p>
+                                <ul>
+                                    <li id="menu-item-42026" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-42026"><a href="http://www.pingwest.com/category/figure/">人物</a></li>
+                                    <li id="menu-item-42027" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-42027"><a href="http://www.pingwest.com/category/phenomenon/">现象</a></li>
+                                    <li id="menu-item-42028" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-42028"><a href="http://www.pingwest.com/category/truth/">真相</a></li>
+                                    <li id="menu-item-42029" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-42029"><a href="http://www.pingwest.com/category/news/">短新闻</a></li>
+                                    <li id="menu-item-42030" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-42030"><a href="http://www.pingwest.com/category/tune/">腔调</a></li>
+                                    <li id="menu-item-42031" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-42031"><a href="http://www.pingwest.com/category/coolplay/">酷玩</a></li>
+                                </ul>
+                            </div>
+                            <div class="tags channel clearfix">
+                                <p class="title">标签</p>
+                                <ul>
+                                    <li><a href="/hot-tags/airbnb/">Airbnb</a></li>
+                                    <li><a href="/hot-tags/xiaomi/">小米</a></li>
+                                    <li><a href="/hot-tags/tesla/">Tesla</a></li>
+                                    <li><a href="/hot-tags/uber/">Uber</a></li>
+                                    <li><a href="/hot-tags/weixin/">微信</a></li>
+                                    <li><a href="/tags/">更多</a></li>
+                                </ul>
+                            </div>
+                        </ul>
+                    </li>
+                    <li class="dropdown nav-dropdown">
+                        <a class="has-drop-menu" href="javascript:;">活动</a>
+                        <ul class="dropdown-menu nav-events">
+                            <li class="nav-events-item">
+                                <b><a target="_blank" href="http://www.pingwest.com/market/screen-salon/">PingWest品玩 沙龙：小屏幕 の 新看法</a></b>
+                                <p class="meta">
+                                    <span class="time">6月26日</span>
+                                </p>
+                                <span class="status">已结束</span>
+                            </li>
+                            <li class="nav-events-item">
+                                <b><a target="_blank" href="http://events.pingwest.com/nlvc-lighting-2/">北极光创投 Lighting 第二期：企业级服务的黄金五年</a></b>
+                                <p class="meta">
+                                    <span class="time">6月11日</span>
+                                </p>
+                                <span class="status">已结束</span>
+                            </li>
+                            <li class="nav-events-item">
+                                <b><a target="_blank" href="http://events.pingwest.com/sequoia_capital/">红杉大讲堂第二季——从实验室到日常消费，智能硬件该如何落地</a></b>
+                                <p class="meta">
+                                    <span class="time">5月17日</span>
+                                </p>
+                                <span class="status">已结束</span>
+                            </li>
+                            <li class="nav-events-item">
+                                <b><a target="_blank" href="http://events.pingwest.com/nlvc-lighting-1/">北极光创投 Lighting 2015第一期 ：新航海时代—中国互联网全球化之路</a></b>
+                                <p class="meta">
+                                    <span class="time">4月3日</span>
+                                </p>
+                                <span class="status">已结束</span>
+                            </li>
+
+                            <div class="more-events">
+                                <a target="_blank" href="http://events.pingwest.com">更多活动<i class="icon-more"></i></a>
+                            </div>
+                        </ul>
+                    </li>
+                    <li><a href="/subject/">专题</a></li>
+                    <li class="dropdown nav-dropdown">
+                        <a class="has-drop-menu" href="javascript:;">旗下产品</a>
+                        <ul class="dropdown-menu nav-pro">
+                            <li>
+                                <div class="pro-logo pro-no">
+                                </div>
+                                <div class="pro-des">
+                                    <b><a target="_blank" href="http://no.pingwest.com">没品</a></b>
+                                    <p>拯救碉堡了的无趣</p>
+                                </div>
+                            </li>
+                            <!--<li>
+              <div class="pro-logo pro-shift">
+              </div>
+              <div class="pro-des">
+                <b><a target="_blank" href="http://shift.pingwest.com">SHIFT</a></b>
+                <p>汽车科技博客</p>
+              </div>
+            </li>-->
+                            <li>
+                                <div class="pro-logo pro-news">
+                                </div>
+                                <div class="pro-des">
+                                    <b><a target="_blank" href="http://news.pingwest.com">快讯</a></b>
+                                    <p>第一时间，了解行业资讯</p>
+                                </div>
+                            </li>
+
+                        </ul>
+                    </li>
+                    <!-- <li class="nav-en"><a href="http://en.pingwest.com/" target="_blank">ENGLISH</a></li> -->
+
+                </ul>
+
+            </div>
+            <div class="right-bar">
+                <ul>
+                    <li class="li-after">
+                        <a href="javascript:;" class="login">登录</a>
+                    </li>
+                    <li>
+                        <form class="form-search" action="http://www.pingwest.com/">
+                            <input type="search" class="nav-search-input" name="s" placeholder="输入搜索内容..." autocomplete="off" spellcheck="false">
+                            <i class="icon-search">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="si-glyph-folder-search" style="height: 20px; width: 20px;">
+                                    <use xlink:href="Plugins/fonts/sprite.svg#si-glyph-folder-search" />
+                                </svg>
+                            </i>
+                            <i class="close">×</i>
+                        </form>
+                    </li>
+                </ul>
+            </div>
+
+
+
+        </div>
+    </div>
+</head>
+<body>
+    <form runat="server">
+
+        <div id="body">
+            <asp:ContentPlaceHolder runat="server" ID="FeaturedContent" />
+            <section class="content-wrapper main-content clear-fix">
+                <asp:ContentPlaceHolder runat="server" ID="MainContent" />
+            </section>
+        </div>
+        <footer>
+            <div class="footgray">
+                <div class="footinner cf">
+                    <dl>
+                        <dt>社区必读</dt>
+                        <dd><a href="http://you.ctrip.com/htmlpages/eula.html" target="_blank">用户协议</a></dd>
+                        <dd><a href="http://you.ctrip.com/htmlpages/guide.html" target="_blank">社区指南</a></dd>
+                        <dd><a href="http://you.ctrip.com/htmlpages/exp.html" target="_blank">经验与等级</a></dd>
+                        <dd><a href="http://you.ctrip.com/htmlpages/help.html" target="_blank">新手导航</a></dd>
+                    </dl>
+                    <dl>
+                        <dt>发现你的旅行</dt>
+                        <dd><a href="http://you.ctrip.com/place" target="_blank">了解目的地</a></dd>
+                        <dd><a href="http://you.ctrip.com/travels" target="_blank">阅读精彩游记</a></dd>
+                        <dd><a href="http://you.ctrip.com/guides" target="_blank">下载精品攻略</a></dd>
+                        <dd><a href="http://you.ctrip.com/asks" target="_blank">请教旅行达人</a></dd>
+                        <dd><a href="http://you.ctrip.com/events" target="_blank">发起结伴</a></dd>
+                    </dl>
+                    <dl>
+                        <dt>分享你的旅行</dt>
+                        <dd><a href="http://you.ctrip.com/add-travel/guide.html" target="_blank">发表游记大作</a></dd>
+                        <dd><a href="http://you.ctrip.com/dianping/" target="_blank">点评去过的景点</a></dd>
+                    </dl>
+                    <dl class="ftabout">
+                        <dt>关于我们</dt>
+                        <dd><a href="http://you.ctrip.com/htmlpages/about.html" target="_blank">社区简介</a></dd>
+                        <dd><a href="http://you.ctrip.com/htmlpages/contact.html" target="_blank">联系我们</a></dd>
+                        <dd><a href="http://you.ctrip.com/htmlpages/job.html" target="_blank">加入我们</a></dd>
+                        <dd><a href="http://you.ctrip.com/intelligence.html" target="_blank">智慧旅游</a></dd>
+                    </dl>
+                    <dl class="ftguanzhu">
+                        <dt>关注携程攻略社区</dt>
+                        <dd class="youguanzhu cf"><span class="ftweixin"></span><a rel="nofollow" target="_blank" href="http://weibo.com/ctripyou" class="ftweibo"></a></dd>
+                    </dl>
+                </div>
+            </div>
+        </footer>
+    </form>
+</body>
+</html>
