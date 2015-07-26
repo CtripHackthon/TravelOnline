@@ -12,26 +12,22 @@
     <div id="top-header" class="header header-show">
         <div class="container clearfix">
             <div class="logo-wrap">
-                <a href="http://www.pingwest.com" class="logo">
+                <a href="../Index.aspx" class="logo">
                     <img src="http://pic.c-ctrip.com/common/c_logo2013.png"></a>
                 <span class="des"><span>穷游路上... 且行且珍惜</span></span>
             </div>
             <a href="javascript:;" class="btn-menu icon-menu"></a>
             <div class="global-nav">
                 <ul class="main-menu">
-                    <li><a href="http://www.pingwest.com">首页</a></li>
+                    <li>
+                        <a href="../index.aspx">家园</a></li>
                     <li class="dropdown nav-dropdown">
-                        <a class="has-drop-menu" href="javascript:;">分类目录</a>
+                        <a class="has-drop-menu" href="javascript:;">个性旅途</a>
                         <ul class="dropdown-menu">
                             <div class="sort channel clearfix">
                                 <p class="title">分类</p>
                                 <ul>
-                                    <li id="menu-item-42026" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-42026"><a href="http://www.pingwest.com/category/figure/">人物</a></li>
-                                    <li id="menu-item-42027" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-42027"><a href="http://www.pingwest.com/category/phenomenon/">现象</a></li>
-                                    <li id="menu-item-42028" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-42028"><a href="http://www.pingwest.com/category/truth/">真相</a></li>
-                                    <li id="menu-item-42029" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-42029"><a href="http://www.pingwest.com/category/news/">短新闻</a></li>
-                                    <li id="menu-item-42030" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-42030"><a href="http://www.pingwest.com/category/tune/">腔调</a></li>
-                                    <li id="menu-item-42031" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-42031"><a href="http://www.pingwest.com/category/coolplay/">酷玩</a></li>
+                                    <li id="menu-item-42026" class="menu-item"><a href="http://www.pingwest.com/category/figure/">人物</a></li>
                                 </ul>
                             </div>
                             <div class="tags channel clearfix">
@@ -48,7 +44,7 @@
                         </ul>
                     </li>
                     <li class="dropdown nav-dropdown">
-                        <a class="has-drop-menu" href="javascript:;">活动</a>
+                        <a class="has-drop-menu" href="javascript:;">召集令</a>
                         <ul class="dropdown-menu nav-events">
                             <li class="nav-events-item">
                                 <b><a target="_blank" href="http://www.pingwest.com/market/screen-salon/">PingWest品玩 沙龙：小屏幕 の 新看法</a></b>
@@ -84,37 +80,8 @@
                             </div>
                         </ul>
                     </li>
-                    <li><a href="/subject/">专题</a></li>
-                    <li class="dropdown nav-dropdown">
-                        <a class="has-drop-menu" href="javascript:;">旗下产品</a>
-                        <ul class="dropdown-menu nav-pro">
-                            <li>
-                                <div class="pro-logo pro-no">
-                                </div>
-                                <div class="pro-des">
-                                    <b><a target="_blank" href="http://no.pingwest.com">没品</a></b>
-                                    <p>拯救碉堡了的无趣</p>
-                                </div>
-                            </li>
-                            <!--<li>
-              <div class="pro-logo pro-shift">
-              </div>
-              <div class="pro-des">
-                <b><a target="_blank" href="http://shift.pingwest.com">SHIFT</a></b>
-                <p>汽车科技博客</p>
-              </div>
-            </li>-->
-                            <li>
-                                <div class="pro-logo pro-news">
-                                </div>
-                                <div class="pro-des">
-                                    <b><a target="_blank" href="http://news.pingwest.com">快讯</a></b>
-                                    <p>第一时间，了解行业资讯</p>
-                                </div>
-                            </li>
-
-                        </ul>
-                    </li>
+                    <li><a href="/subject/">喵星探险</a></li>
+                  
                     <!-- <li class="nav-en"><a href="http://en.pingwest.com/" target="_blank">ENGLISH</a></li> -->
 
                 </ul>
@@ -123,18 +90,10 @@
             <div class="right-bar">
                 <ul>
                     <li class="li-after">
-                        <a href="javascript:;" class="login">登录</a>
+                        <a href="../Account/Login.aspx" class="login">登录</a>
                     </li>
-                    <li>
-                        <form class="form-search" action="http://www.pingwest.com/">
-                            <input type="search" class="nav-search-input" name="s" placeholder="输入搜索内容..." autocomplete="off" spellcheck="false">
-                            <i class="icon-search">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="si-glyph-folder-search" style="height: 20px; width: 20px;">
-                                    <use xlink:href="Plugins/fonts/sprite.svg#si-glyph-folder-search" />
-                                </svg>
-                            </i>
-                            <i class="close">×</i>
-                        </form>
+                     <li style="padding-left:10px">
+                        <a href="../Account/Register.aspx" class="login">注册</a>
                     </li>
                 </ul>
             </div>
@@ -143,6 +102,18 @@
 
         </div>
     </div>
+    <script src="Scripts/jquery-1.10.2.min.js"></script>
+    <script src="Scripts/site.js"></script>
+    <script type="text/javascript">
+        (function (site, $, undefined) {
+
+          
+        })(window.site = window.site || {}, $, undefined);
+
+        $(function () {
+            site.init();
+        });
+    </script>
 </head>
 <body>
     <form runat="server">

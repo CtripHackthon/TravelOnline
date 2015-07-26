@@ -1,0 +1,121 @@
+﻿body {
+}
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+    margin: 0px;
+    padding: 0px;
+    border: 0px none;
+    outline: 0px none;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent none repeat scroll 0% 0%;
+}
+* {
+    word-wrap: break-word;
+    word-break: break-all;
+    color: #111;
+}
+
+.login_wrap {
+    width: 900px;
+    margin: 0px auto;
+    padding: 27px 0px 33px;
+    min-height: 580px;
+}
+
+.login_wrap .content {
+    padding-top: 40px;
+    height: 500px;
+}
+.clearfix::before, .clearfix::after {
+    content: "";
+    display: table;
+} 
+
+.lg_banner {
+    width: 400px;
+    float: left;
+    display: inline;
+}
+.lg_banner a.banner1 {
+    height: 300px;
+    margin-bottom: 10px;
+}
+.lg_banner a {
+    display: block;
+    width: 400px;
+    height: 100px;
+    overflow: hidden;
+}
+
+.lg_left {
+    float: right;
+    display: inline;
+    border: 1px solid #DCDCDC;
+    padding: 10px 40px 30px 38px;
+}
+
+.login_mod_tab {
+    height: 70px;
+    margin-left: -38px;
+}
+
+.lg_form .lg_name, .lg_form .lg_pass, .lg_form .lg_code {
+    position: relative;
+}
+.lg_form .lg_item {
+    margin-bottom: 15px;
+}
+
+textarea, input[type="text"], input[type="password"] {
+    background: #FFF url("/img/input_bg_sd.png") no-repeat scroll 0px 0px;
+}
+.pwd_text {
+    background: transparent none repeat scroll 0% 0% !important;
+    border: 1px solid #CCC;
+    height: 28px;
+    width: 269px;
+    padding: 0px 6px;
+}
+input, textarea {
+    margin: 0px;
+    padding: 0px;
+    outline: medium none;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+body, textarea, pre, input {
+    font: 12px/1.6 tahoma,arial,sans-serif;
+}
+
+.lg_remember .findpwd {
+    margin-left: 130px;
+    color: #959595;
+}
+
+.lg_login {
+    padding-top: 10px;
+}
+
+.lg_login .sub {
+    display: inline;
+    float: left;
+    border: medium none;
+    width: 285px;
+    height: 30px;
+    background: #FF4066 none repeat scroll 0% 0%;
+    border-radius: 2px;
+    cursor: pointer;
+    color: #FFF;
+}
+
+.lg_reg {
+    padding-top: 20px;
+}
+
+.lg_reg .regist {
+    margin-left: 150px;
+}
+.lg_reg a {
+    text-decoration: underline;
+    color: #959595;
+}

@@ -1,0 +1,113 @@
+﻿body {
+}
+
+.register {
+    background: white url("../Images/login.jpg") no-repeat scroll center top;
+}
+
+.loginBk {
+    min-height: 500px;
+    position: relative;
+    z-index: 5;
+    width: 100%;
+}
+
+.warp {
+    width: 960px;
+    margin: 0px auto;
+}
+
+.loginContent {
+    float: right;
+    background: #FFF none repeat scroll 0% 0% !important;
+    padding-bottom: 20px;
+    width: 420px;
+    position: relative;
+    z-index: 5;
+    border-radius: 8px;
+    box-shadow: 0px 0px 5px #CCC;
+    margin-top:60px;
+}
+
+.loginContent .loginTitle {
+    height: auto !important;
+    min-height: 40px;
+    padding: 25px 60px 0px;
+    margin-bottom: 20px;
+}
+.loginContent div, .loginContent li, .loginContent .loginTitle {
+    font-family: arial,宋体,"MicrosoftJhengHei",华文细黑,STHeiti,MingLiu;
+    font-size: 12px;
+}
+
+.loginTitle span.lc1 {
+    background-position: 0px -158px;
+    width: 100px;
+    height: 36px;
+    float: left;
+}
+.loginTitle span {
+    display: block;
+    font-family: "Microsoft YaHei",微软雅黑;
+    color: #333;
+    font-size: 14px;
+}
+.loginTitle span, .loginTitle span a {
+    font-size: 14px;
+    line-height: 28px;
+    color: #02B1CB;
+}
+
+.loginContent .loginTitle a {
+    color: #02B1CB;
+}
+.loginTitle span, .loginTitle span a {
+    font-size: 14px;
+    line-height: 28px;
+    color: #02B1CB;
+}
+.loginTitle span a {
+    color: #FFF;
+    font-family: "Microsoft YaHei",微软雅黑;
+}
+.loginInput {
+    padding: 0px 60px;
+    position: relative;
+}
+li.mailwrap {
+    position: relative;
+}
+.loginInput li {
+    height: 75px;
+    position: relative;
+    width: 300px;
+    clear: both;
+}
+.loginInput li h2 {
+    font-weight: 500;
+    line-height: 24px;
+}
+
+li.nobk input {
+    background: #FFF none repeat scroll 0% 0% !important;
+}
+
+li.yzmwrap span {
+    display: inline-block;
+    vertical-align: top;
+}
+
+li.yzmwrap a {
+    height: 40px;
+    color: #A0A0A0;
+    text-decoration: underline;
+}
+li.yzmwrap img, li.yzmwrap a {
+    display: inline-block;
+    margin-left: 4px;
+    vertical-align: top;
+}
+li.buttonwrap {
+    margin-top: 20px;
+    height: 40px;
+}

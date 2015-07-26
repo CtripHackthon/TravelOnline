@@ -84,7 +84,6 @@ body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, fo
 
 h1, h2, h3,
 h4, h5, h6 {
-    color: #000;
     margin-bottom: 0;
     padding-bottom: 0;
 }
@@ -133,6 +132,11 @@ h5, h6 {
   transform: translateY(0%);
  
   transition: all 500ms cubic-bezier(0.190, 1.000, 0.220, 1.000);
+}
+
+    .header.header-hide {
+    transform: translateY(-100%);
+    transition: all 300ms cubic-bezier(0.55, 0.055, 0.675, 0.19) 0s;
 }
 
     .header {
@@ -216,6 +220,52 @@ h5, h6 {
   z-index: 111;
 }
 
+
+.channel {
+    width: 400px;
+}
+.clearfix::after {
+    clear: both;
+}
+.sort .title {
+    margin-top: 0px;
+}
+.channel .title {
+    font-weight: bold;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+.channel ul li {
+    float: left;
+}
+.channel ul li a {
+    padding: 0px;
+    height: auto;
+    line-height: normal;
+}
+
+.nav-dropdown .dropdown-menu::before {
+    left: 50px;
+}
+.dropdown-menu::before {
+    content: "";
+    position: absolute;
+    top: -7px;
+    left: calc(50% - 7px);
+    width: 13px;
+    height: 7px;
+    background: transparent url("http://cdn.pingwest.com/wp-content/themes/pingwest2014/images/dropdown-menu-arrow.svg") repeat scroll 0% 0%;
+}
+
+.channel ul li a::after {
+    content: "";
+    width: 1px;
+    height: 12px;
+    display: inline-block;
+    background: rgba(0, 0, 0, 0.15) none repeat scroll 0% 0%;
+    margin: 0px 15px;
+}
+
 .right-bar {
   font-size: 0px;
   float: right;
@@ -232,6 +282,44 @@ h5, h6 {
   visibility: hidden;
   font-size: 0;
   height: 0;
+}
+
+.dropdown-menu.visible {
+    opacity: 1;
+    pointer-events: auto;
+    transform: none;
+}
+
+.nav-dropdown .dropdown-menu::before {
+    left: 50px;
+}
+
+.nav-events-item {
+    position: relative;
+    width: 250px;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    padding: 10px 0px;
+}
+.nav-events-item b {
+    display: block;
+    padding-right: 70px;
+}
+b, strong {
+    font-weight: bold;
+}
+.nav-events-item .meta {
+    color: rgba(0, 0, 0, 0.5);
+    margin-top: 5px;
+    font-size: 13px;
+}
+.nav-events-item .status {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.05);
+    border-radius: 4px;
+    font-size: 12px;
+    right: 0px;
+    top: 10px;
+    padding: 3px 8px 1px;
 }
 .right-bar>ul>li {
   display: inline-block;
@@ -265,7 +353,21 @@ h5, h6 {
   width: 230px !important;
   cursor: text;
 }
-
+.form-search .icon-search::before {
+    float: right;
+    margin-top: 22px;
+    margin-right: 18px;
+}
+.right-bar .li-after::after {
+    content: "";
+    width: 1px;
+    height: 16px;
+    display: inline-block;
+    background: rgba(0, 0, 0, 0.15) none repeat scroll 0% 0%;
+    margin: 0px 0px 0px 14px;
+    position: relative;
+    top: 2px;
+}
 .form-search.active input {
   width: 230px !important;
   cursor: text;
@@ -307,28 +409,28 @@ h5, h6 {
   top: -1px;
 }
 
-
+li {
+    list-style: outside none none;
+}
 /* main layout
 ----------------------------------------------------------*/
 .content-wrapper {
     margin: 0 auto;
-    max-width: 960px;
+    /*max-width: 960px;*/
 }
 
 #body {
-    background-color: #efeeef;
+    /*background-color: #efeeef;*/
     clear: both;
     padding-bottom: 35px;
 }
 
 .main-content {
-    background: url("../Images/accent.png") no-repeat;
     padding-left: 10px;
     padding-top: 30px;
 }
 
 .featured + .main-content {
-    background: url("../Images/heroAccent.png") no-repeat;
 }
 
 header .content-wrapper {
