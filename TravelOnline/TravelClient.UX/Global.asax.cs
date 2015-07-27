@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using System.Web.Optimization;
 using System.Web.Routing;
 using System.Web.Security;
 using TravelClient.UX;
@@ -14,8 +13,8 @@ namespace TravelClient.UX
         void Application_Start(object sender, EventArgs e)
         {
             // Code that runs on application startup
-            BundleConfig.RegisterBundles(BundleTable.Bundles);
-            AuthConfig.RegisterOpenAuth();
+            //BundleConfig.RegisterBundles(BundleTable.Bundles);
+            //AuthConfig.RegisterOpenAuth();
             //RouteConfig.RegisterRoutes(RouteTable.Routes);
         }
 
