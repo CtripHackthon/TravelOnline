@@ -1,0 +1,10 @@
+D:\Git-My\longamd\longamd\DATABASE\bin\Debug\DATABASE.dll
+D:\Git-My\longamd\longamd\DATABASE\bin\Debug\DATABASE.pdb
+D:\Git-My\longamd\longamd\DATABASE\obj\Debug\DATABASE.csprojResolveAssemblyReference.cache
+D:\Git-My\longamd\longamd\DATABASE\obj\Debug\DATABASE.dll
+D:\Git-My\longamd\longamd\DATABASE\obj\Debug\DATABASE.pdb
+D:\MyGit\TravelOnline\TravelOnline\DATABASE\bin\Debug\DATABASE.dll
+D:\MyGit\TravelOnline\TravelOnline\DATABASE\bin\Debug\DATABASE.pdb
+D:\MyGit\TravelOnline\TravelOnline\DATABASE\obj\Debug\DATABASE.dll
+D:\MyGit\TravelOnline\TravelOnline\DATABASE\obj\Debug\DATABASE.pdb
+D:\MyGit\TravelOnline\TravelOnline\DATABASE\obj\Debug\DATABASE.csprojResolveAssemblyReference.cache

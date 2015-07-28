@@ -20,14 +20,27 @@
                     <input id="codekeyFormobile" name="codekeyFormobile" value="6e120dfce05a6a59b333bd0f08200f39" type="hidden">
                     <div class="css3 loginContent">
                         <div class="loginTitle"><span class="lc1"></span><span class="lcr">已有  账号 ? <a id="reg_link" href="login.jsp">登录</a></span></div>
-                       
 
-                       
-                        <ul class="loginInput">
-                          
-                        </ul>
+                        <div class="loginzone">
+                           <span class="regtitle">用户名:</span> <span><input type="text" /></span>
+                        </div>
 
-                    </div>
+                        <div class="loginzone">
+                           <span class="regtitle"> 密码:</span><span><input type="password" /></span>
+                        </div>
+                        <div class="loginzone">
+                             <span class="regtitle">邮箱:</span><span><input type="text" /></span>
+                        </div>
+                        <div class="loginzone">
+                             <span class="regtitle">验证码:</span><span><input type="password" /></span>
+
+                        </div>
+
+                        <div class="item">
+                            <span class="label">&nbsp;</span>
+                            <input type="button" class="btn-img btn-regist" id="registsubmit" value="立即注册" tabindex="8" clstag="regist|keycount|personalreg|07" onclick="reg();">
+                        </div>
+                        </div>
                 </form>
 
 

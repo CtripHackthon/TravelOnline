@@ -12,6 +12,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Application.Front", "Applic
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TravelClient.UX", "TravelClient.UX\TravelClient.UX.csproj", "{865654FC-EF83-4848-91B6-A80D88742E79}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DATABASE", "DATABASE\DATABASE.csproj", "{3337E05E-79AD-4577-A9CC-2B737A6DDF3C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -22,11 +24,16 @@ Global
 		{865654FC-EF83-4848-91B6-A80D88742E79}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{865654FC-EF83-4848-91B6-A80D88742E79}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{865654FC-EF83-4848-91B6-A80D88742E79}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3337E05E-79AD-4577-A9CC-2B737A6DDF3C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3337E05E-79AD-4577-A9CC-2B737A6DDF3C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3337E05E-79AD-4577-A9CC-2B737A6DDF3C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3337E05E-79AD-4577-A9CC-2B737A6DDF3C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{865654FC-EF83-4848-91B6-A80D88742E79} = {3B0AF77C-1816-4E8B-BEBB-BD0F053B22E8}
+		{3337E05E-79AD-4577-A9CC-2B737A6DDF3C} = {3B0AF77C-1816-4E8B-BEBB-BD0F053B22E8}
 	EndGlobalSection
 EndGlobal
