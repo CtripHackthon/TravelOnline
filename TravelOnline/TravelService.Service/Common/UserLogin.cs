@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TravelService.Service.Common
 {
-    public class GetUserInfo : IService
+    public class UserLogin : IService
     {
         public void process(Model.ServiceRequest request, Model.ServiceResponse response)
         {

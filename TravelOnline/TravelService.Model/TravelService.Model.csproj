@@ -39,7 +39,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Base\Common\UserInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ServiceModel\RegistUserRequest.cs" />
+    <Compile Include="ServiceModel\RegistUserResponse.cs" />
+    <Compile Include="ServiceRequest.cs" />
+    <Compile Include="ServiceResponse.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Base\Travel\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
