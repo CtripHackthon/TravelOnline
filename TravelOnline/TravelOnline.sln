@@ -12,7 +12,17 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Application.Front", "Applic
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TravelClient.UX", "TravelClient.UX\TravelClient.UX.csproj", "{865654FC-EF83-4848-91B6-A80D88742E79}"
 EndProject
+<<<<<<< HEAD
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DATABASE", "DATABASE\DATABASE.csproj", "{3337E05E-79AD-4577-A9CC-2B737A6DDF3C}"
+=======
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Application.Back", "Application.Back", "{C583E99C-6071-4535-BF17-CF809A5ACD98}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Application.ServiceInterface", "Application.ServiceInterface", "{2F676DD4-29F4-41F8-BE6D-430E200A1765}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TravelService.Model", "TravelService.Model\TravelService.Model.csproj", "{707F22E6-23F3-45D7-A11E-FE3B1DEC0A30}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TravelService.Service", "TravelService.Service\TravelService.Service.csproj", "{FCE483F1-BE68-4271-B00E-740012AE02C9}"
+>>>>>>> 0a653887ca71c710e1ba2b9aa1cb2fd473c49897
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -24,16 +34,32 @@ Global
 		{865654FC-EF83-4848-91B6-A80D88742E79}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{865654FC-EF83-4848-91B6-A80D88742E79}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{865654FC-EF83-4848-91B6-A80D88742E79}.Release|Any CPU.Build.0 = Release|Any CPU
+<<<<<<< HEAD
 		{3337E05E-79AD-4577-A9CC-2B737A6DDF3C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{3337E05E-79AD-4577-A9CC-2B737A6DDF3C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3337E05E-79AD-4577-A9CC-2B737A6DDF3C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3337E05E-79AD-4577-A9CC-2B737A6DDF3C}.Release|Any CPU.Build.0 = Release|Any CPU
+=======
+		{707F22E6-23F3-45D7-A11E-FE3B1DEC0A30}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{707F22E6-23F3-45D7-A11E-FE3B1DEC0A30}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{707F22E6-23F3-45D7-A11E-FE3B1DEC0A30}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{707F22E6-23F3-45D7-A11E-FE3B1DEC0A30}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FCE483F1-BE68-4271-B00E-740012AE02C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FCE483F1-BE68-4271-B00E-740012AE02C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FCE483F1-BE68-4271-B00E-740012AE02C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FCE483F1-BE68-4271-B00E-740012AE02C9}.Release|Any CPU.Build.0 = Release|Any CPU
+>>>>>>> 0a653887ca71c710e1ba2b9aa1cb2fd473c49897
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{865654FC-EF83-4848-91B6-A80D88742E79} = {3B0AF77C-1816-4E8B-BEBB-BD0F053B22E8}
+<<<<<<< HEAD
 		{3337E05E-79AD-4577-A9CC-2B737A6DDF3C} = {3B0AF77C-1816-4E8B-BEBB-BD0F053B22E8}
+=======
+		{707F22E6-23F3-45D7-A11E-FE3B1DEC0A30} = {C583E99C-6071-4535-BF17-CF809A5ACD98}
+		{FCE483F1-BE68-4271-B00E-740012AE02C9} = {C583E99C-6071-4535-BF17-CF809A5ACD98}
+>>>>>>> 0a653887ca71c710e1ba2b9aa1cb2fd473c49897
 	EndGlobalSection
 EndGlobal
