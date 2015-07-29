@@ -9,7 +9,7 @@
     <link rel="icon" href="http://webresource.c-ctrip.com/ResUnionOnline/R3/float/pic/log.png" />
     <meta name="viewport" content="width=device-width" />
     <asp:ContentPlaceHolder runat="server" ID="HeadContent" />
-    <div id="top-header" class="header header-show">
+    <div id="top-header" class="header2 header-show">
         <div class="container clearfix">
             <div class="logo-wrap">
                 <a href="../Index.aspx" class="logo">

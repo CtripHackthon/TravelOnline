@@ -45,15 +45,22 @@ namespace TravelClient.UX.Ajax
             UserModel user = jss.Deserialize<UserModel>(Request.Params["user"]);
 
             operate.Connect();
-            DataTable dt = operate.SelectToDataTable("select * from users where uname='" + user.UserName + "', and upassword='" + user.Password + "'");
-            
-            if (dt.Rows.Count > 0) {
-                Session["user_id"] = dt.Rows[0]["id"];
-            }
+            string query = "select * from users where uname='" + user.UserName + "' and upassword='" + user.Password + "'";
+
+            DataTable dt = operate.SelectToDataTable(query);
 
             operate.CloseConnection();
 
-            return null;
+            if (dt.Rows.Count > 0)
+            {
+                Session["user_id"] = dt.Rows[0]["id"];
+                // Login successfully
+                return "{\"login\":1}";
+            }
+            else {
+                return "{\"login\":0}";
+            }
+
         }
     }
 }

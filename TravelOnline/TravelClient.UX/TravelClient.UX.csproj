@@ -64,11 +64,13 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Account\Login.aspx" />
+    <Content Include="Account\PersonalBoard.aspx" />
     <Content Include="Account\Register.aspx" />
     <Content Include="Ajax\UserAjax.aspx" />
     <Content Include="Content\game.css" />
     <Content Include="Content\home.css" />
     <Content Include="Content\login.css" />
+    <Content Include="Content\personal.css" />
     <Content Include="Content\register.css" />
     <Content Include="Content\Site.css" />
     <Content Include="Content\themes\base\jquery-ui.css" />
@@ -298,7 +300,9 @@
     <Content Include="Global.asax" />
     <Content Include="Images\login.jpg" />
     <Content Include="Images\reg.jpg" />
+    <Content Include="Plugins\css\metro-bootstrap.css" />
     <Content Include="Plugins\fonts\sprite.svg" />
+    <Content Include="Posts\NewPost.aspx" />
     <Content Include="Scripts\account.js" />
     <Content Include="Scripts\site.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -327,6 +331,13 @@
     </Compile>
     <Compile Include="Account\Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\PersonalBoard.aspx.cs">
+      <DependentUpon>PersonalBoard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\PersonalBoard.aspx.designer.cs">
+      <DependentUpon>PersonalBoard.aspx</DependentUpon>
     </Compile>
     <Compile Include="Account\Register.aspx.cs">
       <DependentUpon>Register.aspx</DependentUpon>
@@ -429,6 +440,13 @@
     </Compile>
     <Compile Include="game\welcome.aspx.designer.cs">
       <DependentUpon>welcome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Posts\NewPost.aspx.cs">
+      <DependentUpon>NewPost.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Posts\NewPost.aspx.designer.cs">
+      <DependentUpon>NewPost.aspx</DependentUpon>
     </Compile>
     <Compile Include="utils\checkbuildingstate.cs" />
     <Compile Include="utils\buildinginfo.cs" />
@@ -575,8 +593,6 @@
     <Folder Include="App_Data\" />
     <Folder Include="App_Start\" />
     <Folder Include="game\css\" />
-    <Folder Include="Plugins\css\" />
-    <Folder Include="Posts\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Site.Master" />

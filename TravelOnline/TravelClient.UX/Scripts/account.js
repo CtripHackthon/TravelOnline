@@ -75,7 +75,15 @@
                     alert('status :' + XMLHttpRequest.status + '; readyState:' + XMLHttpRequest.readyState + '; textStatus:' + textStatus);
                 },
                 success: function (result) {
-
+                    // if login successfully navigate customer to the welcome page
+                    if (result != null) {
+                        if (result.login == '1') {
+                            window.location.href="../Account/Personal.aspx";
+                        }
+                        else {
+                            alert('login failed');
+                        }
+                    }
                 }
             });
         };
