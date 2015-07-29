@@ -6,11 +6,10 @@
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="MainContent" runat="server">
 
-    <title></title>
     <link href="../Content/personal.css" rel="stylesheet" />
     <link href="../Plugins/css/metro-bootstrap.css" rel="stylesheet" />
 
-    <body class="metro">
+    <body>
         <div class="wrapper">
 
             <div class="header">
@@ -58,5 +57,11 @@
             </div>
         </div>
     </body>
-
+    <script src="../Scripts/jquery-1.10.2.min.js"></script>
+    <script src="../Scripts/personal.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            person.init();
+        });
+    </script>
 </asp:Content>

@@ -8,3 +8,8 @@ D:\MyGit\TravelOnline\TravelOnline\DATABASE\bin\Debug\DATABASE.pdb
 D:\MyGit\TravelOnline\TravelOnline\DATABASE\obj\Debug\DATABASE.dll
 D:\MyGit\TravelOnline\TravelOnline\DATABASE\obj\Debug\DATABASE.pdb
 D:\MyGit\TravelOnline\TravelOnline\DATABASE\obj\Debug\DATABASE.csprojResolveAssemblyReference.cache
+D:\NET\MyGit\TravelOnline\TravelOnline\DATABASE\bin\Debug\DATABASE.dll
+D:\NET\MyGit\TravelOnline\TravelOnline\DATABASE\bin\Debug\DATABASE.pdb
+D:\NET\MyGit\TravelOnline\TravelOnline\DATABASE\obj\Debug\DATABASE.csprojResolveAssemblyReference.cache
+D:\NET\MyGit\TravelOnline\TravelOnline\DATABASE\obj\Debug\DATABASE.dll
+D:\NET\MyGit\TravelOnline\TravelOnline\DATABASE\obj\Debug\DATABASE.pdb
