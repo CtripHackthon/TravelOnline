@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace TravelService.Service.Travel
 {
-    class GetAssociatedProductsInfo
+    class GetAssociatedProductsInfo : IService
     {
+        public void process(Model.ServiceRequest request, Model.ServiceResponse response)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

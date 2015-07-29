@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="hackthonModel.Store" Alias="Self" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.6" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="hackthonModelStoreContainer">
+    <EntitySet Name="comment" EntityType="hackthonModel.Store.comment" store:Type="Tables" Schema="hackthon" />
+    <EntitySet Name="diary" EntityType="hackthonModel.Store.diary" store:Type="Tables" Schema="hackthon" />
+    <EntitySet Name="order" EntityType="hackthonModel.Store.order" store:Type="Tables" Schema="hackthon" />
+    <EntitySet Name="product" EntityType="hackthonModel.Store.product" store:Type="Tables" Schema="hackthon" />
+    <EntitySet Name="user" EntityType="hackthonModel.Store.user" store:Type="Tables" Schema="hackthon" />
+  </EntityContainer>
+  <EntityType Name="comment">
+    <Key>
+      <PropertyRef Name="diaryID" />
+    </Key>
+    <Property Name="diaryID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="commentID" Type="int" />
+    <Property Name="content" Type="longtext" />
+  </EntityType>
+  <EntityType Name="diary">
+    <Key>
+      <PropertyRef Name="diaryID" />
+    </Key>
+    <Property Name="diaryID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="userID" Type="int" />
+    <Property Name="title" Type="varchar" MaxLength="200" />
+    <Property Name="content" Type="longtext" />
+    <Property Name="tag" Type="varchar" MaxLength="200" />
+    <Property Name="publishTime" Type="datetime" />
+    <Property Name="readTimes" Type="int" />
+    <Property Name="buyTimes" Type="int" />
+    <Property Name="likeTimes" Type="int" />
+    <Property Name="commentTimes" Type="int" />
+  </EntityType>
+  <EntityType Name="order">
+    <Key>
+      <PropertyRef Name="orderID" />
+    </Key>
+    <Property Name="orderID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="productID" Type="int" />
+    <Property Name="status" Type="varchar" MaxLength="100" />
+    <Property Name="buyUserID" Type="int" />
+    <Property Name="recommendUserID" Type="int" />
+    <Property Name="price" Type="decimal" />
+  </EntityType>
+  <EntityType Name="product">
+    <Key>
+      <PropertyRef Name="productID" />
+    </Key>
+    <Property Name="productID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="url" Type="varchar" MaxLength="200" />
+    <Property Name="type" Type="varchar" MaxLength="50" />
+    <Property Name="name" Type="varchar" MaxLength="100" />
+    <Property Name="country" Type="varchar" MaxLength="50" />
+    <Property Name="city" Type="varchar" MaxLength="50" />
+    <Property Name="rate" Type="decimal" />
+  </EntityType>
+  <EntityType Name="user">
+    <Key>
+      <PropertyRef Name="userID" />
+    </Key>
+    <Property Name="userID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="userName" Type="varchar" MaxLength="100" />
+    <Property Name="password" Type="varchar" MaxLength="200" />
+    <Property Name="identity" Type="int" />
+    <Property Name="credits" Type="decimal" />
+    <Property Name="email" Type="varchar" MaxLength="100" />
+    <Property Name="phone" Type="varchar" MaxLength="20" />
+  </EntityType>
+</Schema>

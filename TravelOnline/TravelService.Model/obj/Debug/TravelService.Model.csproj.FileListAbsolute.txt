@@ -1,5 +1,12 @@
+<<<<<<< HEAD
 D:\MyGit\TravelOnline\TravelOnline\TravelService.Model\bin\Debug\TravelService.Model.dll
 D:\MyGit\TravelOnline\TravelOnline\TravelService.Model\bin\Debug\TravelService.Model.pdb
 D:\MyGit\TravelOnline\TravelOnline\TravelService.Model\obj\Debug\TravelService.Model.csprojResolveAssemblyReference.cache
 D:\MyGit\TravelOnline\TravelOnline\TravelService.Model\obj\Debug\TravelService.Model.dll
 D:\MyGit\TravelOnline\TravelOnline\TravelService.Model\obj\Debug\TravelService.Model.pdb
+=======
+D:\Framework.Dep\hackason\TravelOnline\TravelOnline\TravelService.Model\bin\Debug\TravelService.Model.dll
+D:\Framework.Dep\hackason\TravelOnline\TravelOnline\TravelService.Model\bin\Debug\TravelService.Model.pdb
+D:\Framework.Dep\hackason\TravelOnline\TravelOnline\TravelService.Model\obj\Debug\TravelService.Model.dll
+D:\Framework.Dep\hackason\TravelOnline\TravelOnline\TravelService.Model\obj\Debug\TravelService.Model.pdb
+>>>>>>> bb10c0d789930d0009ea6ef887dbf438fa29761e
