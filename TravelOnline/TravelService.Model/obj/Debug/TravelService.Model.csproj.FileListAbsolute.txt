@@ -1,0 +1,4 @@
+D:\Framework.Dep\hackason\TravelOnline\TravelOnline\TravelService.Model\bin\Debug\TravelService.Model.dll
+D:\Framework.Dep\hackason\TravelOnline\TravelOnline\TravelService.Model\bin\Debug\TravelService.Model.pdb
+D:\Framework.Dep\hackason\TravelOnline\TravelOnline\TravelService.Model\obj\Debug\TravelService.Model.dll
+D:\Framework.Dep\hackason\TravelOnline\TravelOnline\TravelService.Model\obj\Debug\TravelService.Model.pdb

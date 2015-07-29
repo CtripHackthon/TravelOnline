@@ -1,9 +1,3 @@
-D:\MyGit\TravelOnline\TravelOnline\TravelClient.UX\bin\TravelClient.UX.dll.config
-D:\MyGit\TravelOnline\TravelOnline\TravelClient.UX\bin\TravelClient.UX.dll
-D:\MyGit\TravelOnline\TravelOnline\TravelClient.UX\bin\TravelClient.UX.pdb
-D:\MyGit\TravelOnline\TravelOnline\TravelClient.UX\obj\Debug\TravelClient.UX.csprojResolveAssemblyReference.cache
-D:\MyGit\TravelOnline\TravelOnline\TravelClient.UX\obj\Debug\TravelClient.UX.dll
-D:\MyGit\TravelOnline\TravelOnline\TravelClient.UX\obj\Debug\TravelClient.UX.pdb
 D:\NET\MyGit\TravelOnline\TravelOnline\TravelClient.UX\obj\Debug\TravelClient.UX.csprojResolveAssemblyReference.cache
 D:\NET\MyGit\TravelOnline\TravelOnline\TravelClient.UX\bin\TravelClient.UX.dll
 D:\NET\MyGit\TravelOnline\TravelOnline\TravelClient.UX\bin\TravelClient.UX.pdb
@@ -32,4 +26,11 @@ D:\NET\MyGit\TravelOnline\TravelOnline\TravelClient.UX\bin\System.Web.WebPages.D
 D:\NET\MyGit\TravelOnline\TravelOnline\TravelClient.UX\bin\System.Web.WebPages.Razor.xml
 D:\NET\MyGit\TravelOnline\TravelOnline\TravelClient.UX\obj\Debug\TravelClient.UX.dll
 D:\NET\MyGit\TravelOnline\TravelOnline\TravelClient.UX\obj\Debug\TravelClient.UX.pdb
+D:\MyGit\TravelOnline\TravelOnline\TravelClient.UX\obj\Debug\TravelClient.UX.csprojResolveAssemblyReference.cache
+D:\MyGit\TravelOnline\TravelOnline\TravelClient.UX\bin\TravelClient.UX.dll
+D:\MyGit\TravelOnline\TravelOnline\TravelClient.UX\bin\TravelClient.UX.pdb
+D:\MyGit\TravelOnline\TravelOnline\TravelClient.UX\bin\DATABASE.dll
 D:\MyGit\TravelOnline\TravelOnline\TravelClient.UX\bin\Newtonsoft.Json.dll
+D:\MyGit\TravelOnline\TravelOnline\TravelClient.UX\bin\DATABASE.pdb
+D:\MyGit\TravelOnline\TravelOnline\TravelClient.UX\obj\Debug\TravelClient.UX.dll
+D:\MyGit\TravelOnline\TravelOnline\TravelClient.UX\obj\Debug\TravelClient.UX.pdb
