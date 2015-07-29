@@ -34,3 +34,4 @@ D:\MyGit\TravelOnline\TravelOnline\TravelClient.UX\bin\Newtonsoft.Json.dll
 D:\MyGit\TravelOnline\TravelOnline\TravelClient.UX\bin\DATABASE.pdb
 D:\MyGit\TravelOnline\TravelOnline\TravelClient.UX\obj\Debug\TravelClient.UX.dll
 D:\MyGit\TravelOnline\TravelOnline\TravelClient.UX\obj\Debug\TravelClient.UX.pdb
+D:\MyGit\TravelOnline\TravelOnline\TravelClient.UX\bin\TravelClient.UX.dll.config

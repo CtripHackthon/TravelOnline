@@ -65,6 +65,7 @@
   <ItemGroup>
     <Content Include="Account\Login.aspx" />
     <Content Include="Account\Register.aspx" />
+    <Content Include="Ajax\UserAjax.aspx" />
     <Content Include="Content\game.css" />
     <Content Include="Content\home.css" />
     <Content Include="Content\login.css" />
@@ -298,6 +299,7 @@
     <Content Include="Images\login.jpg" />
     <Content Include="Images\reg.jpg" />
     <Content Include="Plugins\fonts\sprite.svg" />
+    <Content Include="Scripts\account.js" />
     <Content Include="Scripts\site.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <Content Include="Plugins\scripts\jquery.bpopup.min.js" />
@@ -332,6 +334,14 @@
     </Compile>
     <Compile Include="Account\Register.aspx.designer.cs">
       <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Ajax\Models\UserModel.cs" />
+    <Compile Include="Ajax\UserAjax.aspx.cs">
+      <DependentUpon>UserAjax.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Ajax\UserAjax.aspx.designer.cs">
+      <DependentUpon>UserAjax.aspx</DependentUpon>
     </Compile>
     <Compile Include="game\building_in_build.aspx.designer.cs">
       <DependentUpon>building_in_build.aspx</DependentUpon>

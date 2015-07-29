@@ -20,10 +20,10 @@
                     <!-- 正常登录 start -->
                     <div class="mod_box lo_mod_box" data-isshow="0">
                         <div class="lg_item lg_name">
-                            <input maxlength="32" class="pwd_text" name="uname" placeholder="昵称/邮箱/手机号" style="border-color:#CFCFCF; color:#999;" type="text">
+                            <input maxlength="32" class="pwd_text uname" name="uname" placeholder="昵称/邮箱/手机号" style="border-color:#CFCFCF; color:#999;" type="text">
                         </div>
                         <div class="lg_item lg_pass">
-                            <input maxlength="32" class="pwd_text" name="pass" value="" placeholder="密码" style="border-color:#CFCFCF; color:#999;" type="password">
+                            <input maxlength="32" class="pwd_text upassword" name="pass" value="" placeholder="密码" style="border-color:#CFCFCF; color:#999;" type="password">
                         </div>
                     </div>
                     <!-- 正常登录 end -->
@@ -38,7 +38,7 @@
                         <a data-ptp-idx="6" class="findpwd" href="/usersecurity/findpwd">忘记密码？</a>
                     </div>
                     <div class="lg_login clearfix">
-                        <input value="登录" class="sub" type="submit">
+                        <input value="登录" class="sub" id="login" type="button">
                     </div>
                     <div class="lg_reg">
                         <a data-ptp-idx="8" class="regist" href="../Account/Register.aspx">新用户注册</a>
@@ -51,4 +51,13 @@
         <input value="" id="isban" type="hidden">
     </div>
 </div>
+
+     <script src="../Scripts/jquery-1.10.2.min.js"></script>
+    <script src="../Scripts/account.js"></script>
+    <script type="text/javascript">
+
+        $(function () {
+            account.init();
+        });
+    </script>
 </asp:Content>

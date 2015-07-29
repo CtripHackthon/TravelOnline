@@ -10,7 +10,7 @@
         <div class="loginBk">
             <div class="warp">
 
-                <form action="register_do.jsp" id="regform" name="regform" method="post">
+                <form id="regform" name="regform" method="post">
                     <input id="returnback" name="returnback" value="" type="hidden">
                     <input id="shoppingId" name="shoppingId" value="" type="hidden">
                     <input id="skuId" name="skuId" value="" type="hidden">
@@ -22,17 +22,18 @@
                         <div class="loginTitle"><span class="lc1"></span><span class="lcr">已有  账号 ? <a id="reg_link" href="login.jsp">登录</a></span></div>
 
                         <div class="loginzone">
-                           <span class="regtitle">用户名:</span> <span><input type="text" /></span>
+                            <span class="regtitle">用户名:</span> <span>
+                                <input id="username" type="text" /></span>
                         </div>
 
                         <div class="loginzone">
-                           <span class="regtitle"> 密码:</span><span><input type="password" /></span>
+                            <span class="regtitle">密码:</span><span><input id="password" type="password" /></span>
                         </div>
                         <div class="loginzone">
-                             <span class="regtitle">邮箱:</span><span><input type="text" /></span>
+                            <span class="regtitle">邮箱:</span><span><input id="mail" type="text" /></span>
                         </div>
                         <div class="loginzone">
-                             <span class="regtitle">验证码:</span><span><input type="password" /></span>
+                            <span class="regtitle">验证码:</span><span><input type="password" /></span>
 
                         </div>
 
@@ -40,11 +41,20 @@
                             <span class="label">&nbsp;</span>
                             <input type="button" class="btn-img btn-regist" id="registsubmit" value="立即注册" tabindex="8" clstag="regist|keycount|personalreg|07" onclick="reg();">
                         </div>
-                        </div>
+                    </div>
                 </form>
 
 
             </div>
         </div>
     </body>
+
+    <script src="../Scripts/jquery-1.10.2.min.js"></script>
+    <script src="../Scripts/account.js"></script>
+    <script type="text/javascript">
+        
+        $(function () {
+            account.init();
+        });
+    </script>
 </asp:Content>
