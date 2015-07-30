@@ -1,0 +1,172 @@
+﻿body {
+     height: 100%;
+    margin: 0;
+    padding: 0;
+        font-family: "Open Sans",Arial,"Hiragino Sans GB","Microsoft YaHei","微软雅黑","STHeiti","WenQuanYi Micro Hei",SimSun,sans-serif;
+    background-color: #fff;
+    color: rgba(0,0,0,0.8);
+    font-size: 100%;
+    padding-top: 60px;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    line-height: 1.5;
+    word-wrap: break-word;
+    margin: 0;
+    display: block;
+
+}
+
+
+.wrapper {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+#report-list {
+  list-style: none;
+  margin: 0 auto;
+  height: 450px;
+  padding: 10px;
+}
+    #report-list li {
+          line-height: 20px;
+    }
+
+    #artcle-information-board {
+  padding: 0px 5px;
+}
+    .article-title-text {
+        height:30px;
+  width: 400px;
+  margin-top:10px;
+}
+    .hide {
+  display: none;
+}
+    #artcle-information-board .a:nth-child(2n+1) {
+  padding-top: 19px;
+}
+    .article-description-text {
+  width: 400px;
+}
+
+
+
+    .selectPictureWin {
+    max-height: 570px;
+    width: 1000px;
+    padding: 50px 50px;
+    background-color: #FFF;
+}
+.tab {
+    width: 100%;
+}
+
+.tab_menu {
+    clear: both;
+}
+
+    .tab_menu li {
+        float: left;
+        text-align: center;
+        cursor: pointer;
+        list-style: none;
+        padding: 1px 6px;
+        margin-right: 4px;
+        background: #F1F1F1;
+        border: 1px solid #898989;
+        border-bottom: none;
+        width: 95px;
+        height: 36px;
+        vertical-align: central;
+    }
+
+        .tab_menu li.hover {
+            background: #3fa7cb;
+        }
+
+        .tab_menu li.selected {
+            color: white;
+            font-weight: bold;
+            background: #3fa7cb;
+        }
+
+
+
+
+.tab_box {
+    clear: both;
+    width: 100%;
+    border-bottom: 1px solid #898989;
+    border-top: 1px solid #898989;
+    height: 482px;
+}
+
+
+.hide {
+    display: none;
+}
+
+
+
+
+.actionArea {
+    float: right;
+    height: 50px;
+}
+
+.okBt {
+    margin: 10px;
+    background-color: #3fa7cb;
+    color: black;
+    font-size: 16px;
+    outline: none;
+    float: left;
+    width: 95px;
+    height: 36px;
+}
+
+    .okBt:hover {
+        color: white;
+        font-weight: bold;
+        cursor: pointer;
+        background-color: darkblue;
+    }
+
+
+
+.resetBt2 {
+    margin: 10px;
+    background-color: #3fa7cb;
+    color: black;
+    font-size: 16px;
+    outline: none;
+    float: left;
+    width: 95px;
+    height: 36px;
+}
+
+    .resetBt2:hover {
+        color: white;
+        font-weight: bold;
+        cursor: pointer;
+        background-color: darkblue;
+    }
+
+.resetBt {
+    margin: 10px;
+    background-color: #3fa7cb;
+    color: black;
+    font-size: 16px;
+    outline: none;
+    float: left;
+    width: 95px;
+    height: 36px;
+}
+
+    .resetBt:hover {
+        color: white;
+        font-weight: bold;
+        cursor: pointer;
+        background-color: darkblue;
+    }

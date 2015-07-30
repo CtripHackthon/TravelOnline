@@ -9,22 +9,12 @@
     <link href="../Content/personal.css" rel="stylesheet" />
     <link href="../Plugins/css/metro-bootstrap.css" rel="stylesheet" />
 
-    <body>
+    <body class="metro">
         <div class="wrapper">
 
             <div class="header">
                 <div class="metro2">
-                    <div class="left">
-                        <div class="description">
-                            <div id="oldUserPhoto">
-                                <%--<asp:Image CssClass="owner-image" runat="server" ID="owner_image_id" />--%>
-                                <span class="edit_pic">
-                                    <a href="ProfileEdit.aspx" style="color: white; text-decoration: none">修改头像</a>
-                                </span>
-                            </div>
-                            <asp:HyperLink CssClass="" runat="server" ID="owner_name_id" NavigateUrl="#"></asp:HyperLink>
-                        </div>
-                    </div>
+                    
                     <div class="right">
                         <div class="slider">
                             <div class="container">
@@ -58,10 +48,124 @@
         </div>
     </body>
     <script src="../Scripts/jquery-1.10.2.min.js"></script>
+    <script src="../Scripts/site.js"></script>
+    <script src="../Plugins/scripts/jquery.showLoading.js"></script>
+    <script src="../Plugins/scripts/jquery/jquery.cookie.js"></script>
     <script src="../Scripts/personal.js"></script>
+    <script src="../Plugins/scripts/load-metro.js"></script>
+    <script src="../Plugins/scripts/jquery.bpopup.min.js"></script>
+
+    <!--Metro script-->
+    <script src="../Plugins/scripts/jquery/jquery.widget.min.js"></script>
+    <script src="../Plugins/scripts/jquery/jquery.easing.1.3.min.js"></script>
+    <script src="../Scripts/docs.js"></script>
+    <script src="../Plugins/scripts/metro/metro-loader.js"></script>
+    <script src="../Plugins/scripts/metro.min.js"></script>
     <script type="text/javascript">
+
+        (function (URP, $, undefined) {
+
+            URP.ReportsGet = new function () {
+                var Site = null;
+                this.SiteGet = function () {
+                    URP.criteria.SiteType = 'myreport';
+
+                    var criteriaString = $.cookie('criteriaString');
+                    if (criteriaString != null) {
+                        var criteriaObj = $.parseJSON(criteriaString);
+                        if (criteriaObj.SiteType == 'myreport') {
+                            URP.criteria = criteriaObj;
+                            URP.criteria.CurrentPage = 0;
+                            $.removeCookie('criteriaString');
+                        }
+                    }
+
+                    URP.util.GetSite($('.header'), getSiteCallBack);
+                };
+                function getSiteCallBack(result) {
+                    var final = [];
+                    Site = result;
+                    $.each(result, function (index, content) {
+                        var str = "";
+
+                        var imageZone = "";
+                        imageZone += "<div class='container'>" +
+                        "  <div class='tile double live' data-role='live-tile' effect='slideLeft'>" +
+                        " <div class='tile-content image'>" +
+                            "<img src='../Images/person/1.jpg' />" +
+                        "</div>" +
+                        "<div class='tile-content image'>" +
+                            "<img src='../Images/person/2.jpg' />" +
+                        "</div>" +
+                        "<div class='tile-content image'>" +
+                            "<img src='../Images/person/3.jpg' />" +
+                        "</div>" +
+                        "<div class='tile-content image'>" +
+                            "<img src='../Images/person/4.jpg' />" +
+                        "</div>" +
+                        "<div class='tile-content image'>" +
+                            "<img src='../Images/person/5.jpg' />" +
+                        "</div>" +
+                        "<div class='tile-status bg-dark opacity'>" +
+                            "<span class='label'>";
+
+                        if (URP.criteria.TileId != 0) {
+                            // Show the default selected tile
+                            if (URP.criteria.TileId == content.Id) {
+                                str += "<dl class='tile-selected' id='" + content.Id + "' tabindex=0><dt>" + content.ReportCount + '</dt><dd>' + content.TileName + '<dd></dl>';
+                                //$('<dl class="tile tile-selected" id="' + content.Id + '" tabindex="0"><dt>' + content.ReportCount + '</dt><dd>' + content.TileName + '</dd></dl>').appendTo($('.tile-status')).appendTo($('.tileRow1'));
+                            }
+                            else {
+                                str += "<dl class='' id='" + content.Id + "' tabindex=0><dt>" + content.ReportCount + '</dt><dd>' + content.TileName + '<dd></dl>';
+                            }
+                        }
+
+                        else {
+                            if (content.Id == 1) {
+                                str += '<dl class="tile-selected" id="' + content.Id + '" tabindex="0"><dt>' + content.ReportCount + '</dt><dd>' + content.TileName + '</dd></dl>';
+                            }
+                            else {
+                                str += '<dl class="" id="' + content.Id + '" tabindex="0"><dt>' + content.ReportCount + '</dt><dd>' + content.TileName + '</dd></dl>';
+                            }
+                        }
+                        str += "</span>";
+
+                        str += "</div></div></div></div>";
+
+                        $('.tileRow1').append(imageZone + str);
+                    });
+
+                    $('.metro2').show();
+                    $('.tile').click(
+                        function (e) {
+                            if ($(this).find('dl').hasClass("tile-selected")) {
+                                return;
+                            }
+                            else {
+                                $('.container dl').removeClass("tile-selected");
+                                $(this).find('dl').addClass("tile-selected");
+                            }
+                            OnTileSelected();
+                        }
+                        );
+                    OnTileSelected();
+                }
+                function OnTileSelected() {
+                    // update the report category text
+                    $(".reportCategory").html($(".tile-selected").find("dd").html() + "( " + $(".tile-selected").find("dt").html() + " )");
+                    var tileId = 2;
+                    URP.criteria.TileId = tileId;
+                    //load the filter controls 
+                    URP.Report.getReport(false);
+                    URP.Filter.getFilter(tileId);
+                }
+            };
+})(window.URP = window.URP || {}, $, undefined);
         $(function () {
-            person.init();
+            URP.criteria.TileId = 2;
+
+            URP.ReportsGet.SiteGet();
+            URP.initiate();
         });
     </script>
 </asp:Content>

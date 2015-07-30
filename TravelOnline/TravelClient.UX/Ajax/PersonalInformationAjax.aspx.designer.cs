@@ -7,9 +7,9 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace TravelClient.UX.Account {
+namespace TravelClient.UX.Ajax {
     
     
-    public partial class PersonalBoard {
+    public partial class PersonalInformationAjax {
     }
 }
