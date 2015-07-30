@@ -50,10 +50,16 @@
   width: 400px;
 }
 
-
+    .addPicBt {
+    margin-top: 218px;
+    margin-left: 346px;
+}
+.secondAddPicBt {
+    display: none;
+}
 
     .selectPictureWin {
-    max-height: 570px;
+    max-height: 670px;
     width: 1000px;
     padding: 50px 50px;
     background-color: #FFF;
@@ -108,7 +114,12 @@
 }
 
 
-
+.pic-desc {
+    color: #999;
+    position: absolute;
+    top: 353px;
+    left: 280px;
+}
 
 .actionArea {
     float: right;
