@@ -7,10 +7,103 @@
     <title></title>
     <link rel="stylesheet" href="http://s1.lvjs.com.cn/min/index.php?f=/styles/v6/header_new.css,/styles/v6/index_new.css" />
     <link rel="stylesheet" href="http://pic.lvmama.com/js/ui/lvmamaUI/css/jquery.common.css" />
-
+    <link href="../Content/productlist.css" rel="stylesheet" />
 </head>
     
     <body class="home" allyes_city="SH">
+        <div id="top-header" class="header2 header-show">
+        <div class="container clearfix">
+            <div class="logo-wrap">
+                <a href="../Index.aspx" class="logo">
+                    <img src="http://pic.c-ctrip.com/common/c_logo2013.png"></a>
+                <span class="des"><span>穷游路上... 且行且珍惜</span></span>
+            </div>
+            <a href="javascript:;" class="btn-menu icon-menu"></a>
+            <div class="global-nav">
+                <ul class="main-menu">
+                    <li>
+                        <a href="../index.aspx">家园</a></li>
+                    <li class="dropdown nav-dropdown">
+                        <a class="has-drop-menu" href="javascript:;">个性旅途</a>
+                        <ul class="dropdown-menu">
+                            <div class="sort channel clearfix">
+                                <p class="title">分类</p>
+                                <ul>
+                                    <li id="menu-item-42026" class="menu-item"><a href="http://www.pingwest.com/category/figure/">人物</a></li>
+                                </ul>
+                            </div>
+                            <div class="tags channel clearfix">
+                                <p class="title">标签</p>
+                                <ul>
+                                    <li><a href="/hot-tags/airbnb/">Airbnb</a></li>
+                                    <li><a href="/hot-tags/xiaomi/">小米</a></li>
+                                    <li><a href="/hot-tags/tesla/">Tesla</a></li>
+                                    <li><a href="/hot-tags/uber/">Uber</a></li>
+                                    <li><a href="/hot-tags/weixin/">微信</a></li>
+                                    <li><a href="/tags/">更多</a></li>
+                                </ul>
+                            </div>
+                        </ul>
+                    </li>
+                    <li class="dropdown nav-dropdown">
+                        <a class="has-drop-menu" href="javascript:;">召集令</a>
+                        <ul class="dropdown-menu nav-events">
+                            <li class="nav-events-item">
+                                <b><a target="_blank" href="http://www.pingwest.com/market/screen-salon/">PingWest品玩 沙龙：小屏幕 の 新看法</a></b>
+                                <p class="meta">
+                                    <span class="time">6月26日</span>
+                                </p>
+                                <span class="status">已结束</span>
+                            </li>
+                            <li class="nav-events-item">
+                                <b><a target="_blank" href="http://events.pingwest.com/nlvc-lighting-2/">北极光创投 Lighting 第二期：企业级服务的黄金五年</a></b>
+                                <p class="meta">
+                                    <span class="time">6月11日</span>
+                                </p>
+                                <span class="status">已结束</span>
+                            </li>
+                            <li class="nav-events-item">
+                                <b><a target="_blank" href="http://events.pingwest.com/sequoia_capital/">红杉大讲堂第二季——从实验室到日常消费，智能硬件该如何落地</a></b>
+                                <p class="meta">
+                                    <span class="time">5月17日</span>
+                                </p>
+                                <span class="status">已结束</span>
+                            </li>
+                            <li class="nav-events-item">
+                                <b><a target="_blank" href="http://events.pingwest.com/nlvc-lighting-1/">北极光创投 Lighting 2015第一期 ：新航海时代—中国互联网全球化之路</a></b>
+                                <p class="meta">
+                                    <span class="time">4月3日</span>
+                                </p>
+                                <span class="status">已结束</span>
+                            </li>
+
+                            <div class="more-events">
+                                <a target="_blank" href="http://events.pingwest.com">更多活动<i class="icon-more"></i></a>
+                            </div>
+                        </ul>
+                    </li>
+                    <li><a href="../game/index_game.aspx">喵星探险</a></li>
+                  
+                    <!-- <li class="nav-en"><a href="http://en.pingwest.com/" target="_blank">ENGLISH</a></li> -->
+
+                </ul>
+
+            </div>
+            <div class="right-bar">
+                <ul>
+                    <li class="li-after">
+                        <a href="../Account/Login.aspx" class="login">登录</a>
+                    </li>
+                     <li style="padding-left:10px">
+                        <a href="../Account/Register.aspx" class="login">注册</a>
+                    </li>
+                </ul>
+            </div>
+
+
+
+        </div>
+    </div>
         <div class="lv-ban">
             <div class="lv-ban-wrap">
 
@@ -28,53 +121,8 @@
 <!-- 景点门票开始 -->
 	<div class="public-box clearfix count-first" data-count-first="景点门票">
 <div class="public-tit">
-    	    <h3 class="fl"><strong>景点门票</strong><span>安全保障，安心出游</span></h3>
-    	    <ul class="JS_public public-sub">
-    	         	    		<li class="active" paramdatasearchname="上海" paramdatacode="Ticket_HotPlace_Tab1" paramid="tab1" parenttype="picTicket">
-	    	    			上海<em class="icon-v7 icon-v7-sub"></em>
-    	    		</li>
-    	    	
-    	    		<li paramdatasearchname="浙江" paramdatacode="Ticket_HotPlace_Tab2" paramid="tab2" parenttype="picTicket">
-	    	    			浙江<em class="icon-v7 icon-v7-sub"></em>
-    	    		</li>
-    	    	
-    	    		<li paramdatasearchname="江苏" paramdatacode="Ticket_HotPlace_Tab3" paramid="tab3" parenttype="picTicket">
-	    	    			江苏<em class="icon-v7 icon-v7-sub"></em>
-    	    		</li>
-    	    	
-    	    		<li paramdatasearchname="安徽" paramdatacode="Ticket_HotPlace_Tab4" paramid="tab4" parenttype="picTicket">
-	    	    			安徽<em class="icon-v7 icon-v7-sub"></em>
-    	    		</li>
-    	    	
-    	    		<li paramdatasearchname="江西" paramdatacode="Ticket_HotPlace_Tab5" paramid="tab5" parenttype="picTicket">
-	    	    			江西<em class="icon-v7 icon-v7-sub"></em>
-    	    		</li>
-    	    	
-    	    		<li paramdatasearchname="福建" paramdatacode="Ticket_HotPlace_Tab6" paramid="tab6" parenttype="picTicket">
-	    	    			福建<em class="icon-v7 icon-v7-sub"></em>
-    	    		</li>
-    	    	
-    	    		<li paramdatasearchname="河南" paramdatacode="Ticket_HotPlace_Tab7" paramid="tab7" parenttype="picTicket">
-	    	    			河南<em class="icon-v7 icon-v7-sub"></em>
-    	    		</li>
-    	    	
-    	    		<li paramdatasearchname="湖北" paramdatacode="Ticket_HotPlace_Tab8" paramid="tab8" parenttype="picTicket">
-	    	    			湖北<em class="icon-v7 icon-v7-sub"></em>
-    	    		</li>
-    	    	
-    	    		<li paramdatasearchname="陕西" paramdatacode="Ticket_HotPlace_Tab9" paramid="tab9" parenttype="picTicket">
-	    	    			陕西<em class="icon-v7 icon-v7-sub"></em>
-    	    		</li>
-    	    	
-    	    		<li paramdatasearchname="三亚" paramdatacode="Ticket_HotPlace_Tab11" paramid="tab10" parenttype="picTicket">
-	    	    			三亚<em class="icon-v7 icon-v7-sub"></em>
-    	    		</li>
-    	    	
-    	    		<li paramdatasearchname="手机专享" paramdatacode="Ticket_HotPlace_wxzx" paramid="tab11" parenttype="picTicket">
-	    	    			<i class="icon-v7 icon-v7-mobile"></i>手机专享<em class="icon-v7 icon-v7-sub"></em>
-    	    		</li>
-    	    	
-			</ul>
+    	    <h3 class="fl"><strong>景点门票</strong></h3>
+    	    
     	    <a class="public-tit-more fr" href="http://ticket.lvmama.com" target="_blank">更多景点门票<i class="icon-v7 icon-v7-more"></i></a>
     	</div>
 		<div class="ticket-box clearfix">
@@ -748,10 +796,18 @@
 <!-- 公用js--> 
 <script src="//hm.baidu.com/hm.js?cb09ebb4692b521604e77f4bf0a61013"></script>
             <script src="http://pic.lvmama.com/stacac/ga.js" async="" type="text/javascript"></script>
-            <script src="http://s1.lvjs.com.cn/min/index.php?f=/js/new_v/jquery-1.7.2.min.js,/js/ui/lvmamaUI/lvmamaUI.js,/js/v6/haoye/home/home_v1.js,/js/v6/header_new.js,/js/v6/public/searchComplete.js,/js/v6/edm_index.js,/js/v6/index_new.js"></script>
-
-            <script src="../Scripts/home.js"></script>
+           
 
 </div>
+        <script src="../Scripts/jquery-1.10.2.min.js"></script>
+        <script src="../Scripts/test.js"></script>
+        <script src="../Scripts/site.js"></script>
+        <script type="text/javascript">
+         
+
+            $(function () {
+                site.init();
+            });
+        </script>
     </body>
 </html>
