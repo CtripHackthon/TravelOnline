@@ -74,6 +74,7 @@
     <Content Include="Content\login.css" />
     <Content Include="Content\newpost.css" />
     <Content Include="Content\personal.css" />
+    <Content Include="Content\productlist.css" />
     <Content Include="Content\products.css" />
     <Content Include="Content\register.css" />
     <Content Include="Content\Site.css" />
@@ -365,6 +366,8 @@
     <Content Include="Posts\NewPost.aspx" />
     <Content Include="Posts\Utility\wangEditor_uploadImg_assist.html" />
     <Content Include="Product\ProductList.aspx" />
+    <Content Include="Product\Products.aspx" />
+    <Content Include="Product\ProductsList.aspx" />
     <Content Include="Scripts\account.js" />
     <Content Include="Scripts\docs.js" />
     <Content Include="Scripts\personal.js" />
@@ -541,6 +544,20 @@
     </Compile>
     <Compile Include="Product\ProductList.aspx.designer.cs">
       <DependentUpon>ProductList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Product\Products.aspx.cs">
+      <DependentUpon>Products.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Product\Products.aspx.designer.cs">
+      <DependentUpon>Products.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Product\ProductsList.aspx.cs">
+      <DependentUpon>ProductsList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Product\ProductsList.aspx.designer.cs">
+      <DependentUpon>ProductsList.aspx</DependentUpon>
     </Compile>
     <Compile Include="utils\checkbuildingstate.cs" />
     <Compile Include="utils\buildinginfo.cs" />
