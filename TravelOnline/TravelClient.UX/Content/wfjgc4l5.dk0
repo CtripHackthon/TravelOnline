@@ -1,0 +1,29 @@
+﻿body {
+}
+.wrapper {
+    padding-top:50px;
+    margin: 0 auto;
+}
+.top {
+    width: 1200px;
+    margin: 0 auto;
+    height:150px;
+    border: 1px;
+}
+.main-zone {
+    width: 1200px;
+    margin: 0 auto;
+}
+.top-show {
+    background-color:antiquewhite;
+    width:1200px; 
+    height:350px;
+    margin: 0 auto;
+}
+.product-list {
+    width:1200px; 
+    margin: 0 auto;
+    background-color:ActiveCaption;
+    height:800px;
+
+}

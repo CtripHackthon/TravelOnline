@@ -1,0 +1,64 @@
+﻿body {
+}
+ul li {
+    list-style:none;
+    float:left;
+}
+.top-show li {
+    padding:20px;
+    cursor:pointer;
+}
+    .top-show li:hover {
+        zoom:1.5;
+        border: 3px groove;
+        background-color:rgb(255, 216, 0)
+    }
+.wrapper {
+    padding-top:50px;
+    margin: 0 auto;
+}
+.top {
+    width: 1200px;
+    margin: 0 auto;
+    height:150px;
+    background-color:rgb(255, 255, 255);
+    border-bottom: groove 1px;
+}
+.main-zone {
+    width: 1200px;
+    margin: 0 auto;
+    padding-top:10px;
+}
+.top-show {
+    width:1000px; 
+    height:150px;
+    margin: 0 auto;
+}
+.product-list {
+    width:1200px; 
+    margin: 0 auto;
+    height:800px;
+}
+svg {
+    height:50px;
+    width:50px;
+    color:red;
+}
+
+.product-list li {
+    padding: 15px;
+}
+
+
+    .product-list li div {
+        height: 150px;
+        width: 150px;
+    }
+.item {
+    height:120px;
+    width: 150px;
+}
+.item-desc {
+    height:20px;
+    width: 150px;
+}

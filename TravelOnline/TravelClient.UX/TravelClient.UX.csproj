@@ -74,6 +74,7 @@
     <Content Include="Content\login.css" />
     <Content Include="Content\newpost.css" />
     <Content Include="Content\personal.css" />
+    <Content Include="Content\products.css" />
     <Content Include="Content\register.css" />
     <Content Include="Content\Site.css" />
     <Content Include="Content\themes\base\jquery-ui.css" />
@@ -363,6 +364,7 @@
     <Content Include="Plugins\scripts\wangEditor-1.3.js" />
     <Content Include="Posts\NewPost.aspx" />
     <Content Include="Posts\Utility\wangEditor_uploadImg_assist.html" />
+    <Content Include="Product\ProductList.aspx" />
     <Content Include="Scripts\account.js" />
     <Content Include="Scripts\docs.js" />
     <Content Include="Scripts\personal.js" />
@@ -532,6 +534,13 @@
     </Compile>
     <Compile Include="Posts\Utility\data.ashx.cs">
       <DependentUpon>data.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Product\ProductList.aspx.cs">
+      <DependentUpon>ProductList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Product\ProductList.aspx.designer.cs">
+      <DependentUpon>ProductList.aspx</DependentUpon>
     </Compile>
     <Compile Include="utils\checkbuildingstate.cs" />
     <Compile Include="utils\buildinginfo.cs" />

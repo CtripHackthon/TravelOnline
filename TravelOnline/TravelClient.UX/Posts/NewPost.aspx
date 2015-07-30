@@ -170,6 +170,7 @@
                     var str = '';
                     if ($('#loadFileBt').val() != '') {
                         var file = $('#loadFileBt').prop('files');
+                        alert(file.length);
                         var alertBool = false;
                         if (file[0].type.toLowerCase().indexOf('gif') > 0) {
                             // GIF file max is 3M
@@ -202,7 +203,6 @@
                 });
                 function UploadImage(pictureData, loadingArea, callBack) {
                     var baseUrl = GetBaseUrl();
-                    alert('sending jquery request');
                     $.ajax({
                         url: baseUrl + "?queryType=addPicture",
                         type: "POST",
