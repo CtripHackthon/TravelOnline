@@ -1,5 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ProductsList.aspx.cs" Inherits="TravelClient.UX.Product.ProductsList" %>
-
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Home.aspx.cs" Inherits="TravelClient.UX.Home" %>
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -17,7 +16,7 @@
             <div class="logo-wrap">
                 <a href="../Index.aspx" class="logo">
                     <img src="http://pic.c-ctrip.com/common/c_logo2013.png"></a>
-                <span class="des"><span>穷游路上... 且行且珍惜</span></span>
+                <span class="des"><span style="font-weight:bold">穷游路上... 且行且珍惜</span></span>
             </div>
             <a href="javascript:;" class="btn-menu icon-menu"></a>
             <div class="global-nav">
@@ -804,7 +803,7 @@
         <script src="../Scripts/test.js"></script>
         <script src="../Scripts/site.js"></script>
         <script type="text/javascript">
-         
+
 
             $(function () {
                 site.init();

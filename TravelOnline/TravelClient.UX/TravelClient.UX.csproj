@@ -74,7 +74,6 @@
     <Content Include="Content\login.css" />
     <Content Include="Content\newpost.css" />
     <Content Include="Content\personal.css" />
-    <Content Include="Content\productlist.css" />
     <Content Include="Content\products.css" />
     <Content Include="Content\register.css" />
     <Content Include="Content\Site.css" />
@@ -303,6 +302,8 @@
     <Content Include="game\store_update.aspx" />
     <Content Include="game\welcome.aspx" />
     <Content Include="Global.asax" />
+    <Content Include="Home.aspx" />
+    <Content Include="Images\1.png" />
     <Content Include="Images\add-pic.png" />
     <Content Include="Images\add2.png" />
     <Content Include="Images\loading40.gif" />
@@ -314,6 +315,8 @@
     <Content Include="Images\person\5.jpg" />
     <Content Include="Images\reg.jpg" />
     <Content Include="Plugins\css\fonts\icomoon.svg" />
+    <Content Include="Plugins\css\lvmm1.css" />
+    <Content Include="Plugins\css\lvmm2.css" />
     <Content Include="Plugins\css\metro-bootstrap.css" />
     <Content Include="Plugins\css\wangEditor-1.3.css" />
     <Content Include="Plugins\fonts\sprite.svg" />
@@ -364,9 +367,8 @@
     <Content Include="Plugins\scripts\metro\metro-wizard.js" />
     <Content Include="Plugins\scripts\wangEditor-1.3.js" />
     <Content Include="Posts\NewPost.aspx" />
+    <Content Include="Posts\PostDetail.aspx" />
     <Content Include="Posts\Utility\wangEditor_uploadImg_assist.html" />
-    <Content Include="Product\ProductList.aspx" />
-    <Content Include="Product\Products.aspx" />
     <Content Include="Product\ProductsList.aspx" />
     <Content Include="Scripts\account.js" />
     <Content Include="Scripts\docs.js" />
@@ -529,6 +531,13 @@
     <Compile Include="game\welcome.aspx.designer.cs">
       <DependentUpon>welcome.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Posts\NewPost.aspx.cs">
       <DependentUpon>NewPost.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -536,22 +545,15 @@
     <Compile Include="Posts\NewPost.aspx.designer.cs">
       <DependentUpon>NewPost.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Posts\PostDetail.aspx.cs">
+      <DependentUpon>PostDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Posts\PostDetail.aspx.designer.cs">
+      <DependentUpon>PostDetail.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Posts\Utility\data.ashx.cs">
       <DependentUpon>data.ashx</DependentUpon>
-    </Compile>
-    <Compile Include="Product\ProductList.aspx.cs">
-      <DependentUpon>ProductList.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Product\ProductList.aspx.designer.cs">
-      <DependentUpon>ProductList.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Product\Products.aspx.cs">
-      <DependentUpon>Products.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Product\Products.aspx.designer.cs">
-      <DependentUpon>Products.aspx</DependentUpon>
     </Compile>
     <Compile Include="Product\ProductsList.aspx.cs">
       <DependentUpon>ProductsList.aspx</DependentUpon>
