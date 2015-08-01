@@ -9,18 +9,19 @@ namespace DataModel
     {
         //用户注册 -- UserRegist
         //todo: 同名的username可以添加
-        public static void saveUser(user u)
+        public static int saveUser(user u)
         {
             using (var ctx = new hackthonEntities())
             {
                 if (u.credits == null) u.credits = 0; //虽然db中默认值为0，但是添加新行还是为空；
                 ctx.AddTousers(u);
                 ctx.SaveChanges();
+                return u.userID;
             }
         }
 
         //用户登录 -- UserLogin
-        //登陆失败返回-1，登陆成功返回用户的身份: 
+        //登陆失败返回-1，登陆成功返回用户的id: 
         public static int? getIdentity(string userName, string password)
         {
             IQueryable<user> results; int? identity;
@@ -28,7 +29,7 @@ namespace DataModel
             {
                    results  = ctx.users.Where(c => c.userName ==userName && c.password ==password);
                    if (results != null)
-                       identity = results.First().identity;
+                       identity = results.First().userID;
                    else
                        identity = -1;
                    return identity;
