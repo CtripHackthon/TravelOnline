@@ -9,6 +9,9 @@ namespace TravelService.Model.ServiceModel
     public class GetTravelDiariesListRequest
     {
         public long userId { get; set; }
+
+        public long diaryId { get; set; }
+
         public DateTime startTime { get; set; }
 
         public DateTime endTime { get; set; }
