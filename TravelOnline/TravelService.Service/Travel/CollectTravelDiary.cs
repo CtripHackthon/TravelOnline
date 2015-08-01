@@ -28,6 +28,10 @@ namespace TravelService.Service.Travel
                 response.returnCode = -1;
                 return;
             }
+
+            string sqlStr = "select * from category";
+
+
             response.returnCode = 0;
         }
     }
