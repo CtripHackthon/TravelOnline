@@ -37,11 +37,9 @@ namespace TravelService.Service.Common
             u.phone = serviceRequest.userinfo.phone;
             u.userName = serviceRequest.userinfo.username;
             
-            User.saveUser(u);
-
             RegistUserResponse serviceResponse = new RegistUserResponse();
-            serviceResponse.userId = 9;
-
+            serviceResponse.userId = User.saveUser(u);
+         
             response.responseObj = serviceResponse;
             response.returnCode = 0;
             return;

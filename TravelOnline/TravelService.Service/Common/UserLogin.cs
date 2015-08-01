@@ -32,13 +32,22 @@ namespace TravelService.Service.Common
             }
 
             user u = new user();
+            int? id = (int)User.getIdentity(serviceRequest.username, serviceRequest.password);
 
+            if (id > 0)
+            {
+                UserLoginResponse serviceResponse = new UserLoginResponse();
+                serviceResponse.userId = (long)id;
+                response.responseObj = serviceResponse;
+                response.returnCode = 0;
 
-            UserLoginResponse serviceResponse = new UserLoginResponse();
-            serviceResponse.userId = 0;
-            response.responseObj = serviceResponse;
-            response.returnCode = 0;
-
+            }
+            else 
+            {
+                response.returnCode = -1;
+                response.errMessage = "password err";
+            }
+            
             return;
         }
     }
