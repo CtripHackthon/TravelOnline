@@ -90,7 +90,6 @@
                <li class="ab"><b>分类:</b></li>
                     <li >
                         <select class="category">
-                            <option>1</option>
                         </select>
                     </li>
 

@@ -211,7 +211,7 @@
                     title: $('.article-title-text').val(),
                     content: $('#editor1').val(),
                     tags: articleTags,
-                    belongCategory: {categoryId: 1}
+                    belongCategory: {categoryId: 1, categoryName:}
                 };
             });
 
