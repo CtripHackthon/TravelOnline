@@ -2,3 +2,15 @@ D:\MyGit\TravelOnline\TravelOnline\TravelService.Model\bin\Debug\TravelService.M
 D:\MyGit\TravelOnline\TravelOnline\TravelService.Model\bin\Debug\TravelService.Model.pdb
 D:\MyGit\TravelOnline\TravelOnline\TravelService.Model\obj\Debug\TravelService.Model.dll
 D:\MyGit\TravelOnline\TravelOnline\TravelService.Model\obj\Debug\TravelService.Model.pdb
+<<<<<<< HEAD
+=======
+D:\Framework.Dep\hackason\TravelOnline\TravelOnline\TravelService.Model\bin\Debug\TravelService.Model.dll
+D:\Framework.Dep\hackason\TravelOnline\TravelOnline\TravelService.Model\bin\Debug\TravelService.Model.pdb
+D:\Framework.Dep\hackason\TravelOnline\TravelOnline\TravelService.Model\obj\Debug\TravelService.Model.dll
+D:\Framework.Dep\hackason\TravelOnline\TravelOnline\TravelService.Model\obj\Debug\TravelService.Model.pdb
+D:\Framework.Dep\hackason\r2\TravelOnline\TravelOnline\TravelService.Model\bin\Debug\TravelService.Model.dll
+D:\Framework.Dep\hackason\r2\TravelOnline\TravelOnline\TravelService.Model\bin\Debug\TravelService.Model.pdb
+D:\Framework.Dep\hackason\r2\TravelOnline\TravelOnline\TravelService.Model\obj\Debug\TravelService.Model.csprojResolveAssemblyReference.cache
+D:\Framework.Dep\hackason\r2\TravelOnline\TravelOnline\TravelService.Model\obj\Debug\TravelService.Model.dll
+D:\Framework.Dep\hackason\r2\TravelOnline\TravelOnline\TravelService.Model\obj\Debug\TravelService.Model.pdb
+>>>>>>> fca31331f0ba5d1dd38b2c6cc79d773297927763

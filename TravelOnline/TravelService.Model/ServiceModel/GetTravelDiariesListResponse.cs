@@ -4,10 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+using TravelService.Model.Base.Travel;
+
 namespace TravelService.Model.ServiceModel
 {
-    public class RegistUserResponse
+    public class GetTravelDiariesListResponse
     {
-        public long userId { get; set; }
+        public List<TravelDiarySummary> MyProperty { get; set; }
     }
 }

@@ -4,10 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TravelService.Model.ServiceModel
+namespace TravelService.Model.Base.Common
 {
-    public class RegistUserResponse
+    class TravelComment
     {
-        public long userId { get; set; }
     }
 }
