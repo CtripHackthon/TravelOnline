@@ -58,6 +58,7 @@
     <Compile Include="MySqlConnectionUnitTest.cs" />
     <Compile Include="PublishDiaryUnitTest.cs" />
     <Compile Include="GetCategoryUnitTest.cs" />
+    <Compile Include="CollectTravelDiaryTestMethod.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\TravelService.DataService\TravelService.DataService.csproj">

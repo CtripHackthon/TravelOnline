@@ -32,7 +32,7 @@ namespace TravelService.Service.Travel
                 return;
             }
 
-            string sqlStr = String.Format("select * from diary_collect_info from where userid=%d and diaryid=%d", serviceRequest.userId, serviceRequest.diaryId);
+            string sqlStr = String.Format("select * from diary_collect_info where userid={0} and diaryid={1}", serviceRequest.userId, serviceRequest.diaryId);
             MySqlConnection conn = ConnectionManager.getInstance().getConnection();
 
             conn.Open();
@@ -42,7 +42,7 @@ namespace TravelService.Service.Travel
             mda.Fill(ds, "table1");
             if (ds.Tables["table1"].Rows.Count == 0)
             {
-                sqlStr = String.Format( "insert into diary_collect_info values (%d, %d)", serviceRequest.userId, serviceRequest.diaryId);
+                sqlStr = String.Format("insert into diary_collect_info values ({0}, {1})", serviceRequest.userId, serviceRequest.diaryId);
                 MySqlCommand command = new MySqlCommand();
                 command.CommandText = sqlStr;
                 command.Connection = conn;

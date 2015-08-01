@@ -74,6 +74,8 @@ namespace TravelService.Service.ServiceRepository
             entity = new GetCategory();
             repositoy.storeServiceEntity(service_type.GET_DISPLAY_CATEGORY, entity);
 
+            entity = new CollectTravelDiary();
+            repositoy.storeServiceEntity(service_type.COLLECT_TRAVEL_DIARY, entity);
             return;
         }
 
