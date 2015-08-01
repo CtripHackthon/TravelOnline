@@ -132,8 +132,6 @@
                         loadingArea.showLoading();
                     },
                     error: function (xhr, status, error) {
-                        ST.util.showErrorHints();
-
                         console.log(error);
                     },
                     success: function (result) {
@@ -180,6 +178,24 @@
                     $(fileinput).trigger('click');
                 }
             });
+
+            $('#addnewtag').live('click', function (e) {
+                $('.addtagdiv').bPopup();
+            });
+
+            $('#savetag').live('click', function (e) {
+                // send post to add tag
+
+                // show tags in th list
+                var str = "<li><a class='newtaga'>" + $('#tagname').val() + "</a></li>";
+                $('#addedtags').append(str);
+                $('.addtagdiv').bPopup().close();
+
+            });
+            $('#canceltag').live('click', function (e) {
+                $('.addtagdiv').bPopup().close();
+            });
+
 
     }
 })(window.post = window.post || {}, $, undefined);
