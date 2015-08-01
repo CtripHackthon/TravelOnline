@@ -24,6 +24,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Application.Back.TravelServ
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dataModel", "DataModel\dataModel.csproj", "{70602D6C-60DA-459C-95FE-64385B71293C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TravelService.DataService", "TravelService.DataService\TravelService.DataService.csproj", "{3AFC77D7-1B74-4493-BEE2-AF3595668A63}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -84,6 +86,16 @@ Global
 		{70602D6C-60DA-459C-95FE-64385B71293C}.Release|Mixed Platforms.Build.0 = Release|x86
 		{70602D6C-60DA-459C-95FE-64385B71293C}.Release|x86.ActiveCfg = Release|x86
 		{70602D6C-60DA-459C-95FE-64385B71293C}.Release|x86.Build.0 = Release|x86
+		{3AFC77D7-1B74-4493-BEE2-AF3595668A63}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3AFC77D7-1B74-4493-BEE2-AF3595668A63}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3AFC77D7-1B74-4493-BEE2-AF3595668A63}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{3AFC77D7-1B74-4493-BEE2-AF3595668A63}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{3AFC77D7-1B74-4493-BEE2-AF3595668A63}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{3AFC77D7-1B74-4493-BEE2-AF3595668A63}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3AFC77D7-1B74-4493-BEE2-AF3595668A63}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3AFC77D7-1B74-4493-BEE2-AF3595668A63}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{3AFC77D7-1B74-4493-BEE2-AF3595668A63}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{3AFC77D7-1B74-4493-BEE2-AF3595668A63}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -93,5 +105,6 @@ Global
 		{865654FC-EF83-4848-91B6-A80D88742E79} = {3B0AF77C-1816-4E8B-BEBB-BD0F053B22E8}
 		{707F22E6-23F3-45D7-A11E-FE3B1DEC0A30} = {C583E99C-6071-4535-BF17-CF809A5ACD98}
 		{FCE483F1-BE68-4271-B00E-740012AE02C9} = {C583E99C-6071-4535-BF17-CF809A5ACD98}
+		{3AFC77D7-1B74-4493-BEE2-AF3595668A63} = {C583E99C-6071-4535-BF17-CF809A5ACD98}
 	EndGlobalSection
 EndGlobal
