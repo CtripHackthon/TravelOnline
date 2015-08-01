@@ -24,6 +24,7 @@ namespace TravelClient.UX.Ajax
             {
                 RemovePicture();
             }
+
         }
         private void RemovePicture()
         {

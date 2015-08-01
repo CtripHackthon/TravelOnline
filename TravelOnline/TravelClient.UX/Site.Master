@@ -9,7 +9,9 @@
     <link rel="icon" href="http://webresource.c-ctrip.com/ResUnionOnline/R3/float/pic/log.png" />
     <meta name="viewport" content="width=device-width" />
     <asp:ContentPlaceHolder runat="server" ID="HeadContent" />
+        
     <div id="top-header" class="header2 header-show">
+        <input type="hidden" id="usersession" style="display:none"/>
         <div class="container clearfix">
             <div class="logo-wrap">
                 <a href="../Home.aspx" class="logo">
