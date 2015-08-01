@@ -35,7 +35,6 @@ namespace Application.Back.TravelService.UnitTest
             ServiceResponse response = new ServiceResponse();
             service.process(request, response);
 
-            Assert.IsTrue(9 == ((RegistUserResponse)response.responseObj).userId);
             Assert.AreEqual(0, response.returnCode);
 
         }

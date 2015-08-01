@@ -49,6 +49,7 @@
     <Compile Include="ServiceRepository\ServiceRepository.cs" />
     <Compile Include="Travel\DeleteTravelDiary.cs" />
     <Compile Include="Travel\GetAssociatedProductsInfo.cs" />
+    <Compile Include="Travel\GetDisplayCategories.cs" />
     <Compile Include="Travel\GetTravelComments.cs" />
     <Compile Include="Travel\GetTravelDiariesList.cs" />
     <Compile Include="Travel\GetTravelDiaryDetailInfo.cs" />

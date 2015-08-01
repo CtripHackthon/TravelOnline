@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TravelService.Model.Base.Common;
 
 namespace TravelService.Model.ServiceModel
 {
-    public class PublishTravelDiaryResponse
+    public class GetDisplayCategoriesResponse
     {
-        public long diaryId { get; set; }
+        public List<Category> categories { get; set; }
     }
 }

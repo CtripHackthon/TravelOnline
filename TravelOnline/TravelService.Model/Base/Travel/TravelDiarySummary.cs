@@ -16,11 +16,11 @@ namespace TravelService.Model.Base.Travel
 
         public string diaryPicAddr { get; set; }
 
-        public byte[] diarySummary { get; set; }
+        public string diarySummary { get; set; }
 
         public DateTime publishTime { get; set; }
 
-        public string[] tags { get; set; }
+        public string tags { get; set; }
 
 
     }
