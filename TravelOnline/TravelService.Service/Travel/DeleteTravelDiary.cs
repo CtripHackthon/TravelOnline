@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using DataModel;
 using TravelService.Model;
 using TravelService.Model.ServiceModel;
 using TravelService.Service.Utilities;
@@ -34,6 +35,11 @@ namespace TravelService.Service.Travel
                 String[] diaryIds = serviceRequest.diariesList.Split(',');
                 if (diaryIds.Length > 0)
                 {
+                    int len = diaryIds.Length;
+                    for (int index = 0; index < len; index++ )
+                    {
+                        Diary.DeleteTraveDiary(int.Parse(diaryIds[index]));
+                    }
                     
                 }
             }

@@ -35,7 +35,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MySql.Data, Version=6.9.5.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="System" />
+    <Reference Include="System.Data" />
   </ItemGroup>
   <Choose>
     <When Condition="('$(VisualStudioVersion)' == '10.0' or '$(VisualStudioVersion)' == '') and '$(TargetFrameworkVersion)' == 'v3.5'">
@@ -53,8 +55,14 @@
     <Compile Include="RegistUserUnitTest.cs" />
     <Compile Include="ServiceRepositoryUnitTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="MySqlConnectionUnitTest.cs" />
+    <Compile Include="PublishDiaryUnitTest.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\TravelService.DataService\TravelService.DataService.csproj">
+      <Project>{3afc77d7-1b74-4493-bee2-af3595668a63}</Project>
+      <Name>TravelService.DataService</Name>
+    </ProjectReference>
     <ProjectReference Include="..\TravelService.Model\TravelService.Model.csproj">
       <Project>{707f22e6-23f3-45d7-a11e-fe3b1dec0a30}</Project>
       <Name>TravelService.Model</Name>

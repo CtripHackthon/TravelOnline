@@ -20,5 +20,7 @@ namespace TravelService.Service.Utilities
 
         public const string USER_ID_OR_DIARY_ID_INVALID = "user id or diary invalid";
 
+
+
     }
 }

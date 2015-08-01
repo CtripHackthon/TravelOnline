@@ -8,6 +8,7 @@ namespace TravelService.Model.ServiceModel
 {
     public class GetTravelDiariesListRequest
     {
+        public long userId { get; set; }
         public DateTime startTime { get; set; }
 
         public DateTime endTime { get; set; }
@@ -20,8 +21,9 @@ namespace TravelService.Model.ServiceModel
 
     public enum sort_type
     {
+        NATIVE_FIRST = 0,
         LASTEST_FIRST = 1,
         COMMENT_FIRST = 2,
-
+         
     }
 }

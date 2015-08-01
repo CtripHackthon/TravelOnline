@@ -3,13 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using TravelService.Model.Base.Travel;
 
 namespace TravelService.Model.ServiceModel
 {
-    public class UpdateTravelDiaryRequest
+    public class CollectTravelDiaryResponse
     {
-
-        public TravelDiary diary { set; get; }
     }
 }
