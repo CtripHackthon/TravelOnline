@@ -24,7 +24,12 @@ namespace TravelClient.UX.Ajax
             {
                 Response.Write(LoginUser());
             }
-                
+
+
+            if (Request.Params["queryType"] == "signoff")
+            {
+                Response.Write(signOff());
+            }
         }
 
         private string RegisterNewUser() {
@@ -63,6 +68,11 @@ namespace TravelClient.UX.Ajax
                 return "{\"login\":0}";
             }
 
+        }
+
+        private string signOff() {
+            Session.Remove("UserName");
+            return "";
         }
     }
 }

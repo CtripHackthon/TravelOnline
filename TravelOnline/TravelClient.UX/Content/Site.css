@@ -8,6 +8,13 @@
     box-sizing: border-box;
 }
 
+.hide {
+    display:none !important;
+}
+.signoff {
+    float:left;
+    margin-left:-10px;
+}
 body {
     font-family: "Open Sans",Arial,"Hiragino Sans GB","Microsoft YaHei","微软雅黑","STHeiti","WenQuanYi Micro Hei",SimSun,sans-serif;
     background-color: #fff;
@@ -262,7 +269,6 @@ h5, h6 {
   float: right;
   color: rgba(0,0,0,0.3);
   position: absolute;
-  top: 20px;
   right: 60px;
   background: #fff;
   /* height: 100%; */

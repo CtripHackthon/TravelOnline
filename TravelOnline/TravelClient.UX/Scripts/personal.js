@@ -1,5 +1,103 @@
 ﻿(function (URP, $, undefined) {
     URP.criteria = { TileId: 0, SiteType: 'teamsite', SortAttribute: "Title", SortAscending: true, currentPage: 0, PageSize: 10, FilterEntityList: [] };
+
+    URP.ReportsGet = new function () {
+        var Site = null;
+        this.SiteGet = function () {
+            alert('test');
+            URP.criteria.SiteType = 'myreport';
+
+            var criteriaString = $.cookie('criteriaString');
+            if (criteriaString != null) {
+                var criteriaObj = $.parseJSON(criteriaString);
+                if (criteriaObj.SiteType == 'myreport') {
+                    URP.criteria = criteriaObj;
+                    URP.criteria.CurrentPage = 0;
+                    $.removeCookie('criteriaString');
+                }
+            }
+
+            URP.util.GetSite($('.header'), getSiteCallBack);
+        };
+        function getSiteCallBack(result) {
+            var final = [];
+            Site = result;
+            $.each(result, function (index, content) {
+                var str = "";
+
+                var imageZone = "";
+                imageZone += "<div class='container'>" +
+                "  <div class='tile double live' data-role='live-tile' effect='slideLeft'>" +
+                " <div class='tile-content image'>" +
+                    "<img src='../Images/person/1.jpg' />" +
+                "</div>" +
+                "<div class='tile-content image'>" +
+                    "<img src='../Images/person/2.jpg' />" +
+                "</div>" +
+                "<div class='tile-content image'>" +
+                    "<img src='../Images/person/3.jpg' />" +
+                "</div>" +
+                "<div class='tile-content image'>" +
+                    "<img src='../Images/person/4.jpg' />" +
+                "</div>" +
+                "<div class='tile-content image'>" +
+                    "<img src='../Images/person/5.jpg' />" +
+                "</div>" +
+                "<div class='tile-status bg-dark opacity'>" +
+                    "<span class='label'>";
+
+                if (URP.criteria.TileId != 0) {
+                    // Show the default selected tile
+                    if (URP.criteria.TileId == content.Id) {
+                        str += "<dl class='tile-selected' id='" + content.Id + "' tabindex=0><dt>" + content.ReportCount + '</dt><dd>' + content.TileName + '<dd></dl>';
+                        //$('<dl class="tile tile-selected" id="' + content.Id + '" tabindex="0"><dt>' + content.ReportCount + '</dt><dd>' + content.TileName + '</dd></dl>').appendTo($('.tile-status')).appendTo($('.tileRow1'));
+                    }
+                    else {
+                        str += "<dl class='' id='" + content.Id + "' tabindex=0><dt>" + content.ReportCount + '</dt><dd>' + content.TileName + '<dd></dl>';
+                    }
+                }
+
+                else {
+                    if (content.Id == 1) {
+                        str += '<dl class="tile-selected" id="' + content.Id + '" tabindex="0"><dt>' + content.ReportCount + '</dt><dd>' + content.TileName + '</dd></dl>';
+                    }
+                    else {
+                        str += '<dl class="" id="' + content.Id + '" tabindex="0"><dt>' + content.ReportCount + '</dt><dd>' + content.TileName + '</dd></dl>';
+                    }
+                }
+                str += "</span>";
+
+                str += "</div></div></div></div>";
+
+                $('.tileRow1').append(imageZone + str);
+            });
+
+            $('.metro2').show();
+            $('.tile').click(
+                function (e) {
+                    if ($(this).find('dl').hasClass("tile-selected")) {
+                        return;
+                    }
+                    else {
+                        $('.container dl').removeClass("tile-selected");
+                        $(this).find('dl').addClass("tile-selected");
+                    }
+                    OnTileSelected();
+                }
+                );
+            OnTileSelected();
+        }
+        function OnTileSelected() {
+            // update the report category text
+            $(".reportCategory").html($(".tile-selected").find("dd").html() + "( " + $(".tile-selected").find("dt").html() + " )");
+            var tileId = 2;
+            URP.criteria.TileId = tileId;
+            //load the filter controls 
+            URP.Report.getReport(false);
+            URP.Filter.getFilter(tileId);
+        }
+    };
+
     URP.Filter = new function () {
         this.initial = function () {
             // Inite user image

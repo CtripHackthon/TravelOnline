@@ -57,10 +57,9 @@
 .secondAddPicBt {
     display: none;
 }
-
     .selectPictureWin {
-    max-height: 670px;
-    width: 1000px;
+    max-height: 650px;
+    width: 800px;
     padding: 50px 50px;
     background-color: #FFF;
 }
