@@ -113,7 +113,7 @@
                         <table width="100%" border="0" cellspacing="0" cellpadding="0" style="margin-top: 7px;">
                             <tr>
                                 <td width="74%" align="right" class="gameLink">
-                                    <a href="../index.aspx">首页</a> | <a href="../article.aspx">社区热点</a> | <a href="../school_vendition/index_vendition.aspx">
+                                    <a href="../Home.aspx">首页</a> | <a href="../article.aspx">社区热点</a> | <a href="../school_vendition/index_vendition.aspx">
                                         活动专区</a> | <a href="../virtual_store/index_virtual_store.aspx">旗舰店</a> |
                                     <a href="../long_man_pk/index_long_man_pk.aspx">龙族风采</a> | <a href="../magazine/index_magazine.aspx">
                                         电子杂志</a></td>

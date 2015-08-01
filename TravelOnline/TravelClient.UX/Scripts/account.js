@@ -1,6 +1,6 @@
 ﻿(function (account, $, undefined) {
 
-    account.init = new function () {
+    account.init =  function () {
 
         $('#registsubmit').live('click', function (e) {
             var username = $('#username').val().trim();
@@ -78,7 +78,7 @@
                     // if login successfully navigate customer to the welcome page
                     if (result != null) {
                         if (result.login == '1') {
-                            window.location.href="../Account/Personal.aspx";
+                            window.location.href = "../Account/PersonalBoard.aspx";
                         }
                         else {
                             alert('login failed');

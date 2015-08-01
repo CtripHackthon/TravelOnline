@@ -20,7 +20,7 @@
             <div class="global-nav">
                 <ul class="main-menu">
                     <li>
-                        <a href="../index.aspx">家园</a></li>
+                        <a href="../Home.aspx">家园</a></li>
                     <li class="dropdown nav-dropdown">
                         <a class="has-drop-menu" href="javascript:;">个性旅途</a>
                         <ul class="dropdown-menu">
@@ -102,18 +102,7 @@
 
         </div>
     </div>
-    <script src="../Scripts/jquery-1.10.2.min.js"></script>
-    <script src="../Scripts/site.js"></script>
-    <script type="text/javascript">
-        (function (site, $, undefined) {
 
-          
-        })(window.site = window.site || {}, $, undefined);
-
-        $(function () {
-            site.init();
-        });
-    </script>
 </head>
 <body>
     <form runat="server">
@@ -162,5 +151,19 @@
             </div>
         </footer>
     </form>
+
+
+        <script src="../Scripts/jquery-1.10.2.min.js"></script>
+    <script src="../Scripts/site.js"></script>
+    <script type="text/javascript">
+
+        (function (site, $, undefined) {
+
+        })(window.site = window.site || {}, $, undefined);
+        $(function () {
+            var sessionUser = '<%= Session["UserName"]%>';
+            site.init(sessionUser);
+        });
+    </script>
 </body>
 </html>

@@ -74,6 +74,7 @@
     <Content Include="Content\login.css" />
     <Content Include="Content\newpost.css" />
     <Content Include="Content\personal.css" />
+    <Content Include="Content\productlist.css" />
     <Content Include="Content\products.css" />
     <Content Include="Content\register.css" />
     <Content Include="Content\Site.css" />
@@ -372,9 +373,9 @@
     <Content Include="Product\ProductsList.aspx" />
     <Content Include="Scripts\account.js" />
     <Content Include="Scripts\docs.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
     <Content Include="Scripts\personal.js" />
     <Content Include="Scripts\site.js" />
-    <Content Include="Scripts\jquery-1.10.2.min.js" />
     <Content Include="Plugins\scripts\jquery.bpopup.min.js" />
     <Content Include="Plugins\scripts\jquery.pin.js" />
     <Content Include="Plugins\scripts\jquery.showLoading.js" />

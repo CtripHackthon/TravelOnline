@@ -1,6 +1,6 @@
 ﻿(function (site, $, undefined) {
     // Top navigation bar
-    site.init = new function () {
+    site.init = function (sessionUser) {
 
         $(window).scroll(function () {
            scrollHide();
@@ -27,6 +27,19 @@
         });
     
 
+
+        if (sessionUser != null && sessionUser != "") {
+            // logined user
+            $('.right-bar ul').remove();
+
+            var userlogo = '<svg xmlns="http://www.w3.org/2000/svg" class="si-glyph-person-people" style="height: 20px;width: 20px;">' +
+            '<use xlink:href="../Plugins/fonts/sprite.svg#si-glyph-person-people" style="height: 14px; width:15px" />' +
+        '</svg>';
+            var str = '<ul><li class="li-after"><a href="#" class="login">' + userlogo + '</a></li><li style="padding-left:10px"><a href="#" class="has-drop-menu login">' + sessionUser + '</a> <ul class="dropdown-menu"><li>注销</li></ul></li> </ul>';
+
+            $('.right-bar').append(str);
+        }
+      
     }
     site.Top = new function () {
     }

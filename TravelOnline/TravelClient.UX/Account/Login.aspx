@@ -10,7 +10,7 @@
     <div class="content clearfix">
         <div class="lg_banner">
             
-            <a data-ptp-cache-id="1.6c69m3iQ.Q4Gueuee.2.tPNrrg" data-ptp-idx="2" href="../Index.aspx" target="_blank" class="banner1"><img src="../Images/reg.jpg"></a>
+            <a data-ptp-cache-id="1.6c69m3iQ.Q4Gueuee.2.tPNrrg" data-ptp-idx="2" href="../Home.aspx" target="_blank" class="banner1"><img src="../Images/reg.jpg"></a>
         </div>
         <div class="lg_left" id="lg_content">
             <!-- 登录方式tab -->
@@ -51,8 +51,7 @@
         <input value="" id="isban" type="hidden">
     </div>
 </div>
-
-     <script src="../Scripts/jquery-1.10.2.min.js"></script>
+<script src="../Scripts/jquery-1.10.2.min.js"></script>
     <script src="../Scripts/account.js"></script>
     <script type="text/javascript">
 

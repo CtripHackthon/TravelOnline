@@ -15,7 +15,7 @@
         <div id="top-header" class="header2 header-show">
         <div class="container clearfix">
             <div class="logo-wrap">
-                <a href="../Index.aspx" class="logo">
+                <a href="../Home.aspx" class="logo">
                     <img src="http://pic.c-ctrip.com/common/c_logo2013.png"></a>
                 <span class="des"><span>穷游路上... 且行且珍惜</span></span>
             </div>
@@ -23,7 +23,7 @@
             <div class="global-nav">
                 <ul class="main-menu">
                     <li>
-                        <a href="../index.aspx">家园</a></li>
+                        <a href="../Home.aspx">家园</a></li>
                     <li class="dropdown nav-dropdown">
                         <a class="has-drop-menu" href="javascript:;">个性旅途</a>
                         <ul class="dropdown-menu">

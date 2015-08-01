@@ -54,6 +54,8 @@ namespace TravelClient.UX.Ajax
             if (dt.Rows.Count > 0)
             {
                 Session["user_id"] = dt.Rows[0]["id"];
+                Session["UserName"] = dt.Rows[0]["uname"];
+
                 // Login successfully
                 return "{\"login\":1}";
             }

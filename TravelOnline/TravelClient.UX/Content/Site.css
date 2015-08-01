@@ -262,8 +262,8 @@ h5, h6 {
   float: right;
   color: rgba(0,0,0,0.3);
   position: absolute;
-  top: 0px;
-  right: 0px;
+  top: 20px;
+  right: 60px;
   background: #fff;
   /* height: 100%; */
   margin-top: 5px;
