@@ -22,7 +22,7 @@ namespace TravelService.Service.Travel
 
             UpdateTravelDiaryRequest serviceRequest = (UpdateTravelDiaryRequest)request.requestObj;
 
-            if (serviceRequest.userId < 0 || serviceRequest.diaryId < 0)
+            if (serviceRequest.diary.userId < 0 || serviceRequest.diary.diaryId < 0)
             {
                 response.errMessage = ReportServiceMessage.USER_ID_OR_DIARY_ID_INVALID;
                 response.returnCode = -1;
