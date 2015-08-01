@@ -1,5 +1,6 @@
 ﻿(function (post, $, undefined) {
     post.Init = function () {
+
             $('.article-title-text').focus();
 
             $('#editor1').wangEditor({
@@ -68,74 +69,55 @@
 
                 // Add the picture div to the 
                 $.each(added_pics, function (index, current) {
-                    str += "<li><div class='item'><input type='image' class='innerPic' src='" + $(current).attr('src') + "' /><div>主图片:<input type='radio' class='set-feature-bt' name='setMain'/><input type='image' src='../Images/cycle.jpg' class='removePicture' /> </div></div></li>";
+                    str += "<li><div class='item'><input type='image' class='innerPic' src='" + $(current).attr('src') + "' /><div class='removePicture'> <svg xmlns='http://www.w3.org/2000/svg' class='si-glyph-basket-error' style='height: 20px;width: 20px; margin-left:40px;margin-right:8px'><use xlink:href='../Plugins/fonts/sprite.svg#si-glyph-basket-error' /></svg>删除</div></div></li>";
                 });
 
                 $('.pictureShowDiv ul').append(str);
                 $('.pictureShowDiv').show();
             });
 
+            var fileinput = $('#loadFileBt').browseElement();
+
             // Upload image dialog
-            $('#loadFileBt').live('change', function () {
+            $(fileinput).change(function () {
                 var str = '';
-                if ($('#loadFileBt').val() != '') {
-                    var file = $('#loadFileBt').prop('files');
-                    alert(file.length);
-                    var alertBool = false;
-                    if (file[0].type.toLowerCase().indexOf('gif') > 0) {
-                        // GIF file max is 3M
-                        if (file[0].size > 3145728) {
-                            alertBool = true;
+                    var file = $(fileinput)[0].files['0'];
+
+                    if (file != null) {
+                        var alertBool = false;
+                        if (file.type.toLowerCase().indexOf('gif') > 0) {
+                            // GIF file max is 3M
+                            if (file.size > 3145728) {
+                                alertBool = true;
+                            }
+                        }
+                        else {
+                            if (file.size > 3145728 * 5) {
+                                alertBool = true;
+                            }
+                        }
+                        if (alertBool) {
+                            $('#loadFileBt').val('');
+                            alert('你的图片文件太大，JPG/JPEG/BMP/PNG，最大15M，GIF最大3M');
+                        }
+                        else {
+                            $('.cleanZone').hide();
+                            $('.secondAddPicBt').show();
+                            // Call the api ajax method to upload the picture to the server 
+                            var imagePath = $('#loadFileBt').val();
+                            var imageData = { PicturePath: imagePath, PictureSize: file.size, FileName: file.name };
+                            UploadImage(file, $('.tab_box'), function (result) {
+                                // show the picture in the demo zone
+                                str = "<li><div class='pict-item'><div class='pict-head'><input type='image' class='innerPic' src='" + result + "' /></div><div class='pict-actions removePicture'><svg xmlns='http://www.w3.org/2000/svg' class='si-glyph-basket-error' style='height: 20px;width: 20px; margin-left:40px;margin-right:8px'><use xlink:href='../Plugins/fonts/sprite.svg#si-glyph-basket-error' /></svg>删除</div></div></li>";
+                                $('.pict-items').append(str);
+                            });
                         }
                     }
-                    else {
-                        if (file[0].size > 3145728 * 5) {
-                            alertBool = true;
-                        }
-                    }
-                    if (alertBool) {
-                        $('#loadFileBt').val('');
-                        alert('你的图片文件太大，JPG/JPEG/BMP/PNG，最大15M，GIF最大3M');
-                    }
-                    else {
-                        $('.cleanZone').hide();
-                        $('.secondAddPicBt').show();
-                        // Call the api ajax method to upload the picture to the server 
-                        var imagePath = $('#loadFileBt').val();
-                        var imageData = { PicturePath: imagePath, PictureSize: file[0].size, FileName: file[0].name };
-                        UploadImage(imageData, $('.tab_box'), function (result) {
-                            // show the picture in the demo zone
-                            str = "<li><div class='pict-item'><div class='pict-head'><input type='image' class='innerPic' src='" + result.FilePath + "' /></div><div class='pict-actions'><input type='image' src='../Images/cycle.jpg' class='removePicture' style='margin:0px,2px;' /> </div></div></li>";
-                            $('.pict-items').append(str);
-                        });
-                    }
-                }
+                    
             });
             function UploadImage(pictureData, loadingArea, callBack) {
                 var baseUrl = GetBaseUrl();
-                $.ajax({
-                    url: baseUrl + "?queryType=addPicture",
-                    type: "POST",
-                    dataType: "json",
-                    data: { queryParam: JSON.stringify(pictureData) },
-                    timeout: 99000,
-                    beforeSend: function () {
-                        loadingArea.showLoading();
-                    },
-                    error: function (xhr, status, error) {
-                        alert('Error loading report');
-                        console.log(error);
-                    },
-                    success: function (result) {
-
-                        if (callBack) {
-                            callBack(result);
-                        }
-                    },
-                    complete: function () {
-                        loadingArea.hideLoading();
-                    },
-                });
+                $.upload(baseUrl + "?queryType=addPicture", pictureData,callBack);
             };
             function RemoveImage(pictureData, loadingArea, callBack) {
                 var baseUrl = GetBaseUrl();
@@ -155,8 +137,6 @@
                         console.log(error);
                     },
                     success: function (result) {
-                        ST.util.showSuccessHints();
-
                         if (callBack) {
                             callBack(result);
                         }
@@ -185,8 +165,9 @@
             });
 
             // Remove one picture from the list
-            $('.addPicBt').live('click', function () {
-                $('#loadFileBt').click();
+            $('.addPicBt').live('click', function (e) {
+                e.preventDefault();
+                $(fileinput).trigger('click');
             });
             $('#addNewPict').live('click', function () {
                 // Get current pictures
@@ -196,7 +177,7 @@
                     $('.okBt').focus();
                 }
                 else {
-                    $('#loadFileBt').click();
+                    $(fileinput).trigger('click');
                 }
             });
 

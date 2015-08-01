@@ -24,6 +24,42 @@
   background: #e64545 !important;
   border-bottom-color: #cc2929 !important;
 }
+.pict-item {
+    list-style: none;
+    width: 200px;
+    height: 200px;
+    float: left;
+}
+.removeitemsvg {
+    height:25px;
+    width:25px;
+    padding-left:100px;
+}
+.pict-head {
+    padding: 10px;
+    width: 200px;
+    height: 150px;
+}
+
+.innerPic {
+    width: 180px;
+    height: 130px;
+    border: thick;
+    border-color: rgba(50, 69, 58, 0.61);
+}
+.pict-show-in-body li {
+    float:left; padding:10px;
+}
+
+.pict-show-in-body ab {
+    float:none !important;
+}
+.pict-actions {
+    height: 20px;
+    width: 100px;
+    text-align: center;
+    cursor:pointer;
+}
 .wrapper {
     width: 1200px;
     margin: 0 auto;
@@ -32,7 +68,7 @@
 #report-list {
   list-style: none;
   margin: 0 auto;
-  height: 450px;
+  height: 250px;
   padding: 10px;
 }
     #report-list li {

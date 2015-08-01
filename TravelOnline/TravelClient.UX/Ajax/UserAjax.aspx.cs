@@ -6,8 +6,12 @@ using System.Web;
 using System.Web.Script.Serialization;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-
 using TravelClient.UX.Ajax.Models;
+using TravelService.Model;
+using TravelService.Model.Base.Common;
+using TravelService.Model.ServiceModel;
+using TravelService.Service;
+using TravelService.Service.ServiceRepository;
 
 namespace TravelClient.UX.Ajax
 {
@@ -17,9 +21,10 @@ namespace TravelClient.UX.Ajax
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            //if (Request.Params["queryType"] == "register") {
-            //    Response.Write(RegisterNewUser());
-            //}
+            if (Request.Params["queryType"] == "register")
+            {
+                Response.Write(RegisterNewUser());
+            }
 
             //if (Request.Params["queryType"] == "login")
             //{
@@ -34,27 +39,29 @@ namespace TravelClient.UX.Ajax
         }
 
         private string RegisterNewUser() {
-            //JavaScriptSerializer jss = new JavaScriptSerializer();
-            //UserModel user = jss.Deserialize<UserModel>(Request.Params["user"]);
+            JavaScriptSerializer jss = new JavaScriptSerializer();
+            UserInfo user = jss.Deserialize<UserInfo>(Request.Params["user"]);
 
+            RegistUserRequest registerReq = new RegistUserRequest();
+            registerReq.userinfo = user;
 
-            //using (MainDBUnitWorkContext context = new MainDBUnitWorkContext()) {
-            //    IUserRepository ur = new UserRepository(context);
-            //    UserService uservice = new UserService(ur);
-            //    bool success = uservice.RegisterUser(new AppUser() { UserName = user.UserName, UserPassword = user.Password });
+            ServiceRequest request = new ServiceRequest(registerReq);
+            ServiceResponse response = new ServiceResponse();
 
-            //    if (success)
-            //    {
-            //        // Login successfully
-            //        return "{\"register\":1}";
-            //    }
-            //    else
-            //    {
-            //        return "{\"register\":0}";
-            //    }
-            //};
-            return "";
+            IService service = ServiceFactory.getInstance().getService(service_type.REGIST_USER);
+           
 
+            service.process(request, response);
+            
+             if (response.returnCode==0)
+             {
+                 // Login successfully
+                 return "{\"register\":1}";
+             }
+             else
+             {
+                 return "{\"register\":0}";
+             }
         }
 
 
