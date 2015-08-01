@@ -7,11 +7,11 @@ using System.Web.UI.WebControls;
 
 namespace TravelClient.UX.Product
 {
-	public partial class Products : System.Web.UI.Page
-	{
-		protected void Page_Load(object sender, EventArgs e)
-		{
+    public partial class ProductDetail : System.Web.UI.Page
+    {
+        protected void Page_Load(object sender, EventArgs e)
+        {
 
-		}
-	}
+        }
+    }
 }

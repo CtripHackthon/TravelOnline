@@ -84,6 +84,7 @@
     <Content Include="Content\login.css" />
     <Content Include="Content\newpost.css" />
     <Content Include="Content\personal.css" />
+    <Content Include="Content\productdetail.css" />
     <Content Include="Content\productlist.css" />
     <Content Include="Content\products.css" />
     <Content Include="Content\register.css" />
@@ -380,7 +381,8 @@
     <Content Include="Posts\NewPost.aspx" />
     <Content Include="Posts\PostDetail.aspx" />
     <Content Include="Posts\Utility\wangEditor_uploadImg_assist.html" />
-    <Content Include="Product\ProductsList.aspx" />
+    <Content Include="Product\ProductDetail.aspx" />
+    <Content Include="Product\Products.aspx" />
     <Content Include="Scripts\account.js" />
     <Content Include="Scripts\docs.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -567,12 +569,19 @@
     <Compile Include="Posts\Utility\data.ashx.cs">
       <DependentUpon>data.ashx</DependentUpon>
     </Compile>
-    <Compile Include="Product\ProductsList.aspx.cs">
-      <DependentUpon>ProductsList.aspx</DependentUpon>
+    <Compile Include="Product\ProductDetail.aspx.cs">
+      <DependentUpon>ProductDetail.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Product\ProductsList.aspx.designer.cs">
-      <DependentUpon>ProductsList.aspx</DependentUpon>
+    <Compile Include="Product\ProductDetail.aspx.designer.cs">
+      <DependentUpon>ProductDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Product\Products.aspx.cs">
+      <DependentUpon>Products.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Product\Products.aspx.designer.cs">
+      <DependentUpon>Products.aspx</DependentUpon>
     </Compile>
     <Compile Include="utils\checkbuildingstate.cs" />
     <Compile Include="utils\buildinginfo.cs" />

@@ -135,19 +135,19 @@
 							<h3>热门景点目的地</h3>
 						</dt>
 						
-						 		<dd><a href="http://ticket.lvmama.com/scenic-103518" title="上海奉贤碧海金沙" target="_blank">上海奉贤碧海金沙</a>
+						 		<dd><a href="#" title="上海奉贤碧海金沙" target="_blank">上海奉贤碧海金沙</a>
 								
-						 		<a class="r" href="http://www.lvmama.com/zt/promo/dongfangmingzhu/" title="东方明珠游船" target="_blank">东方明珠游船</a></dd>
+						 		<a class="r" href="#" title="东方明珠游船" target="_blank">东方明珠游船</a></dd>
 								
-						 		<dd><a href="http://ticket.lvmama.com/scenic-100792" title="上海东方明珠" target="_blank">上海东方明珠</a>
+						 		<dd><a href="#" title="上海东方明珠" target="_blank">上海东方明珠</a>
 								
-						 		<a class="r" href="http://dujia.lvmama.com/tour/shanghaihuanqiujinrongzhongxinguanguangting175652" title="上海环球金融中心观光厅" target="_blank">上海环球金融中心观光厅</a></dd>
+						 		<a class="r" href="#" title="上海环球金融中心观光厅" target="_blank">上海环球金融中心观光厅</a></dd>
 								
-						 		<dd><a href="http://ticket.lvmama.com/scenic-102843" title="上海野生动物园" target="_blank">上海野生动物园</a>
+						 		<dd><a href="#" title="上海野生动物园" target="_blank">上海野生动物园</a>
 								
-						 		<a class="r" href="http://ticket.lvmama.com/scenic-100683" title="上海东方绿舟" target="_blank">上海东方绿舟</a></dd>
+						 		<a class="r" href="#" title="上海东方绿舟" target="_blank">上海东方绿舟</a></dd>
 								
-						 		<dd><a href="http://ticket.lvmama.com/scenic-103057" title="上海动物园" target="_blank">上海动物园</a>
+						 		<dd><a href="#" title="上海动物园" target="_blank">上海动物园</a>
 								
 						 		<a class="r" href="http://ticket.lvmama.com/scenic-150300" title="上海星期8小镇" target="_blank">上海星期8小镇</a></dd>
 								

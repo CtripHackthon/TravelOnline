@@ -7,9 +7,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace TravelClient.UX.Product {
-    
-    
-    public partial class Products {
+namespace TravelClient.UX.Product
+{
+
+
+    public partial class ProductDetail
+    {
     }
 }

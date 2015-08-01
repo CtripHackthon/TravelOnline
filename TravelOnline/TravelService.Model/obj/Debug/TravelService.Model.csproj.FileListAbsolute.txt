@@ -14,3 +14,4 @@ D:\Framework.Dep\hackason\r2\TravelOnline\TravelOnline\TravelService.Model\obj\D
 D:\Framework.Dep\hackason\r2\TravelOnline\TravelOnline\TravelService.Model\obj\Debug\TravelService.Model.dll
 D:\Framework.Dep\hackason\r2\TravelOnline\TravelOnline\TravelService.Model\obj\Debug\TravelService.Model.pdb
 >>>>>>> fca31331f0ba5d1dd38b2c6cc79d773297927763
+D:\MyGit\TravelOnline\TravelOnline\TravelService.Model\obj\Debug\TravelService.Model.csprojResolveAssemblyReference.cache

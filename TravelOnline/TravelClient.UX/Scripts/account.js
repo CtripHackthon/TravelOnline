@@ -48,7 +48,7 @@
                             window.location.href = "../Home.aspx";
                         }
                         else {
-                            alert('login failed');
+                            alert('register failed');
                         }
                     }
                 }
