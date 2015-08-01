@@ -21,5 +21,8 @@ namespace TravelService.Model.Base.Travel
         public Category belongCategory { get; set; }
 
         public List<string> addrs { get; set; }
+
+
+        public string publishTime { get; set; }
     }
 }
