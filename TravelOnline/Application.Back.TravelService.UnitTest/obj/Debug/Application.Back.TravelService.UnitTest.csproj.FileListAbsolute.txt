@@ -18,3 +18,4 @@ D:\Framework.Dep\hackason\r2\TravelOnline\TravelOnline\Application.Back.TravelSe
 D:\Framework.Dep\hackason\r2\TravelOnline\TravelOnline\Application.Back.TravelService.UnitTest\obj\Debug\Application.Back.TravelService.UnitTest.csprojResolveAssemblyReference.cache
 D:\Framework.Dep\hackason\r2\TravelOnline\TravelOnline\Application.Back.TravelService.UnitTest\obj\Debug\Application.Back.TravelService.UnitTest.dll
 D:\Framework.Dep\hackason\r2\TravelOnline\TravelOnline\Application.Back.TravelService.UnitTest\obj\Debug\Application.Back.TravelService.UnitTest.pdb
+D:\Framework.Dep\hackason\r2\TravelOnline\TravelOnline\Application.Back.TravelService.UnitTest\bin\Debug\Application.Back.TravelService.UnitTest.dll.config
