@@ -39,6 +39,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Base\Common\Category.cs" />
     <Compile Include="Base\Common\TravelComment.cs" />
     <Compile Include="Base\Common\UserInfo.cs" />
     <Compile Include="Base\Travel\TravelDiarySummary.cs" />
@@ -47,6 +48,8 @@
     <Compile Include="ServiceModel\DeleteTravelDiaryResponse.cs" />
     <Compile Include="ServiceModel\GetAssociatedProductsInfoRequest.cs" />
     <Compile Include="ServiceModel\GetAssociatedProductsInfoResponse.cs" />
+    <Compile Include="ServiceModel\GetDisplayCategoriesRequest.cs" />
+    <Compile Include="ServiceModel\GetDisplayCategoriesResponse.cs" />
     <Compile Include="ServiceModel\GetTravelCommentsRequest.cs" />
     <Compile Include="ServiceModel\GetTravelCommentsResponse.cs" />
     <Compile Include="ServiceModel\GetTravelDiariesListRequest.cs" />
