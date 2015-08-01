@@ -12,3 +12,12 @@ D:\MyGit\TravelOnline\TravelOnline\TravelService.Service\bin\Debug\TravelService
 D:\MyGit\TravelOnline\TravelOnline\TravelService.Service\obj\Debug\TravelService.Service.dll
 D:\MyGit\TravelOnline\TravelOnline\TravelService.Service\obj\Debug\TravelService.Service.pdb
 D:\MyGit\TravelOnline\TravelOnline\TravelService.Service\obj\Debug\TravelService.Service.csprojResolveAssemblyReference.cache
+D:\Framework.Dep\hackason\r2\TravelOnline\TravelOnline\TravelService.Service\bin\Debug\TravelService.Service.dll
+D:\Framework.Dep\hackason\r2\TravelOnline\TravelOnline\TravelService.Service\bin\Debug\TravelService.Service.pdb
+D:\Framework.Dep\hackason\r2\TravelOnline\TravelOnline\TravelService.Service\bin\Debug\DataModel.exe
+D:\Framework.Dep\hackason\r2\TravelOnline\TravelOnline\TravelService.Service\bin\Debug\TravelService.Model.dll
+D:\Framework.Dep\hackason\r2\TravelOnline\TravelOnline\TravelService.Service\bin\Debug\DataModel.pdb
+D:\Framework.Dep\hackason\r2\TravelOnline\TravelOnline\TravelService.Service\bin\Debug\TravelService.Model.pdb
+D:\Framework.Dep\hackason\r2\TravelOnline\TravelOnline\TravelService.Service\obj\Debug\TravelService.Service.csprojResolveAssemblyReference.cache
+D:\Framework.Dep\hackason\r2\TravelOnline\TravelOnline\TravelService.Service\obj\Debug\TravelService.Service.dll
+D:\Framework.Dep\hackason\r2\TravelOnline\TravelOnline\TravelService.Service\obj\Debug\TravelService.Service.pdb

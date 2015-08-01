@@ -7,3 +7,14 @@ D:\MyGit\TravelOnline\TravelOnline\Application.Back.TravelService.UnitTest\bin\D
 D:\MyGit\TravelOnline\TravelOnline\Application.Back.TravelService.UnitTest\obj\Debug\Application.Back.TravelService.UnitTest.csprojResolveAssemblyReference.cache
 D:\MyGit\TravelOnline\TravelOnline\Application.Back.TravelService.UnitTest\obj\Debug\Application.Back.TravelService.UnitTest.dll
 D:\MyGit\TravelOnline\TravelOnline\Application.Back.TravelService.UnitTest\obj\Debug\Application.Back.TravelService.UnitTest.pdb
+D:\Framework.Dep\hackason\r2\TravelOnline\TravelOnline\Application.Back.TravelService.UnitTest\bin\Debug\Application.Back.TravelService.UnitTest.dll
+D:\Framework.Dep\hackason\r2\TravelOnline\TravelOnline\Application.Back.TravelService.UnitTest\bin\Debug\Application.Back.TravelService.UnitTest.pdb
+D:\Framework.Dep\hackason\r2\TravelOnline\TravelOnline\Application.Back.TravelService.UnitTest\bin\Debug\TravelService.Model.dll
+D:\Framework.Dep\hackason\r2\TravelOnline\TravelOnline\Application.Back.TravelService.UnitTest\bin\Debug\TravelService.Service.dll
+D:\Framework.Dep\hackason\r2\TravelOnline\TravelOnline\Application.Back.TravelService.UnitTest\bin\Debug\DataModel.exe
+D:\Framework.Dep\hackason\r2\TravelOnline\TravelOnline\Application.Back.TravelService.UnitTest\bin\Debug\TravelService.Model.pdb
+D:\Framework.Dep\hackason\r2\TravelOnline\TravelOnline\Application.Back.TravelService.UnitTest\bin\Debug\TravelService.Service.pdb
+D:\Framework.Dep\hackason\r2\TravelOnline\TravelOnline\Application.Back.TravelService.UnitTest\bin\Debug\DataModel.pdb
+D:\Framework.Dep\hackason\r2\TravelOnline\TravelOnline\Application.Back.TravelService.UnitTest\obj\Debug\Application.Back.TravelService.UnitTest.csprojResolveAssemblyReference.cache
+D:\Framework.Dep\hackason\r2\TravelOnline\TravelOnline\Application.Back.TravelService.UnitTest\obj\Debug\Application.Back.TravelService.UnitTest.dll
+D:\Framework.Dep\hackason\r2\TravelOnline\TravelOnline\Application.Back.TravelService.UnitTest\obj\Debug\Application.Back.TravelService.UnitTest.pdb

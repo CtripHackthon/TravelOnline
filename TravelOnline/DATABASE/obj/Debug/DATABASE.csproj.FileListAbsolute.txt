@@ -13,3 +13,7 @@ D:\NET\MyGit\TravelOnline\TravelOnline\DATABASE\bin\Debug\DATABASE.pdb
 D:\NET\MyGit\TravelOnline\TravelOnline\DATABASE\obj\Debug\DATABASE.csprojResolveAssemblyReference.cache
 D:\NET\MyGit\TravelOnline\TravelOnline\DATABASE\obj\Debug\DATABASE.dll
 D:\NET\MyGit\TravelOnline\TravelOnline\DATABASE\obj\Debug\DATABASE.pdb
+D:\Framework.Dep\hackason\r2\TravelOnline\TravelOnline\DATABASE\bin\Debug\DATABASE.dll
+D:\Framework.Dep\hackason\r2\TravelOnline\TravelOnline\DATABASE\bin\Debug\DATABASE.pdb
+D:\Framework.Dep\hackason\r2\TravelOnline\TravelOnline\DATABASE\obj\Debug\DATABASE.dll
+D:\Framework.Dep\hackason\r2\TravelOnline\TravelOnline\DATABASE\obj\Debug\DATABASE.pdb

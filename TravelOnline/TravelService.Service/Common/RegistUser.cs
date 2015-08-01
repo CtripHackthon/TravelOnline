@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using DataModel;
 using TravelService.Model;
 using TravelService.Model.ServiceModel;
 using TravelService.Service.Utilities;
@@ -30,7 +31,18 @@ namespace TravelService.Service.Common
                 return;
             }
 
+            user u = new user();
+            u.email = serviceRequest.userinfo.email;
+            u.password = serviceRequest.userinfo.password;
+            u.phone = serviceRequest.userinfo.phone;
+            u.userName = serviceRequest.userinfo.username;
+            
+            User.saveUser(u);
 
+            RegistUserResponse serviceResponse = new RegistUserResponse();
+            serviceResponse.userId = 9;
+
+            response.responseObj = serviceResponse;
             response.returnCode = 0;
             return;
         }

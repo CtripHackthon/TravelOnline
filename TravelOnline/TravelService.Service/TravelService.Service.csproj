@@ -32,6 +32,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -57,10 +58,17 @@
     <Compile Include="Utilities\ReportServiceMessage.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\DataModel\dataModel.csproj">
+      <Project>{70602d6c-60da-459c-95fe-64385b71293c}</Project>
+      <Name>dataModel</Name>
+    </ProjectReference>
     <ProjectReference Include="..\TravelService.Model\TravelService.Model.csproj">
       <Project>{707f22e6-23f3-45d7-a11e-fe3b1dec0a30}</Project>
       <Name>TravelService.Model</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
