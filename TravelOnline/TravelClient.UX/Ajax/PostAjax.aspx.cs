@@ -25,6 +25,12 @@ namespace TravelClient.UX.Ajax
                 RemovePicture();
             }
 
+
+             if (Request["queryType"] == "getcategory")
+             {
+                 Response.Write(GetCategoryList());
+                 
+             }
         }
         private void RemovePicture()
         {
@@ -36,6 +42,10 @@ namespace TravelClient.UX.Ajax
                 FileInfo myfileinf = new FileInfo(Server.MapPath(item));
                 myfileinf.Delete();
             }
+        }
+
+        private string GetCategoryList() {
+            return null;
         }
 
         private string AddPicture()

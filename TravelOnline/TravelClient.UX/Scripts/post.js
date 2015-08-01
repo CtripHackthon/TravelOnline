@@ -205,13 +205,39 @@
                 $('.addtagdiv').bPopup().close();
             });
 
+            $('.category').live('click', function (e) {
+                var baseUrl = GetBaseUrl();
+
+                $.ajax({
+                    url: baseUrl + "?queryType=removePicture",
+                    type: "POST",
+                    dataType: "json",
+                    data: { queryParam: JSON.stringify(pictureData) },
+                    timeout: 99000,
+                    beforeSend: function () {
+                        loadingArea.showLoading();
+                    },
+                    error: function (xhr, status, error) {
+                        console.log(error);
+                    },
+                    success: function (result) {
+                        if (callBack) {
+                            callBack(result);
+                        }
+                    },
+                    complete: function () {
+                        loadingArea.hideLoading();
+                    },
+                });
+
+            });
             $('#submitarticle').live('click', function (e) {
                 var article = {
                     userId: $('#usersession').val(),
                     title: $('.article-title-text').val(),
                     content: $('#editor1').val(),
                     tags: articleTags,
-                    belongCategory: {categoryId: 1}
+                    belongCategory: {categoryId: 1, categoryName:""}
                 };
             });
 

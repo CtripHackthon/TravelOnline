@@ -17,4 +17,3 @@ D:\Framework.Dep\hackason\r2\TravelOnline\TravelOnline\DATABASE\bin\Debug\DATABA
 D:\Framework.Dep\hackason\r2\TravelOnline\TravelOnline\DATABASE\bin\Debug\DATABASE.pdb
 D:\Framework.Dep\hackason\r2\TravelOnline\TravelOnline\DATABASE\obj\Debug\DATABASE.dll
 D:\Framework.Dep\hackason\r2\TravelOnline\TravelOnline\DATABASE\obj\Debug\DATABASE.pdb
-D:\Framework.Dep\hackason\r2\TravelOnline\TravelOnline\DATABASE\obj\Debug\DATABASE.csprojResolveAssemblyReference.cache

@@ -21,5 +21,3 @@ D:\Framework.Dep\hackason\r2\TravelOnline\TravelOnline\TravelService.Service\obj
 D:\Framework.Dep\hackason\r2\TravelOnline\TravelOnline\TravelService.Service\obj\Debug\TravelService.Service.dll
 D:\Framework.Dep\hackason\r2\TravelOnline\TravelOnline\TravelService.Service\obj\Debug\TravelService.Service.pdb
 D:\Framework.Dep\hackason\r2\TravelOnline\TravelOnline\TravelService.Service\bin\Debug\DataModel.dll
-D:\Framework.Dep\hackason\r2\TravelOnline\TravelOnline\TravelService.Service\bin\Debug\TravelService.DataService.dll
-D:\Framework.Dep\hackason\r2\TravelOnline\TravelOnline\TravelService.Service\bin\Debug\TravelService.DataService.pdb
