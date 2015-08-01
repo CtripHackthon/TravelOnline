@@ -13,6 +13,8 @@
 
 <body class="home" allyes_city="SH">
     <form runat="server">
+        <input type="hidden" id="usersession" style="display:none"/>
+
         <div id="top-header" class="header2 header-show">
             <div class="container clearfix">
                 <div class="logo-wrap">

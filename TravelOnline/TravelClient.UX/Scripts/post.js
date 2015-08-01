@@ -1,6 +1,15 @@
 ﻿(function (post, $, undefined) {
     post.Init = function () {
 
+        var articleTitle;
+        var articleCategory = {};
+        var articleTags;
+        var articleContent;
+        var currentTime=Date.now().toString();
+        var img1;
+        var img2;
+        var img3;
+
             $('.article-title-text').focus();
 
             $('#editor1').wangEditor({
@@ -185,17 +194,30 @@
 
             $('#savetag').live('click', function (e) {
                 // send post to add tag
-
+                articleTags += $('#tagname').val()+";";
                 // show tags in th list
                 var str = "<li><a class='newtaga'>" + $('#tagname').val() + "</a></li>";
                 $('#addedtags').append(str);
                 $('.addtagdiv').bPopup().close();
-
             });
+
             $('#canceltag').live('click', function (e) {
                 $('.addtagdiv').bPopup().close();
             });
 
+            $('#submitarticle').live('click', function (e) {
+                var article = {
+                    userId: $('#usersession').val(),
+                    title: $('.article-title-text').val(),
+                    content: $('#editor1').val(),
+                    tags: articleTags,
+                    belongCategory: {categoryId: 1}
+                };
+            });
+
+            $('#cancelArticle').live('click', function (e) {
+                window.location.href = "../Account/PersonalBoard.aspx";
+            });
 
     }
 })(window.post = window.post || {}, $, undefined);

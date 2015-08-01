@@ -67,14 +67,18 @@
 #addnewtag {
     cursor:pointer;
 }
-
+.ab {
+    margin-top:20px;
+}
+#addedtags {
+    height:20px;
+}
 #addedtags li {
     float:left;
 }
 #report-list {
   list-style: none;
   margin: 0 auto;
-  height: 350px;
   padding: 10px;
     width: 1100px;
 }

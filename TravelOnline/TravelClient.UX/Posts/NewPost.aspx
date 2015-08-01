@@ -7,6 +7,17 @@
 <asp:Content ID="Content3" ContentPlaceHolderID="MainContent" runat="server">
     <link href="../Content/newpost.css" rel="stylesheet" />
     <link href="../Plugins/css/wangEditor-1.3.css" rel="stylesheet" />
+    <div class="addtagdiv">
+        <div>
+            标签名: <input type="text" placeholder="标签名字" id="tagname"/>
+        </div>
+        <div>
+            <div class="actionArea">
+                                    <input class="okBt actionbt"  id="savetag" value="确定" />
+                                    <input class="resetBt actionbt" id="canceltag" value="取消" />
+                                </div>
+        </div>
+    </div>
     <div class="selectPictureWin" style="display: none">
                             <div class="tab">
                                 <div class="tab_menu">
@@ -44,11 +55,11 @@
     <div class="wrapper">
         <ul id="report-list">
             <li>
-                <ul style="width: 800px; height: 30px" id="artcle-information-board">
+                <ul style="width: 800px; height: 30px; margin-bottom:10px; margin-left:-70px;" id="artcle-information-board">
                     <li>
                         <a class="addPic">
-<svg xmlns="http://www.w3.org/2000/svg" class="si-glyph-camera" style="height:20px; width:20px"><use xlink:href="../Plugins/fonts/sprite.svg#si-glyph-camera" /></svg>
-                        上传封面</a>
+<svg xmlns="http://www.w3.org/2000/svg" class="si-glyph-camera" style="height:80px; width:80px"><use xlink:href="../Plugins/fonts/sprite.svg#si-glyph-camera" /></svg>
+                        </a>
                     </li>
                     <li>
                          <div class="pictureShowDiv">
@@ -71,16 +82,28 @@
 
 
         <ul style="width: 800px; height: 30px">
-                       <li class="ab"><b>标题:</b></li>
                     <li class="ab">
                         <input type="text" class="article-title-text" placeholder="标题..." tabindex="0" />
                         <label style="color: red; margin-left: 10px;" class="hide">* 标题不能为空</label>
                     </li>
 
-                    <li class="ab"><b>简介:</b></li>
+               <li class="ab"><b>分类:</b></li>
+                    <li >
+                        <select class="category">
+                            <option>1</option>
+                        </select>
+                    </li>
+
+             <li class="ab"><b>标签:</b></li>
+                    <li>
+                        <svg id="addnewtag" xmlns='http://www.w3.org/2000/svg' class='si-glyph-button-plus' style='height: 20px;width: 20px;'><use xlink:href='../Plugins/fonts/sprite.svg#si-glyph-button-plus' /></svg>
+                        <ul id="addedtags">
+
+                        </ul>
+                    </li>
                     <li class="ab" style="width: 800px; margin: 0 auto; margin-top: 10px;">
                         <div class="head">
-                            <textarea id="editor1" name="editor1" tabindex="5"
+                            <textarea id="editor1" name="editor1" tabindex="5" placeholder="简介"
                                 style="width: 200px; height: 420px"></textarea>
                             <label style="color: red;" class="hide">* 文章内容不能为空</label>
 

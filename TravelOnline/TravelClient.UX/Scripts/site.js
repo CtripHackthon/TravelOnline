@@ -67,6 +67,7 @@
         }
         this.userLoad = function (sessionUser) {
             if (sessionUser != null && sessionUser != "") {
+                $('#usersession').val(sessionUser);
                 // logined user
                 $('.right-bar ul').remove();
 

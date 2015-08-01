@@ -17,7 +17,6 @@ namespace TravelClient.UX.Ajax
 {
     public partial class UserAjax : System.Web.UI.Page
     {
-       private DATABASE.SQLDBOperate operate = new DATABASE.SQLDBOperate();
 
         protected void Page_Load(object sender, EventArgs e)
         {
