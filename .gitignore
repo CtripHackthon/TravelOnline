@@ -21,6 +21,9 @@
 *.dylib
 
 # Executables
+*.pdb
+*.txt
+*.cache
 *.exe
 *.out
 *.app
