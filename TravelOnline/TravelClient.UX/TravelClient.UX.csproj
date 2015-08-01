@@ -43,14 +43,6 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
-    </Reference>
-    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.5.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
@@ -332,11 +324,13 @@
     <Content Include="Plugins\css\metro-bootstrap.css" />
     <Content Include="Plugins\css\wangEditor-1.3.css" />
     <Content Include="Plugins\fonts\sprite.svg" />
+    <Content Include="Plugins\scripts\jquery\jquery.browse.js" />
     <Content Include="Plugins\scripts\jquery\jquery.cookie.js" />
     <Content Include="Plugins\scripts\jquery\jquery.dataTables.js" />
     <Content Include="Plugins\scripts\jquery\jquery.easing.1.3.min.js" />
     <Content Include="Plugins\scripts\jquery\jquery.min.js" />
     <Content Include="Plugins\scripts\jquery\jquery.mousewheel.js" />
+    <Content Include="Plugins\scripts\jquery\jquery.upload.js" />
     <Content Include="Plugins\scripts\jquery\jquery.widget.min.js" />
     <Content Include="Plugins\scripts\load-metro.js" />
     <Content Include="Plugins\scripts\metro.min.js" />
@@ -730,6 +724,14 @@
     <ProjectReference Include="..\DATABASE\DATABASE.csproj">
       <Project>{3337e05e-79ad-4577-a9cc-2b737a6ddf3c}</Project>
       <Name>DATABASE</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TravelService.Model\TravelService.Model.csproj">
+      <Project>{707f22e6-23f3-45d7-a11e-fe3b1dec0a30}</Project>
+      <Name>TravelService.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TravelService.Service\TravelService.Service.csproj">
+      <Project>{fce483f1-be68-4271-b00e-740012ae02c9}</Project>
+      <Name>TravelService.Service</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
