@@ -7,8 +7,9 @@ D:\Framework.Dep\hackason\r2\TravelOnline\DataModel\bin\Debug\DataModel.pdb
 D:\Framework.Dep\hackason\r2\TravelOnline\DataModel\obj\x86\Debug\dataModel.csprojResolveAssemblyReference.cache
 D:\Framework.Dep\hackason\r2\TravelOnline\DataModel\obj\x86\Debug\DataModel.exe
 D:\Framework.Dep\hackason\r2\TravelOnline\DataModel\obj\x86\Debug\DataModel.pdb
-D:\Framework.Dep\hackason\r2\TravelOnline\TravelOnline\DataModel\bin\Debug\DataModel.exe.config
-D:\Framework.Dep\hackason\r2\TravelOnline\TravelOnline\DataModel\bin\Debug\DataModel.exe
 D:\Framework.Dep\hackason\r2\TravelOnline\TravelOnline\DataModel\bin\Debug\DataModel.pdb
-D:\Framework.Dep\hackason\r2\TravelOnline\TravelOnline\DataModel\obj\x86\Debug\DataModel.exe
 D:\Framework.Dep\hackason\r2\TravelOnline\TravelOnline\DataModel\obj\x86\Debug\DataModel.pdb
+D:\Framework.Dep\hackason\r2\TravelOnline\TravelOnline\DataModel\bin\Debug\DataModel.dll.config
+D:\Framework.Dep\hackason\r2\TravelOnline\TravelOnline\DataModel\bin\Debug\DataModel.dll
+D:\Framework.Dep\hackason\r2\TravelOnline\TravelOnline\DataModel\obj\x86\Debug\dataModel.csprojResolveAssemblyReference.cache
+D:\Framework.Dep\hackason\r2\TravelOnline\TravelOnline\DataModel\obj\x86\Debug\DataModel.dll
