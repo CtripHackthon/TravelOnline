@@ -8,5 +8,6 @@ namespace TravelService.Model.ServiceModel
 {
     public class PublishTravelDiaryResponse
     {
+        public long diaryId { get; set; }
     }
 }

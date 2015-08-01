@@ -22,14 +22,16 @@ namespace TravelService.Service.Travel
 
             PublishTravelDiaryRequest serviceRequest = (PublishTravelDiaryRequest)request.requestObj;
 
-            if (serviceRequest.userId < 0)
+            if (serviceRequest.diary.userId < 0)
             {
                 response.errMessage = ReportServiceMessage.USER_ID_ILLEGAL;
                 response.returnCode = -1;
                 return;
             }
 
-
+            PublishTravelDiaryResponse serviceResoponse = new PublishTravelDiaryResponse();
+            serviceResoponse.diaryId = 9;
+            response.responseObj = serviceResoponse;
             response.returnCode = 0;
             return;
 
