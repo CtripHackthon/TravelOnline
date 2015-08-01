@@ -27,7 +27,7 @@
         var baseurl = this.getBaseUrl();
         
         this.regUser = function (username, password) {
-            var userjson = JSON.stringify({'UserName': username, 'Password': password});
+            var userjson = JSON.stringify({ 'username': username, 'password': password });
             $.ajax({
                 url: baseurl + '/Ajax/UserAjax.aspx',
                 cache: false,
