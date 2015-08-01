@@ -1,7 +1,0 @@
-d:\users\h_kang\documents\visual studio 2010\Projects\ConsoleApplication8\ConsoleApplication8\bin\Debug\ConsoleApplication8.exe.config
-d:\users\h_kang\documents\visual studio 2010\Projects\ConsoleApplication8\ConsoleApplication8\bin\Debug\ConsoleApplication8.exe
-d:\users\h_kang\documents\visual studio 2010\Projects\ConsoleApplication8\ConsoleApplication8\bin\Debug\ConsoleApplication8.pdb
-d:\users\h_kang\documents\visual studio 2010\Projects\ConsoleApplication8\ConsoleApplication8\obj\x86\Debug\ConsoleApplication8.exe
-d:\users\h_kang\documents\visual studio 2010\Projects\ConsoleApplication8\ConsoleApplication8\obj\x86\Debug\ConsoleApplication8.pdb
-d:\users\h_kang\documents\visual studio 2010\Projects\ConsoleApplication8\ConsoleApplication8\bin\Debug\model.exe.config
-d:\users\h_kang\documents\visual studio 2010\Projects\ConsoleApplication8\ConsoleApplication8\bin\Debug\dataLayer.exe.config

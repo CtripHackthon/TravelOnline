@@ -1,0 +1,241 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="hackthonModel.Store" Alias="Self" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.6" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="hackthonModelStoreContainer">
+          <EntitySet Name="comment" EntityType="hackthonModel.Store.comment" store:Type="Tables" Schema="hackthon" />
+          <EntitySet Name="diary" EntityType="hackthonModel.Store.diary" store:Type="Tables" Schema="hackthon" />
+          <EntitySet Name="order" EntityType="hackthonModel.Store.order" store:Type="Tables" Schema="hackthon" />
+          <EntitySet Name="product" EntityType="hackthonModel.Store.product" store:Type="Tables" Schema="hackthon" />
+          <EntitySet Name="user" EntityType="hackthonModel.Store.user" store:Type="Tables" Schema="hackthon" />
+        </EntityContainer>
+        <EntityType Name="comment">
+          <Key>
+            <PropertyRef Name="diaryID" />
+          </Key>
+          <Property Name="diaryID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="commentID" Type="int" />
+          <Property Name="content" Type="longtext" />
+        </EntityType>
+        <EntityType Name="diary">
+          <Key>
+            <PropertyRef Name="diaryID" />
+          </Key>
+          <Property Name="diaryID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="userID" Type="int" />
+          <Property Name="title" Type="varchar" MaxLength="200" />
+          <Property Name="content" Type="longtext" />
+          <Property Name="tag" Type="varchar" MaxLength="200" />
+          <Property Name="publishTime" Type="datetime" />
+          <Property Name="readTimes" Type="int" />
+          <Property Name="buyTimes" Type="int" />
+          <Property Name="likeTimes" Type="int" />
+          <Property Name="commentTimes" Type="int" />
+        </EntityType>
+        <EntityType Name="order">
+          <Key>
+            <PropertyRef Name="orderID" />
+          </Key>
+          <Property Name="orderID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="productID" Type="int" />
+          <Property Name="status" Type="varchar" MaxLength="100" />
+          <Property Name="buyUserID" Type="int" />
+          <Property Name="recommendUserID" Type="int" />
+          <Property Name="price" Type="decimal" />
+        </EntityType>
+        <EntityType Name="product">
+          <Key>
+            <PropertyRef Name="productID" />
+          </Key>
+          <Property Name="productID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="url" Type="varchar" MaxLength="200" />
+          <Property Name="type" Type="varchar" MaxLength="50" />
+          <Property Name="name" Type="varchar" MaxLength="100" />
+          <Property Name="country" Type="varchar" MaxLength="50" />
+          <Property Name="city" Type="varchar" MaxLength="50" />
+          <Property Name="rate" Type="decimal" />
+        </EntityType>
+        <EntityType Name="user">
+          <Key>
+            <PropertyRef Name="userID" />
+          </Key>
+          <Property Name="userID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="userName" Type="varchar" MaxLength="100" />
+          <Property Name="password" Type="varchar" MaxLength="200" />
+          <Property Name="identity" Type="int" />
+          <Property Name="credits" Type="decimal" />
+          <Property Name="email" Type="varchar" MaxLength="100" />
+          <Property Name="phone" Type="varchar" MaxLength="20" />
+        </EntityType>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="hackthonModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="hackthonEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="comments" EntityType="hackthonModel.comment" />
+          <EntitySet Name="diaries" EntityType="hackthonModel.diary" />
+          <EntitySet Name="orders" EntityType="hackthonModel.order" />
+          <EntitySet Name="products" EntityType="hackthonModel.product" />
+          <EntitySet Name="users" EntityType="hackthonModel.user" />
+        </EntityContainer>
+        <EntityType Name="comment">
+          <Key>
+            <PropertyRef Name="diaryID" />
+          </Key>
+          <Property Name="diaryID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="commentID" Type="Int32" />
+          <Property Name="content" Type="String" MaxLength="1073741823" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="diary">
+          <Key>
+            <PropertyRef Name="diaryID" />
+          </Key>
+          <Property Name="diaryID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="userID" Type="Int32" />
+          <Property Name="title" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+          <Property Name="content" Type="String" MaxLength="1073741823" Unicode="false" FixedLength="false" />
+          <Property Name="tag" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+          <Property Name="publishTime" Type="DateTime" />
+          <Property Name="readTimes" Type="Int32" />
+          <Property Name="buyTimes" Type="Int32" />
+          <Property Name="likeTimes" Type="Int32" />
+          <Property Name="commentTimes" Type="Int32" />
+        </EntityType>
+        <EntityType Name="order">
+          <Key>
+            <PropertyRef Name="orderID" />
+          </Key>
+          <Property Name="orderID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="productID" Type="Int32" />
+          <Property Name="status" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="buyUserID" Type="Int32" />
+          <Property Name="recommendUserID" Type="Int32" />
+          <Property Name="price" Type="Decimal" />
+        </EntityType>
+        <EntityType Name="product">
+          <Key>
+            <PropertyRef Name="productID" />
+          </Key>
+          <Property Name="productID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="url" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+          <Property Name="type" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="name" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="country" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="city" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="rate" Type="Decimal" />
+        </EntityType>
+        <EntityType Name="user">
+          <Key>
+            <PropertyRef Name="userID" />
+          </Key>
+          <Property Name="userID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="userName" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="password" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+          <Property Name="identity" Type="Int32" />
+          <Property Name="credits" Type="Decimal" />
+          <Property Name="email" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="phone" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="hackthonModelStoreContainer" CdmEntityContainer="hackthonEntities">
+          <EntitySetMapping Name="comments">
+            <EntityTypeMapping TypeName="hackthonModel.comment">
+              <MappingFragment StoreEntitySet="comment">
+                <ScalarProperty Name="diaryID" ColumnName="diaryID" />
+                <ScalarProperty Name="commentID" ColumnName="commentID" />
+                <ScalarProperty Name="content" ColumnName="content" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="diaries">
+            <EntityTypeMapping TypeName="hackthonModel.diary">
+              <MappingFragment StoreEntitySet="diary">
+                <ScalarProperty Name="diaryID" ColumnName="diaryID" />
+                <ScalarProperty Name="userID" ColumnName="userID" />
+                <ScalarProperty Name="title" ColumnName="title" />
+                <ScalarProperty Name="content" ColumnName="content" />
+                <ScalarProperty Name="tag" ColumnName="tag" />
+                <ScalarProperty Name="publishTime" ColumnName="publishTime" />
+                <ScalarProperty Name="readTimes" ColumnName="readTimes" />
+                <ScalarProperty Name="buyTimes" ColumnName="buyTimes" />
+                <ScalarProperty Name="likeTimes" ColumnName="likeTimes" />
+                <ScalarProperty Name="commentTimes" ColumnName="commentTimes" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="orders">
+            <EntityTypeMapping TypeName="hackthonModel.order">
+              <MappingFragment StoreEntitySet="order">
+                <ScalarProperty Name="orderID" ColumnName="orderID" />
+                <ScalarProperty Name="productID" ColumnName="productID" />
+                <ScalarProperty Name="status" ColumnName="status" />
+                <ScalarProperty Name="buyUserID" ColumnName="buyUserID" />
+                <ScalarProperty Name="recommendUserID" ColumnName="recommendUserID" />
+                <ScalarProperty Name="price" ColumnName="price" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="products">
+            <EntityTypeMapping TypeName="hackthonModel.product">
+              <MappingFragment StoreEntitySet="product">
+                <ScalarProperty Name="productID" ColumnName="productID" />
+                <ScalarProperty Name="url" ColumnName="url" />
+                <ScalarProperty Name="type" ColumnName="type" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="country" ColumnName="country" />
+                <ScalarProperty Name="city" ColumnName="city" />
+                <ScalarProperty Name="rate" ColumnName="rate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="users">
+            <EntityTypeMapping TypeName="hackthonModel.user">
+              <MappingFragment StoreEntitySet="user">
+                <ScalarProperty Name="userID" ColumnName="userID" />
+                <ScalarProperty Name="userName" ColumnName="userName" />
+                <ScalarProperty Name="password" ColumnName="password" />
+                <ScalarProperty Name="identity" ColumnName="identity" />
+                <ScalarProperty Name="credits" ColumnName="credits" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="phone" ColumnName="phone" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="Model">
+        <EntityTypeShape EntityType="hackthonModel.comment" Width="1.5" PointX="0.75" PointY="0.75" Height="1.5879931640625" IsExpanded="true" />
+        <EntityTypeShape EntityType="hackthonModel.diary" Width="1.5" PointX="2.75" PointY="0.75" Height="2.9251310221354156" IsExpanded="true" />
+        <EntityTypeShape EntityType="hackthonModel.order" Width="1.5" PointX="4.75" PointY="0.75" Height="2.1610522460937496" IsExpanded="true" />
+        <EntityTypeShape EntityType="hackthonModel.product" Width="1.5" PointX="0.75" PointY="4.75" Height="2.3520719401041656" IsExpanded="true" />
+        <EntityTypeShape EntityType="hackthonModel.user" Width="1.5" PointX="2.75" PointY="4.75" Height="2.3520719401041656" IsExpanded="true" />
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>
