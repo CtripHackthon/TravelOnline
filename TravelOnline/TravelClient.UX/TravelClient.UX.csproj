@@ -20,6 +20,8 @@
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
     <TargetFrameworkProfile />
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -41,6 +43,14 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.5.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
@@ -375,6 +385,7 @@
     <Content Include="Scripts\docs.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <Content Include="Scripts\personal.js" />
+    <Content Include="Scripts\post.js" />
     <Content Include="Scripts\site.js" />
     <Content Include="Plugins\scripts\jquery.bpopup.min.js" />
     <Content Include="Plugins\scripts\jquery.pin.js" />
@@ -421,6 +432,7 @@
     <Compile Include="Account\Register.aspx.designer.cs">
       <DependentUpon>Register.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Ajax\Models\QueryParameterPicture.cs" />
     <Compile Include="Ajax\Models\Tile.cs" />
     <Compile Include="Ajax\Models\UserModel.cs" />
     <Compile Include="Ajax\PersonalInformationAjax.aspx.cs">
@@ -706,9 +718,33 @@
     <Content Include="Site.Master" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Application.MainBoundedContect\Application.MainBoundedContext.csproj">
+      <Project>{76739eb7-cc94-4cd6-8cad-5cf1c1a8eb70}</Project>
+      <Name>Application.MainBoundedContext</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Application.MainBoundedContext.DAO\Application.MainBoundedContext.DAO.csproj">
+      <Project>{d534164a-fa1a-4ef2-857f-1cede864e793}</Project>
+      <Name>Application.MainBoundedContext.DAO</Name>
+    </ProjectReference>
     <ProjectReference Include="..\DATABASE\DATABASE.csproj">
       <Project>{3337e05e-79ad-4577-a9cc-2b737a6ddf3c}</Project>
       <Name>DATABASE</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Domain.MainBoundedContext\Domain.MainBoundedContext.csproj">
+      <Project>{97a0d587-aba4-4831-9479-a67b9cfd0431}</Project>
+      <Name>Domain.MainBoundedContext</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Domain.SeedWork\Domain.SeedWork.csproj">
+      <Project>{ec6e151b-ef22-48b4-83b6-89c261344e08}</Project>
+      <Name>Domain.SeedWork</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Infrastructor.MainBoundedContext\Infrastructor.MainBoundedContext.csproj">
+      <Project>{7a737165-5f75-494a-a02e-ac673082c81a}</Project>
+      <Name>Infrastructor.MainBoundedContext</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Infrastructor.SeedWork\Infrastructor.SeedWork.csproj">
+      <Project>{b5a4276f-c64c-4c2e-91b7-5489ce8d55cc}</Project>
+      <Name>Infrastructor.SeedWork</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
@@ -736,6 +772,7 @@
       </FlavorProperties>
     </VisualStudio>
   </ProjectExtensions>
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

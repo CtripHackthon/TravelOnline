@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Web;
+using System.Web.Script.Serialization;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using TravelClient.UX.Ajax.Models;
 
 namespace TravelClient.UX.Ajax
 {
@@ -16,8 +18,24 @@ namespace TravelClient.UX.Ajax
             {
                 Response.Write(AddPicture());
             }
-        }
 
+
+             if (Request["queryType"] == "removePicture")
+            {
+                RemovePicture();
+            }
+        }
+        private void RemovePicture()
+        {
+            JavaScriptSerializer jss = new JavaScriptSerializer();
+            var paramDes = jss.Deserialize<ListQueryParameterPicture>(Request["queryParam"]);
+
+            foreach (var item in paramDes)
+            {
+                FileInfo myfileinf = new FileInfo(Server.MapPath(item));
+                myfileinf.Delete();
+            }
+        }
 
         private string AddPicture()
         {

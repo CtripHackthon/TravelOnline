@@ -43,7 +43,14 @@
                     alert('status :' + XMLHttpRequest.status + '; readyState:' + XMLHttpRequest.readyState + '; textStatus:' + textStatus);
                 },
                 success: function (result) {
-                  
+                    if (result != null) {
+                        if (result.register == '1') {
+                            window.location.href = "../Home.aspx";
+                        }
+                        else {
+                            alert('login failed');
+                        }
+                    }
                 }
             });
         };

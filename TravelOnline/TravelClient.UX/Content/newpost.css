@@ -16,7 +16,14 @@
 
 }
 
-
+.actionbt {
+    margin:4px !important;
+      padding: 7px 14px !important;
+  font-size: 12px !important;
+  color: white !important;
+  background: #e64545 !important;
+  border-bottom-color: #cc2929 !important;
+}
 .wrapper {
     width: 1200px;
     margin: 0 auto;
@@ -37,7 +44,7 @@
 }
     .article-title-text {
         height:30px;
-  width: 400px;
+  width: 800px;
   margin-top:10px;
 }
     .hide {

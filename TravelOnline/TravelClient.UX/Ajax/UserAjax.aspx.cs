@@ -6,6 +6,11 @@ using System.Web;
 using System.Web.Script.Serialization;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using Application.MainBoundedContect.Services.Users;
+using Application.MainBoundedContext.DAO;
+using Domain.MainBoundedContext.Aggregates.Account;
+using Infrastructor.MainBoundedContext.Repositories.Users;
+using Infrastructor.MainBoundedContext.UnitWorks;
 using TravelClient.UX.Ajax.Models;
 
 namespace TravelClient.UX.Ajax
@@ -37,10 +42,23 @@ namespace TravelClient.UX.Ajax
             UserModel user = jss.Deserialize<UserModel>(Request.Params["user"]);
 
 
-            operate.Connect();
-            operate.UpdateDataBase("insert into users(uname,upassword) values('" + user.UserName + "','"+user.Password+"')");
-            operate.CloseConnection();
-            return null;
+            using (MainDBUnitWorkContext context = new MainDBUnitWorkContext()) {
+                IUserRepository ur = new UserRepository(context);
+                UserService uservice = new UserService(ur);
+                bool success = uservice.RegisterUser(new AppUser() { UserName = user.UserName, UserPassword = user.Password });
+
+                if (success)
+                {
+                    // Login successfully
+                    return "{\"register\":1}";
+                }
+                else
+                {
+                    return "{\"register\":0}";
+                }
+            };
+
+           
         }
 
 
@@ -49,23 +67,24 @@ namespace TravelClient.UX.Ajax
             JavaScriptSerializer jss = new JavaScriptSerializer();
             UserModel user = jss.Deserialize<UserModel>(Request.Params["user"]);
 
-            operate.Connect();
-            string query = "select * from users where uname='" + user.UserName + "' and upassword='" + user.Password + "'";
 
-            DataTable dt = operate.SelectToDataTable(query);
+            using (MainDBUnitWorkContext context = new MainDBUnitWorkContext()) {
+                UserRepository ur = new UserRepository(context);
+                UserService uservice = new UserService(ur);
+                bool success = uservice.LoginUser(new AppUser() { UserName = user.UserName, UserPassword = user.Password });
 
-            operate.CloseConnection();
+                if (success)
+                {
+                    Session["UserName"] = user.UserName;
 
-            if (dt.Rows.Count > 0)
-            {
-                Session["user_id"] = dt.Rows[0]["id"];
-                Session["UserName"] = dt.Rows[0]["uname"];
-
-                // Login successfully
-                return "{\"login\":1}";
-            }
-            else {
-                return "{\"login\":0}";
+                    // Login successfully
+                    return "{\"login\":1}";
+                }
+                else
+                {
+                    return "{\"login\":0}";
+ 
+                }
             }
 
         }

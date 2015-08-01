@@ -40,7 +40,7 @@
                 $.each($('.innerPic'), function (index, current) {
                     currentReports.push($(current).attr('src'));
                 });
-                URP.util.RemoveImage(currentReports, $('.tab_box'), function (result) {
+               RemoveImage(currentReports, $('.tab_box'), function (result) {
                     // DO - Nothing
                 });
                 $('.pict-items').val('');
@@ -137,7 +137,35 @@
                     },
                 });
             };
+            function RemoveImage(pictureData, loadingArea, callBack) {
+                var baseUrl = GetBaseUrl();
 
+                $.ajax({
+                    url: baseUrl + "?queryType=removePicture",
+                    type: "POST",
+                    dataType: "json",
+                    data: { queryParam: JSON.stringify(pictureData) },
+                    timeout: 99000,
+                    beforeSend: function () {
+                        loadingArea.showLoading();
+                    },
+                    error: function (xhr, status, error) {
+                        ST.util.showErrorHints();
+
+                        console.log(error);
+                    },
+                    success: function (result) {
+                        ST.util.showSuccessHints();
+
+                        if (callBack) {
+                            callBack(result);
+                        }
+                    },
+                    complete: function () {
+                        loadingArea.hideLoading();
+                    },
+                });
+            };
             function GetBaseUrl() {
                 var url = "http://" + window.location.hostname + ':' + window.location.port + '/Ajax/PostAjax.aspx';
                 return url;
@@ -151,7 +179,7 @@
                 var itemParent = $(this).parentsUntil('li');
                 var currentPictSrc = itemParent.find('.innerPic').attr('src');
                 removedPictureList.push(currentPictSrc);
-                URP.util.RemoveImage(removedPictureList, $('.tab_box'), function (result) {
+                RemoveImage(removedPictureList, $('.tab_box'), function (result) {
                     itemParent.remove();
                 });
             });

@@ -1,0 +1,16 @@
+D:\MyGit\WebAppDemo\WebApplication1\Infrastructor.SeedWork\bin\Release\Infrastructor.SeedWork.dll.config
+D:\MyGit\WebAppDemo\WebApplication1\Infrastructor.SeedWork\bin\Release\Infrastructor.SeedWork.dll
+D:\MyGit\WebAppDemo\WebApplication1\Infrastructor.SeedWork\bin\Release\Infrastructor.SeedWork.pdb
+D:\MyGit\WebAppDemo\WebApplication1\Infrastructor.SeedWork\bin\Release\Domain.SeedWork.dll
+D:\MyGit\WebAppDemo\WebApplication1\Infrastructor.SeedWork\bin\Release\EntityFramework.dll
+D:\MyGit\WebAppDemo\WebApplication1\Infrastructor.SeedWork\bin\Release\EntityFramework.SqlServer.dll
+D:\MyGit\WebAppDemo\WebApplication1\Infrastructor.SeedWork\bin\Release\Microsoft.AspNet.Identity.Core.dll
+D:\MyGit\WebAppDemo\WebApplication1\Infrastructor.SeedWork\bin\Release\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\MyGit\WebAppDemo\WebApplication1\Infrastructor.SeedWork\bin\Release\Domain.SeedWork.pdb
+D:\MyGit\WebAppDemo\WebApplication1\Infrastructor.SeedWork\bin\Release\EntityFramework.xml
+D:\MyGit\WebAppDemo\WebApplication1\Infrastructor.SeedWork\bin\Release\EntityFramework.SqlServer.xml
+D:\MyGit\WebAppDemo\WebApplication1\Infrastructor.SeedWork\bin\Release\Microsoft.AspNet.Identity.Core.xml
+D:\MyGit\WebAppDemo\WebApplication1\Infrastructor.SeedWork\bin\Release\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\MyGit\WebAppDemo\WebApplication1\Infrastructor.SeedWork\obj\Release\Infrastructor.SeedWork.csprojResolveAssemblyReference.cache
+D:\MyGit\WebAppDemo\WebApplication1\Infrastructor.SeedWork\obj\Release\Infrastructor.SeedWork.dll
+D:\MyGit\WebAppDemo\WebApplication1\Infrastructor.SeedWork\obj\Release\Infrastructor.SeedWork.pdb

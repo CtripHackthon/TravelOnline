@@ -4,7 +4,6 @@
     URP.ReportsGet = new function () {
         var Site = null;
         this.SiteGet = function () {
-            alert('test');
             URP.criteria.SiteType = 'myreport';
 
             var criteriaString = $.cookie('criteriaString');
@@ -94,7 +93,7 @@
             URP.criteria.TileId = tileId;
             //load the filter controls 
             URP.Report.getReport(false);
-            URP.Filter.getFilter(tileId);
+            //URP.Filter.getFilter(tileId);
         }
     };
 
@@ -285,7 +284,6 @@
 
             $('.reportTitle').live('click', function (e) {
                 e.preventDefault();
-                alert('test');
             });
         };
         this.getReport = function (scrolling, briefCallBack, detailCallBack) {

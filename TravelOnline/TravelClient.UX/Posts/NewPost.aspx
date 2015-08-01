@@ -11,10 +11,11 @@
     <div class="wrapper">
         <ul id="report-list">
             <li>
-                <ul style="width: 600px; height: 30px" id="artcle-information-board">
+                <ul style="width: 800px; height: 30px" id="artcle-information-board">
                     <li>
-                        <a class="addPic">上传封面</a>
-
+                        <a class="addPic">
+<svg xmlns="http://www.w3.org/2000/svg" class="si-glyph-camera" style="height:20px; width:20px"><use xlink:href="../Plugins/fonts/sprite.svg#si-glyph-camera" /></svg>
+                        上传封面</a>
                     </li>
                     <li>
                          <div class="pictureShowDiv">
@@ -30,13 +31,13 @@
                     </li>
 
                     <li class="a"><b>简介:</b></li>
-                    <li style="width: 1200px; margin: 0 auto; margin-top: 10px;">
+                    <li style="width: 800px; margin: 0 auto; margin-top: 10px;">
                         <div class="head">
                             <textarea id="editor1" name="editor1" tabindex="5"
                                 style="width: 200px; height: 420px"></textarea>
                             <label style="color: red;" class="hide">* 文章内容不能为空</label>
 
-                            <p class="edit-tag-btns" style="float: right; margin-top: 30px;"><a id="submitarticle" href="#" class="__saveTagBtn save-tag-btn sc-btn" type="submit"><span>保存</span></a><a href="#" class="__cancelBtn cancel-btn sc-btn" type="submit"><span>取消</span></a></p>
+                            <p class="edit-tag-btns" style="float: right; margin-top: 30px;"><a id="submitarticle" href="#" class="actionbt __saveTagBtn save-tag-btn sc-btn" type="submit"><span>保存</span></a><a href="#" class="actionbt __cancelBtn cancel-btn sc-btn" type="submit"><span>取消</span></a></p>
                         </div>
                     </li>
 
@@ -77,8 +78,8 @@
 
                                 </div>
                                 <div class="actionArea">
-                                    <input class="okBt" type="submit" value="确定" />
-                                    <input class="resetBt" type="reset" value="取消" />
+                                    <input class="okBt actionbt" type="submit" value="确定" />
+                                    <input class="resetBt actionbt" type="reset" value="取消" />
                                 </div>
                             </div>
                         </div>
