@@ -1,3 +1,0 @@
-d:\users\h_kang\documents\visual studio 2010\Projects\ConsoleApplication8\ConsoleApplication8\bin\Debug\DataModel.exe.config
-D:\Users\h_kang\Documents\Visual Studio 2010\Projects\ConsoleApplication8\DataModel\bin\Debug\DataModel.exe.config
-D:\MyGit\TravelOnline\DataModel\bin\Debug\DataModel.exe.config
