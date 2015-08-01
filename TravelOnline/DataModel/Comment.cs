@@ -12,11 +12,18 @@ namespace DataModel
          GetTravelComments 获取某一游记关联的评论信息
 	Comments getCommentsByDiaryID()	
         */
-        public static comment getCommentsByDiaryID(int diaryID)
+        public static List<comment> getCommentsByDiaryID(int diaryID)
         {
             using (var ctx = new hackthonEntities())
             {
-                return ctx.comments.Where(x => x.diaryID == diaryID).FirstOrDefault();
+                List<comment> list = new List<comment>();
+                IEnumerator<comment> ie = ctx.comments.Where(x => x.diaryID == diaryID).GetEnumerator();
+                while (ie.MoveNext())
+                {
+                    list.Add(ie.Current);
+                }
+
+                return list;
             }
         }
     }
