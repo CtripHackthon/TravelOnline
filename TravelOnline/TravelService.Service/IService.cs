@@ -23,6 +23,7 @@ namespace TravelService.Service
         GET_TRAVEL_COMMENT = 7,
         GET_TRAVEL_DIARYLIST = 8,
         GET_TRAVEL_DIARY_DETAIL = 9,
-        GET_ASSOCIATED_PRODUCT = 10
+        GET_ASSOCIATED_PRODUCT = 10,
+        GET_DISPLAY_CATEGORY = 11,
     }
 }
