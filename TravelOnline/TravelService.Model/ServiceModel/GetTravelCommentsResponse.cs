@@ -6,8 +6,10 @@ using System.Threading.Tasks;
 
 namespace TravelService.Model.ServiceModel
 {
-    public class RegistUserResponse
+    public class GetTravelCommentsResponse
     {
-        public long userId { get; set; }
+        public long commentNum { get; set; }
+
+        public String[] comments { get; set; }
     }
 }

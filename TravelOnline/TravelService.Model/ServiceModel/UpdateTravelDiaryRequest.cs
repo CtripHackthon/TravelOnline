@@ -6,8 +6,14 @@ using System.Threading.Tasks;
 
 namespace TravelService.Model.ServiceModel
 {
-    public class RegistUserResponse
+    public class UpdateTravelDiaryRequest
     {
         public long userId { get; set; }
+
+        public long diaryId { get; set; }
+
+        public List<string> tags { get; set; }
+
+        public byte[] content { get; set; }
     }
 }

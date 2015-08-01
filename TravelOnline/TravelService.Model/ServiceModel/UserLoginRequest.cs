@@ -6,8 +6,10 @@ using System.Threading.Tasks;
 
 namespace TravelService.Model.ServiceModel
 {
-    public class RegistUserResponse
+    public class UserLoginRequest
     {
-        public long userId { get; set; }
+        public String username { get; set; }
+
+        public String password { get; set; }
     }
 }

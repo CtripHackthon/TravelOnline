@@ -39,16 +39,36 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Base\Common\TravelComment.cs" />
     <Compile Include="Base\Common\UserInfo.cs" />
+    <Compile Include="Base\Travel\TravelDiarySummary.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ServiceModel\DeleteTravelDiaryRequest.cs" />
+    <Compile Include="ServiceModel\DeleteTravelDiaryResponse.cs" />
+    <Compile Include="ServiceModel\GetAssociatedProductsInfoRequest.cs" />
+    <Compile Include="ServiceModel\GetAssociatedProductsInfoResponse.cs" />
+    <Compile Include="ServiceModel\GetTravelCommentsRequest.cs" />
+    <Compile Include="ServiceModel\GetTravelCommentsResponse.cs" />
+    <Compile Include="ServiceModel\GetTravelDiariesListRequest.cs" />
+    <Compile Include="ServiceModel\GetTravelDiariesListResponse.cs" />
+    <Compile Include="ServiceModel\GetTravelDiaryDetailInfoRequest.cs" />
+    <Compile Include="ServiceModel\GetTravelDiaryDetailInfoResponse.cs" />
+    <Compile Include="ServiceModel\GetUserInfoRequest.cs" />
+    <Compile Include="ServiceModel\GetUserInfoResponse.cs" />
+    <Compile Include="ServiceModel\PublishTravelDiaryRequest.cs" />
+    <Compile Include="ServiceModel\PublishTravelDiaryResponse.cs" />
     <Compile Include="ServiceModel\RegistUserRequest.cs" />
     <Compile Include="ServiceModel\RegistUserResponse.cs" />
+    <Compile Include="ServiceModel\ReserveProductRequest.cs" />
+    <Compile Include="ServiceModel\ReserveProductResponse.cs" />
+    <Compile Include="ServiceModel\UpdateTravelDiaryRequest.cs" />
+    <Compile Include="ServiceModel\UpdateTravelDiaryResponse.cs" />
+    <Compile Include="ServiceModel\UserLoginRequest.cs" />
+    <Compile Include="ServiceModel\UserLoginResponse.cs" />
     <Compile Include="ServiceRequest.cs" />
     <Compile Include="ServiceResponse.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Base\Travel\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

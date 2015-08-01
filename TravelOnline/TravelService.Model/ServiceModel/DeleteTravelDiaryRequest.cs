@@ -6,8 +6,11 @@ using System.Threading.Tasks;
 
 namespace TravelService.Model.ServiceModel
 {
-    public class RegistUserResponse
+    public class DeleteTravelDiaryRequest
     {
         public long userId { get; set; }
+
+        public String diariesList { get; set; }
+
     }
 }

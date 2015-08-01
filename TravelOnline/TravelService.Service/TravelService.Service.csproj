@@ -52,6 +52,7 @@
     <Compile Include="Travel\GetTravelDiariesList.cs" />
     <Compile Include="Travel\GetTravelDiaryDetailInfo.cs" />
     <Compile Include="Travel\PublishTravelDiary.cs" />
+    <Compile Include="Travel\ReserveProduct.cs" />
     <Compile Include="Travel\UpdateTravelDiary.cs" />
     <Compile Include="Utilities\ReportServiceMessage.cs" />
   </ItemGroup>

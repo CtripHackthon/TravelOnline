@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace TravelService.Model.ServiceModel
 {
-    public class RegistUserResponse
+    public class GetUserInfoRequest
     {
-        public long userId { get; set; }
+        public long  userId { get; set; }
     }
 }

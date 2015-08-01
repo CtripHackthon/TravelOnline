@@ -6,8 +6,7 @@ using System.Threading.Tasks;
 
 namespace TravelService.Model.ServiceModel
 {
-    public class RegistUserResponse
+    public class PublishTravelDiaryResponse
     {
-        public long userId { get; set; }
     }
 }
