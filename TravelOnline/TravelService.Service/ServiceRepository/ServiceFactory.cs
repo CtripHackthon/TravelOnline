@@ -71,6 +71,9 @@ namespace TravelService.Service.ServiceRepository
             entity = new GetAssociatedProductsInfo();
             repositoy.storeServiceEntity(service_type.GET_ASSOCIATED_PRODUCT, entity);
 
+            entity = new GetDisplayCategories();
+            repositoy.storeServiceEntity(service_type.GET_DISPLAY_CATEGORY, entity);
+
             return;
         }
 
