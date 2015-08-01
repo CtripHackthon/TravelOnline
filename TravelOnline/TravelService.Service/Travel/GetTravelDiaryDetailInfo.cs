@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using DataModel;
 using TravelService.Model;
+using TravelService.Model.Base.Travel;
 using TravelService.Model.ServiceModel;
 using TravelService.Service.Utilities;
 
@@ -30,7 +32,21 @@ namespace TravelService.Service.Travel
             }
 
             GetTravelDiaryDetailInfoResponse serviceResponse = new GetTravelDiaryDetailInfoResponse();
-            
+            if (serviceRequest.diaryid > 0)
+            {
+                diary d = Diary.getDiaryByDiaryID((int)serviceRequest.diaryid);
+                if (d != null)
+                {
+                    TravelDiary ds = new TravelDiary();
+                    ds.diaryId = d.diaryID;
+                    ds.content = d.content;
+                    ds.userId = (long)d.userID;
+                    ds.publishTime = ((DateTime)d.publishTime).ToString();
+                    ds.tags = d.tag;
+                    ds.title = d.title;
+                    serviceResponse.diaryInfo = ds;        
+                }
+            }
 
             response.responseObj = serviceResponse;
             response.returnCode = 0;
