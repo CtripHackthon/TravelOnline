@@ -9,7 +9,11 @@ namespace TravelService.Model.Base.Travel
 {
     public class TravelDiary
     {
+
+
         public long userId { get; set; }
+
+        public long diaryId { get; set; }
 
         public string title { get; set; }
 

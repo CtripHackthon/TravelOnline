@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using DataModel;
 using TravelService.Model.ServiceModel;
 using TravelService.Service.Utilities;
 
@@ -28,6 +29,13 @@ namespace TravelService.Service.Travel
                 return;
             }
 
+            diary d = new diary();
+            d.content = serviceRequest.diary.content;
+            d.tag = serviceRequest.diary.tags;
+            d.title = serviceRequest.diary.title;
+            d.diaryID = (int)serviceRequest.diary.diaryId;
+
+            Diary.updateDiary((int)serviceRequest.diary.diaryId, d);
 
             response.returnCode = 0;
 
