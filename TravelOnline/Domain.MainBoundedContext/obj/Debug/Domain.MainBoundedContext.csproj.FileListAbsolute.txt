@@ -30,7 +30,6 @@ D:\MyGit\TravelOnline\TravelOnline\Domain.MainBoundedContext\bin\Debug\Domain.Ma
 D:\MyGit\TravelOnline\TravelOnline\Domain.MainBoundedContext\bin\Debug\Domain.SeedWork.dll
 D:\MyGit\TravelOnline\TravelOnline\Domain.MainBoundedContext\bin\Debug\EntityFramework.dll
 D:\MyGit\TravelOnline\TravelOnline\Domain.MainBoundedContext\bin\Debug\EntityFramework.SqlServer.dll
-D:\MyGit\TravelOnline\TravelOnline\Domain.MainBoundedContext\bin\Debug\LinqKit.dll
 D:\MyGit\TravelOnline\TravelOnline\Domain.MainBoundedContext\bin\Debug\Microsoft.AspNet.Identity.Core.dll
 D:\MyGit\TravelOnline\TravelOnline\Domain.MainBoundedContext\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
 D:\MyGit\TravelOnline\TravelOnline\Domain.MainBoundedContext\bin\Debug\Microsoft.CSharp.dll

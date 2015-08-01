@@ -81,13 +81,6 @@
     <Compile Include="Aggregates\Account\UserAccount.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Domain.SeedWork\Domain.SeedWork.csproj">
-      <Project>{ec6e151b-ef22-48b4-83b6-89c261344e08}</Project>
-      <Name>Domain.SeedWork</Name>
-      <Private>True</Private>
-    </ProjectReference>
-  </ItemGroup>
   <ItemGroup />
   <ItemGroup>
     <None Include="App.config" />

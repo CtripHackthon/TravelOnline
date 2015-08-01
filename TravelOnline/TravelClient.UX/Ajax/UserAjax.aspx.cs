@@ -6,11 +6,7 @@ using System.Web;
 using System.Web.Script.Serialization;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using Application.MainBoundedContect.Services.Users;
-using Application.MainBoundedContext.DAO;
-using Domain.MainBoundedContext.Aggregates.Account;
-using Infrastructor.MainBoundedContext.Repositories.Users;
-using Infrastructor.MainBoundedContext.UnitWorks;
+
 using TravelClient.UX.Ajax.Models;
 
 namespace TravelClient.UX.Ajax
@@ -21,71 +17,73 @@ namespace TravelClient.UX.Ajax
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Request.Params["queryType"] == "register") {
-                Response.Write(RegisterNewUser());
-            }
+            //if (Request.Params["queryType"] == "register") {
+            //    Response.Write(RegisterNewUser());
+            //}
 
-            if (Request.Params["queryType"] == "login")
-            {
-                Response.Write(LoginUser());
-            }
+            //if (Request.Params["queryType"] == "login")
+            //{
+            //    Response.Write(LoginUser());
+            //}
 
 
-            if (Request.Params["queryType"] == "signoff")
-            {
-                Response.Write(signOff());
-            }
+            //if (Request.Params["queryType"] == "signoff")
+            //{
+            //    Response.Write(signOff());
+            //}
         }
 
         private string RegisterNewUser() {
-            JavaScriptSerializer jss = new JavaScriptSerializer();
-            UserModel user = jss.Deserialize<UserModel>(Request.Params["user"]);
+            //JavaScriptSerializer jss = new JavaScriptSerializer();
+            //UserModel user = jss.Deserialize<UserModel>(Request.Params["user"]);
 
 
-            using (MainDBUnitWorkContext context = new MainDBUnitWorkContext()) {
-                IUserRepository ur = new UserRepository(context);
-                UserService uservice = new UserService(ur);
-                bool success = uservice.RegisterUser(new AppUser() { UserName = user.UserName, UserPassword = user.Password });
+            //using (MainDBUnitWorkContext context = new MainDBUnitWorkContext()) {
+            //    IUserRepository ur = new UserRepository(context);
+            //    UserService uservice = new UserService(ur);
+            //    bool success = uservice.RegisterUser(new AppUser() { UserName = user.UserName, UserPassword = user.Password });
 
-                if (success)
-                {
-                    // Login successfully
-                    return "{\"register\":1}";
-                }
-                else
-                {
-                    return "{\"register\":0}";
-                }
-            };
+            //    if (success)
+            //    {
+            //        // Login successfully
+            //        return "{\"register\":1}";
+            //    }
+            //    else
+            //    {
+            //        return "{\"register\":0}";
+            //    }
+            //};
+            return "";
 
-           
         }
 
 
         private string LoginUser() {
 
-            JavaScriptSerializer jss = new JavaScriptSerializer();
-            UserModel user = jss.Deserialize<UserModel>(Request.Params["user"]);
+            //JavaScriptSerializer jss = new JavaScriptSerializer();
+            //UserModel user = jss.Deserialize<UserModel>(Request.Params["user"]);
 
 
-            using (MainDBUnitWorkContext context = new MainDBUnitWorkContext()) {
-                UserRepository ur = new UserRepository(context);
-                UserService uservice = new UserService(ur);
-                bool success = uservice.LoginUser(new AppUser() { UserName = user.UserName, UserPassword = user.Password });
+            //using (MainDBUnitWorkContext context = new MainDBUnitWorkContext()) {
+            //    UserRepository ur = new UserRepository(context);
+            //    UserService uservice = new UserService(ur);
+            //    bool success = uservice.LoginUser(new AppUser() { UserName = user.UserName, UserPassword = user.Password });
 
-                if (success)
-                {
-                    Session["UserName"] = user.UserName;
+            //    if (success)
+            //    {
+            //        Session["UserName"] = user.UserName;
 
-                    // Login successfully
-                    return "{\"login\":1}";
-                }
-                else
-                {
-                    return "{\"login\":0}";
+            //        // Login successfully
+            //        return "{\"login\":1}";
+            //    }
+            //    else
+            //    {
+            //        return "{\"login\":0}";
  
-                }
-            }
+            //    }
+            //}
+
+            return "";
 
         }
 

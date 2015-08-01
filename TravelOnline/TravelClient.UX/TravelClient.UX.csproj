@@ -727,33 +727,9 @@
     <Content Include="Site.Master" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Application.MainBoundedContect\Application.MainBoundedContext.csproj">
-      <Project>{76739eb7-cc94-4cd6-8cad-5cf1c1a8eb70}</Project>
-      <Name>Application.MainBoundedContext</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Application.MainBoundedContext.DAO\Application.MainBoundedContext.DAO.csproj">
-      <Project>{d534164a-fa1a-4ef2-857f-1cede864e793}</Project>
-      <Name>Application.MainBoundedContext.DAO</Name>
-    </ProjectReference>
     <ProjectReference Include="..\DATABASE\DATABASE.csproj">
       <Project>{3337e05e-79ad-4577-a9cc-2b737a6ddf3c}</Project>
       <Name>DATABASE</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Domain.MainBoundedContext\Domain.MainBoundedContext.csproj">
-      <Project>{97a0d587-aba4-4831-9479-a67b9cfd0431}</Project>
-      <Name>Domain.MainBoundedContext</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Domain.SeedWork\Domain.SeedWork.csproj">
-      <Project>{ec6e151b-ef22-48b4-83b6-89c261344e08}</Project>
-      <Name>Domain.SeedWork</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Infrastructor.MainBoundedContext\Infrastructor.MainBoundedContext.csproj">
-      <Project>{7a737165-5f75-494a-a02e-ac673082c81a}</Project>
-      <Name>Infrastructor.MainBoundedContext</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Infrastructor.SeedWork\Infrastructor.SeedWork.csproj">
-      <Project>{b5a4276f-c64c-4c2e-91b7-5489ce8d55cc}</Project>
-      <Name>Infrastructor.SeedWork</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
