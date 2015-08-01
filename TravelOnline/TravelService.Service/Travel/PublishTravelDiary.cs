@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using DataModel;
 using TravelService.Model;
 using TravelService.Model.ServiceModel;
 using TravelService.Service.Utilities;
@@ -29,8 +30,19 @@ namespace TravelService.Service.Travel
                 return;
             }
 
+            diary d = new diary();
+            d.title = serviceRequest.diary.title;
+            d.userID = (int)serviceRequest.diary.userId;
+            d.tag = serviceRequest.diary.tags;
+            d.content = serviceRequest.diary.content;
+            d.publishTime = DateTime.Now;
+            
+            int diaryId = Diary.saveDiary(d);
+
             PublishTravelDiaryResponse serviceResoponse = new PublishTravelDiaryResponse();
-            serviceResoponse.diaryId = 9;
+
+
+            serviceResoponse.diaryId = diaryId;
             response.responseObj = serviceResoponse;
             response.returnCode = 0;
             return;

@@ -19,12 +19,14 @@ namespace DataModel
         }
 
         //PutTravelDiary         发布旅行日志
-        public static void saveDiary(diary diary)
+        public static int saveDiary(diary diary)
         {
             using (var ctx = new hackthonEntities())
             {
                 ctx.AddTodiaries(diary);
                 ctx.SaveChanges();
+                return diary.diaryID;
+
             }
         }
 
