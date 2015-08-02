@@ -13,8 +13,8 @@
         </div>
         <div>
             <div class="actionArea">
-                                    <input class="okBt actionbt"  id="savetag" value="确定" />
-                                    <input class="resetBt actionbt" id="canceltag" value="取消" />
+                                    <input class="okBt2 actionbt"  id="savetag" value="确定" />
+                                    <input class="resetBt3 actionbt" id="canceltag" value="取消" />
                                 </div>
         </div>
     </div>
@@ -100,7 +100,7 @@
 
                         </ul>
                     </li>
-                    <li class="ab" style="width: 800px; margin: 0 auto; margin-top: 10px;">
+                    <li class="ab" style="width: 1200px; margin: 0 auto; margin-top: 10px;">
                         <div class="head">
                             <textarea id="editor1" name="editor1" tabindex="5" placeholder="简介"
                                 style="width: 200px; height: 420px"></textarea>

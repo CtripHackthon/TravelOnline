@@ -196,7 +196,7 @@
     height: 50px;
 }
 
-.okBt {
+.okBt, .okBt2 {
     margin: 10px;
     background-color: #3fa7cb;
     color: black;
@@ -207,7 +207,7 @@
     height: 36px;
 }
 
-    .okBt:hover {
+    .okBt:hover, .okBt2:hover {
         color: white;
         font-weight: bold;
         cursor: pointer;
@@ -216,7 +216,7 @@
 
 
 
-.resetBt2 {
+.resetBt2, .resetBt3 {
     margin: 10px;
     background-color: #3fa7cb;
     color: black;
@@ -227,7 +227,7 @@
     height: 36px;
 }
 
-    .resetBt2:hover {
+    .resetBt2:hover, .resetBt3:hover {
         color: white;
         font-weight: bold;
         cursor: pointer;

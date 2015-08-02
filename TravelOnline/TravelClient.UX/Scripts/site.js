@@ -1,6 +1,6 @@
 ﻿(function (site, $, undefined) {
     // Top navigation bar
-    site.init = function (sessionUser) {
+    site.init = function (sessionUser,sessionid) {
 
         $(window).scroll(function () {
            scrollHide();
@@ -25,7 +25,7 @@
         });
     
         // user login status
-        site.Top.userLoad(sessionUser);
+        site.Top.userLoad(sessionUser, sessionid);
         site.Top.init();
       
 
@@ -65,9 +65,12 @@
                 });
             });
         }
-        this.userLoad = function (sessionUser) {
+        this.userLoad = function (sessionUser, sessionid) {
             if (sessionUser != null && sessionUser != "") {
                 $('#usersession').val(sessionUser);
+                alert(sessionid);
+                $('#usersessionid').val(sessionid);
+
                 // logined user
                 $('.right-bar ul').remove();
 

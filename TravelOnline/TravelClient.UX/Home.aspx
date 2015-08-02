@@ -14,6 +14,7 @@
 <body class="home" allyes_city="SH">
     <form runat="server">
         <input type="hidden" id="usersession" style="display:none"/>
+        <input type="hidden" id="usersessionid" style="display:none"/>
 
         <div id="top-header" class="header2 header-show">
             <div class="container clearfix">
@@ -964,8 +965,9 @@
             $(function () {
 
                 var sessionUser = '<%= Session["UserName"]%>';
+                var sessionUserId = '<%= Session["UserId"]%>';
 
-                site.init(sessionUser);
+                site.init(sessionUser, sessionUserId);
 
            
             });

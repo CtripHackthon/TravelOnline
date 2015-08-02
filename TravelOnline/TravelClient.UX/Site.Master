@@ -12,6 +12,8 @@
         
     <div id="top-header" class="header2 header-show">
         <input type="hidden" id="usersession" style="display:none"/>
+        <input type="hidden" id="usersessionid" style="display:none"/>
+
         <div class="container clearfix">
             <div class="logo-wrap">
                 <a href="../Home.aspx" class="logo">
@@ -162,7 +164,9 @@
         })(window.site = window.site || {}, $, undefined);
         $(function () {
             var sessionUser = '<%= Session["UserName"]%>';
-            site.init(sessionUser);
+            var sessionId = '<%= Session["UserId"]%>';
+
+            site.init(sessionUser, sessionId);
         });
     </script>
 </body>
