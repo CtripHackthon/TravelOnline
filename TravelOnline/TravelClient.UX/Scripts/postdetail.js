@@ -22,32 +22,32 @@
                     $('#slider').children().remove();
 
                     var str="";
-    //                $.each(result.addrs,function(index,current){
+                    $.each(result.addrs,function(index,current){
                     
-    //                    if (index == 0) {
-    //                         str+= '<li style="display: list-item;" class="active">' +
-    //                                          '<a target="_blank" class="con" href="#" style="background-image: url' +
-    //'(' + current + ')">' +
-    //'                                                <div class="overlay"></div>' +
-    //'                                                <div class="title">' +
-    //'                                                </div>' +
-    //'                                            </a>' +
-    //'                                        </li>';
-    //                    }
-    //                    else {
-    //                         str+= '<li style="display: list-item;">' +
-    //                                           '<a target="_blank" class="con" href="#" style="background-image: url' +
-    //'(' + current + ')">' +
-    //'                                                <div class="overlay"></div>' +
-    //'                                                <div class="title">' +
-    //'                                                </div>' +
-    //'                                            </a>' +
-    //'                                        </li>';
-    //                    }
+                        if (index == 0) {
+                             str+= '<li style="display: list-item;" class="active">' +
+                                              '<a target="_blank" class="con" href="#" style="background-image: url' +
+    '(' + current + ')">' +
+    '                                                <div class="overlay"></div>' +
+    '                                                <div class="title">' +
+    '                                                </div>' +
+    '                                            </a>' +
+    '                                        </li>';
+                        }
+                        else {
+                             str+= '<li style="display: list-item;">' +
+                                               '<a target="_blank" class="con" href="#" style="background-image: url' +
+    '(' + current + ')">' +
+    '                                                <div class="overlay"></div>' +
+    '                                                <div class="title">' +
+    '                                                </div>' +
+    '                                            </a>' +
+    '                                        </li>';
+                        }
 
-    //                });
+                    });
 
-                  //  $('#slider').append(str);
+                    $('#slider').append(str);
 
                     // load the article detail in the detail page
                     $('#articletitle').html("<a href='#'>" + result.title + "</a>");
@@ -58,7 +58,7 @@
                     var stt = "";
 
                     $.each(tags, function (index, c) {
-                        stt += "<li><a href='#'>"+c+"</a></li>";
+                        stt += "<li><a href='#' class='taglink'>"+c+"</a></li>";
                     });
 
                     $('.tags').append(stt);
@@ -68,6 +68,11 @@
             complete: function () {
                 // loadingArea.hideLoading();
             },
+        });
+
+
+        $('.taglink').live('click', function (e) {
+            window.location.href = "../Product/Products.aspx";
         });
     }
 

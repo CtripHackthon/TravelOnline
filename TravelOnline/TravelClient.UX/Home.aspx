@@ -114,7 +114,7 @@
 
                 <ul class="lv-ban-imgs" id="js_allyes_1">
                     <li class="active"><a href="#" target="_blank">
-                        <img src="http://pic.lvmama.com/opi/sy01-mdd-sh.jpg" to_trd="null" height="400" width="1920"></a></li>
+                        <img src="../Images/sy01-mdd-sh.jpg" to_trd="null" height="400" width="1920" /></a></li>
                 </ul>
             </div>
         </div>

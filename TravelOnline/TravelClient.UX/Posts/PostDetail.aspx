@@ -6,7 +6,9 @@
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="MainContent" runat="server">
     <link href="../Content/home.css" rel="stylesheet" />
-    <div class="main-wrap" style="padding:20px">
+    <link href="../Content/home2.css" rel="stylesheet" />
+    <div class="main-wrap" style="padding:20px; width:1200px; margin: 0 auto">
+
         <div class="container" style="width:1200px; margin: 0 auto">
             <div class="focus">
                 <div class="headlines">
@@ -57,24 +59,7 @@
             </div>
         </div>
     </div>
-    <div class="demo-wrap">
-        <div class="pic_for_gift500_uni">
-        </div>
-        <div class="container">
-            <div class="demo-wall">
-
-                <ul>
-
-
-                </ul>
-            </div>
-            <div style="display: none; height: 45px; padding-top: 0px; margin-top: 0px; padding-bottom: 0px; margin-bottom: 0px;" class="demo-btn">
-                <a target="_blank" href="http://no.pingwest.com">
-                    <span>查看更多</span>
-                </a>
-            </div>
-        </div>
-    </div>
+    
 
     <script src="../Scripts/jquery-1.10.2.min.js"></script>
     <script src="../Scripts/slider.js"></script>
