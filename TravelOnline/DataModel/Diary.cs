@@ -44,7 +44,7 @@ namespace DataModel
         }
 
         //GetTravelDiaryDetailInfo  获取某一游记详细信息
-        static diary getDiaryByDiaryID(int diaryID)
+        public static diary getDiaryByDiaryID(int diaryID)
         {          
             using (var ctx = new hackthonEntities())
             {

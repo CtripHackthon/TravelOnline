@@ -12,6 +12,8 @@ namespace TravelService.Model.Base.Travel
 
         public long userId { get; set; }
 
+        public string title { get; set; }
+
         public string username { get; set; }
 
         public string diaryPicAddr { get; set; }
