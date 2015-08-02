@@ -187,6 +187,7 @@
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <Content Include="Scripts\personal.js" />
     <Content Include="Scripts\post.js" />
+    <Content Include="Scripts\postdetail.js" />
     <Content Include="Scripts\site.js" />
     <Content Include="Plugins\scripts\jquery.bpopup.min.js" />
     <Content Include="Plugins\scripts\jquery.pin.js" />
@@ -311,6 +312,7 @@
     <Folder Include="App_Data\" />
     <Folder Include="App_Start\" />
     <Folder Include="CustomerPicture\" />
+    <Folder Include="uploadedFiles\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Site.Master" />

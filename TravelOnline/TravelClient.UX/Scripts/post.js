@@ -1,14 +1,26 @@
 ﻿(function (post, $, undefined) {
     post.Init = function () {
 
+        var myDate = new Date();
+        myDate.getYear();      //获取当前年份(2位)  
+        myDate.getFullYear(); //获取完整的年份(4位,1970-????)  
+        myDate.getMonth();      //获取当前月份(0-11,0代表1月)  
+        myDate.getDate();      //获取当前日(1-31)  
+        myDate.getDay();        //获取当前星期X(0-6,0代表星期天)  
+        myDate.getTime();      //获取当前时间(从1970.1.1开始的毫秒数)  
+        myDate.getHours();      //获取当前小时数(0-23)  
+        myDate.getMinutes();    //获取当前分钟数(0-59)  
+        myDate.getSeconds();    //获取当前秒数(0-59)  
+        myDate.getMilliseconds(); //获取当前毫秒数(0-999)  
+        myDate.toLocaleDateString();    //获取当前日期  
+        var mytime = myDate.getFullYear() + "-" + myDate.getMonth() + "-" + myDate.getDate();    //获取当前时间
+
         var articleTitle;
         var articleCategory = {};
         var articleTags;
         var articleContent;
-        var currentTime=Date.now().toString();
-        var img1;
-        var img2;
-        var img3;
+        var currentTime = mytime;
+        var articleImages = [];
 
             $('.article-title-text').focus();
 
@@ -138,7 +150,7 @@
                     data: { queryParam: JSON.stringify(pictureData) },
                     timeout: 99000,
                     beforeSend: function () {
-                        loadingArea.showLoading();
+                        //loadingArea.showLoading()();
                     },
                     error: function (xhr, status, error) {
                         console.log(error);
@@ -196,8 +208,8 @@
                 // send post to add tag
                 articleTags += $('#tagname').val()+";";
                 // show tags in th list
-                var str = "<li><a class='newtaga'>" + $('#tagname').val() + "</a></li>";
-                $('#addedtags').append(str);
+                var str2 = "<li><a class='newtaga'>" + $('#tagname').val() + "</a></li>";
+                $('#addedtags').append(str2);
                 $('.addtagdiv').bPopup().close();
             });
 
@@ -207,43 +219,100 @@
 
             $('.category').live('click', function (e) {
                 var baseUrl = GetBaseUrl();
+                $('.category').children().remove();
 
                 $.ajax({
-                    url: baseUrl + "?queryType=removePicture",
+                    url: baseUrl + "?queryType=getcategory",
                     type: "POST",
                     dataType: "json",
-                    data: { queryParam: JSON.stringify(pictureData) },
                     timeout: 99000,
                     beforeSend: function () {
-                        loadingArea.showLoading();
+                        //loadingArea.showLoading()();
                     },
                     error: function (xhr, status, error) {
                         console.log(error);
                     },
                     success: function (result) {
-                        if (callBack) {
-                            callBack(result);
+                        if (result != null) {
+                            var str = "";
+                            $.each(result, function(index,current){
+                                str += "<option valuetag='" + current.categoryId + "'>" + current.categoryName + "</option>";
+                            });
+
+                            $('.category').append(str);
                         }
                     },
                     complete: function () {
-                        loadingArea.hideLoading();
+                        //loadingArea.hideLoading();
                     },
                 });
 
             });
+
+            $('.category option').live('click', function (e) {
+                articleCategory = { categoryId: $(this).attr('valuetag'), categoryName: $(this).val()};
+            });
             $('#submitarticle').live('click', function (e) {
+                var baseUrl = GetBaseUrl();
+
+                $.each($('.pict-show-in-body .innerPic'), function (index, current2) {
+                    if ($(current2).attr('src') != '') {
+                        articleImages.push($(current2).attr('src'));
+                    }
+                });
                 var article = {
-                    userId: $('#usersession').val(),
+                    userId: $('#usersessionid').val(),
                     title: $('.article-title-text').val(),
-                    content: $('#editor1').val(),
+                    content: HTMLEncode($('#editor1').val()),
                     tags: articleTags,
-                    belongCategory: {categoryId: 1, categoryName:""}
+                    belongCategory: articleCategory,
+                    addrs: articleImages,
+                    publishTime: currentTime
                 };
+
+
+                $.ajax({
+                    url: baseUrl + "?queryType=savearticle",
+                    type: "POST",
+                    dataType: "json",
+                    data: { queryParam: JSON.stringify(article) },
+                    timeout: 99000,
+                    beforeSend: function () {
+                       // //loadingArea.showLoading()();
+                    },
+                    error: function (xhr, status, error) {
+                        console.log(error);
+                    },
+                    success: function (result) {
+                        if (result != null) {
+                            alert(result);
+                            window.location.href = "../Posts/PostDetail.aspx?id="+result;
+                        }
+                    },
+                    complete: function () {
+                       // loadingArea.hideLoading();
+                    },
+                });
             });
 
             $('#cancelArticle').live('click', function (e) {
                 window.location.href = "../Account/PersonalBoard.aspx";
             });
+
+          function HTMLEncode (html) {
+                var temp = document.createElement("div");
+                (temp.textContent != null) ? (temp.textContent = html) : (temp.innerText = html);
+                var output = temp.innerHTML;
+                temp = null;
+                return output;
+            }
+          function HTMLDecode(text) {
+                var temp = document.createElement("div");
+                temp.innerHTML = text;
+                var output = temp.innerText || temp.textContent;
+                temp = null;
+                return output;
+            }
 
     }
 })(window.post = window.post || {}, $, undefined);

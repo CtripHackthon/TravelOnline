@@ -1,10 +1,11 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="PostDetail.aspx.cs" Inherits="TravelClient.UX.Posts.PostDetail" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="FeaturedContent" runat="server">
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="MainContent" runat="server">
-       <link href="../Content/home.css" rel="stylesheet" />
+    <link href="../Content/home.css" rel="stylesheet" />
     <div class="main-wrap">
         <div class="container">
             <div class="focus">
@@ -77,31 +78,43 @@
                         </ul>
                     </div>
                 </div>
-                
+
             </div>
             <div class="news-list index-news">
-              <ul>
-                  <li>
-                      <h1>这是标题</h1>
-                  </li>
-                  <li>
-                      <div>
-                          <h3>这是文章正文</h3>
-                      </div>
-                  </li>
-                  <li>
-                      组别：
-                      <ul class="tags">
-                          <li>标签1</li><li>标签1</li><li>标签1</li><li>标签1</li><li>标签1</li><li>标签1</li><li>标签1</li>
-                      </ul>
-                  </li>
-                  <li>
-                      标签：
-                      <ul class="tags">
-                          <li>标签1</li><li>标签1</li><li>标签1</li><li>标签1</li><li>标签1</li><li>标签1</li><li>标签1</li>
-                      </ul>
-                  </li>
-              </ul>
+                <ul>
+                    <li>
+                        <h1>这是标题</h1>
+                    </li>
+                    <li>
+                        <div>
+                            <h3>这是文章正文</h3>
+                        </div>
+                    </li>
+                    <li>组别：
+                     
+                        <ul class="tags">
+                            <li>标签1</li>
+                            <li>标签1</li>
+                            <li>标签1</li>
+                            <li>标签1</li>
+                            <li>标签1</li>
+                            <li>标签1</li>
+                            <li>标签1</li>
+                        </ul>
+                    </li>
+                    <li>标签：
+                     
+                        <ul class="tags">
+                            <li>标签1</li>
+                            <li>标签1</li>
+                            <li>标签1</li>
+                            <li>标签1</li>
+                            <li>标签1</li>
+                            <li>标签1</li>
+                            <li>标签1</li>
+                        </ul>
+                    </li>
+                </ul>
             </div>
         </div>
     </div>
@@ -137,4 +150,25 @@
     <script src="../Scripts/jquery-1.10.2.min.js"></script>
     <script src="../Scripts/slider.js"></script>
 
+    <script src="../Plugins/scripts/jquery.bpopup.min.js"></script>
+    <script src="../Plugins/scripts/jquery.showLoading.js"></script>
+    <script src="../Scripts/postdetail.js"></script>
+    <script src="../Plugins/scripts/wangEditor-1.3.js"></script>
+    <script type="text/javascript">
+        (function (post, $, undefined) {
+            post.getArticle = function () {
+                // article id
+                var r = window.location.search.split('=')[1];
+
+                // load the 
+                alert(r);
+            }
+        })(window.post = window.post || {}, $, undefined);
+
+       
+
+        $(function () {
+            post.getArticle();
+        });
+            </script>
 </asp:Content>
