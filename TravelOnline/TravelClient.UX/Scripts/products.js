@@ -20,7 +20,7 @@
                         str+='  <li id="" class="">' +
                     '<a class="group-pic J_hotelItem" href="../Product/ProductDetail.aspx" ' +
                         'data-cid="345040" title="' + result.productName + '" target="_blank">' +
-                                                '<img src="http://images4.c-' +
+                                                '<img src="http://images4.c-ctrip.com/target/tuangou/791/349/537/3f40bbe9e93c427e887352912b74a0f1_360_240.jpg' +
                         +'ctrip.com/target/tuangou/791/349/537/3f40bbe9e93c427e887352912b74a0f1_360_240.jpg" onerror="defaultImg(this)" class="group-'
                         + 'img" alt="">' +
                                         '        <div class="pic">' +
