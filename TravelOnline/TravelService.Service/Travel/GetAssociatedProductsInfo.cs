@@ -29,11 +29,20 @@ namespace TravelService.Service.Travel
                 GetAssociatedProductsInfoResponse serviceResponse = new GetAssociatedProductsInfoResponse();
                 List<TravelProduct> products = new List<TravelProduct>();
                 //Mock Data
+                List<TravelProduct> raw_products  = new List<TravelProduct>();
                 MockData(products);
 
                 int seed = 10;
                 Random rand = new Random(seed);
-                
+
+                int num = rand.Next(5, 10);
+
+                for (int i = 0; i < num; i++)
+                {
+                    int key = rand.Next(1, 10);
+                    products.Add(raw_products.ElementAt(key));
+                }
+
 
                 serviceResponse.products = products;
                 response.responseObj = serviceResponse;
