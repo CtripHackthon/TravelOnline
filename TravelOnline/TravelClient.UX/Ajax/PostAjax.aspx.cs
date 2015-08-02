@@ -7,6 +7,11 @@ using System.Web.Script.Serialization;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using TravelClient.UX.Ajax.Models;
+using TravelService.Model;
+using TravelService.Model.Base.Travel;
+using TravelService.Model.ServiceModel;
+using TravelService.Service;
+using TravelService.Service.ServiceRepository;
 
 namespace TravelClient.UX.Ajax
 {
@@ -29,8 +34,74 @@ namespace TravelClient.UX.Ajax
              if (Request["queryType"] == "getcategory")
              {
                  Response.Write(GetCategoryList());
-                 
              }
+
+             if (Request["queryType"] == "getpostsbycategoryid")
+             {
+                 Response.Write(GetArticlesByCategoryId());
+             }
+            
+             if (Request["queryType"] == "getarticlebyid")
+             {
+                 Response.Write(GetArticleByID());
+             }
+
+             if (Request["queryType"] == "savearticle")
+             {
+                 Response.Write(SubmitArticle());
+             }
+            
+
+        }
+
+        private string GetArticlesByCategoryId() {
+
+
+            JavaScriptSerializer jss = new JavaScriptSerializer();
+            var paramDes = jss.Deserialize<TravelDiary>(Request["queryParam"]);
+
+
+        }
+        private string SubmitArticle() {
+
+            JavaScriptSerializer jss = new JavaScriptSerializer();
+            var paramDes = jss.Deserialize<TravelDiary>(Request["queryParam"]);
+
+            PublishTravelDiaryRequest registerReq = new PublishTravelDiaryRequest();
+            registerReq.diary = paramDes;
+
+
+            ServiceRequest request = new ServiceRequest(registerReq);
+            ServiceResponse response = new ServiceResponse();
+
+            IService service = ServiceFactory.getInstance().getService(service_type.PUBLISH_TRAVEL_DIARY);
+
+
+            service.process(request, response);
+            PublishTravelDiaryResponse responseU = (PublishTravelDiaryResponse)response.responseObj;
+            return responseU.diaryId.ToString();
+
+        }
+        private string GetArticleByID() {
+            JavaScriptSerializer jss = new JavaScriptSerializer();
+
+            string articleId = Request["id"].ToString();
+
+
+
+            GetTravelDiaryDetailInfoRequest registerReq = new GetTravelDiaryDetailInfoRequest();
+            registerReq.diaryid = int.Parse(articleId);
+
+
+            ServiceRequest request = new ServiceRequest(registerReq);
+            ServiceResponse response = new ServiceResponse();
+
+            IService service = ServiceFactory.getInstance().getService(service_type.GET_TRAVEL_DIARY_DETAIL);
+
+
+            service.process(request, response);
+            GetTravelDiaryDetailInfoResponse responseU = (GetTravelDiaryDetailInfoResponse)response.responseObj;
+            return jss.Serialize(responseU.diaryInfo);
         }
         private void RemovePicture()
         {
@@ -45,7 +116,21 @@ namespace TravelClient.UX.Ajax
         }
 
         private string GetCategoryList() {
-            return null;
+
+            JavaScriptSerializer jss = new JavaScriptSerializer();
+
+            GetCategoryRequest registerReq = new GetCategoryRequest();
+
+
+            ServiceRequest request = new ServiceRequest(registerReq);
+            ServiceResponse response = new ServiceResponse();
+
+            IService service = ServiceFactory.getInstance().getService(service_type.GET_DISPLAY_CATEGORY);
+
+
+            service.process(request, response);
+            GetCategoryResponse responseU = (GetCategoryResponse)response.responseObj;
+            return jss.Serialize(responseU.categories);
         }
 
         private string AddPicture()

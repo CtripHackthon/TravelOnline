@@ -184,6 +184,7 @@
     <Content Include="Product\Products.aspx" />
     <Content Include="Scripts\account.js" />
     <Content Include="Scripts\docs.js" />
+    <Content Include="Scripts\home.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <Content Include="Scripts\personal.js" />
     <Content Include="Scripts\post.js" />
