@@ -19,22 +19,22 @@
                     $.each(result, function (index, c) {
                         str+='  <li id="" class="">' +
                     '<a class="group-pic J_hotelItem" href="../Product/ProductDetail.aspx" ' +
-                        'data-cid="345040" title="' + result.productName + '" target="_blank">' +
-                                                '<img src="http://images4.c-ctrip.com/target/tuangou/791/349/537/3f40bbe9e93c427e887352912b74a0f1_360_240.jpg' +
-                        +'ctrip.com/target/tuangou/791/349/537/3f40bbe9e93c427e887352912b74a0f1_360_240.jpg" onerror="defaultImg(this)" class="group-'
+                        'data-cid="345040" title="' + c.productName + '" target="_blank">' +
+                                                '<img src="http://images4.c-ctrip.com/target/tuangou/791/349/537/3f40bbe9e93c427e887352912b74a0f1_360_240.jpg'
+                        +'" onerror="defaultImg(this)" class="group-'
                         + 'img" alt="">' +
                                         '        <div class="pic">' +
 
 
 
                                                     '<div class="shop-area J_ajaxEl" ' + 'style="display: none;">' +
-                                                        '<span class="area"><i class="icon-area"></i>' + result.productName + '</span>' +
+                                                        '<span class="area"><i class="icon-area"></i>' + c.productName + '</span>' +
                         '</div>' +
 
                     '</div>' +
                     '<div class="shop-' + 'txt">' +
                             '<div class="shop-info">' +
-                                '<p class="name">【长宁' + '区】上海龙之梦大酒店</p>' +
+                                '<p class="name">' + c.productName + '</p>' +
 
                                 '<p class="tips">贵宾房2晚+每日双早+1次双人自助晚餐-</p>' +
 

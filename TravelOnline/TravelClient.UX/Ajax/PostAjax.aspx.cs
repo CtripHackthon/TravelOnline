@@ -82,7 +82,7 @@ namespace TravelClient.UX.Ajax
 
             service.process(request, response);
             GetAssociatedProductsInfoResponse responseU = (GetAssociatedProductsInfoResponse)response.responseObj;
-            return jss.Serialize(responseU.products.ToString());
+            return jss.Serialize(responseU.products);
         }
         private string SubmitArticle() {
 
