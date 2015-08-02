@@ -1,9 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DataModel;
+using MySql.Data.MySqlClient;
+using TravelService.DataService;
 using TravelService.Model;
 using TravelService.Model.Base.Travel;
 using TravelService.Model.ServiceModel;
@@ -22,7 +25,7 @@ namespace TravelService.Service.Travel
                 return;
             }
 
-            GetTravelDiaryDetailInfoRequest serviceRequest = new GetTravelDiaryDetailInfoRequest();
+            GetTravelDiaryDetailInfoRequest serviceRequest = (GetTravelDiaryDetailInfoRequest)request.requestObj;
 
             if (serviceRequest.diaryid < 0 || serviceRequest.userId < 0)
             {
@@ -46,6 +49,43 @@ namespace TravelService.Service.Travel
                     ds.title = d.title;
                     serviceResponse.diaryInfo = ds;        
                 }
+
+                string sqlStr = string.Format("select * from diary_pic_info where diaryId={0}", serviceRequest.diaryid);
+
+                MySqlConnection conn = ConnectionManager.getInstance().getConnection();
+
+                conn.Open();
+
+                MySqlDataAdapter mda = new MySqlDataAdapter(sqlStr, conn);
+                DataSet ds1 = new DataSet();
+                mda.Fill(ds1, "table1");
+
+                conn.Close();
+
+                int count = ds1.Tables["table1"].Rows.Count;
+                List<string> strlist = new List<string>();
+                if(count > 0)
+                {
+                    string str = null;
+                    str = (string)ds1.Tables["table1"].Rows[0][1];
+
+                    if(str != null)
+                        strlist.Add(str);
+
+                    str = (string)ds1.Tables["table1"].Rows[0][2];
+
+                    if (str != null)
+                        strlist.Add(str);
+
+                    str = (string)ds1.Tables["table1"].Rows[0][3];
+
+                    if (str != null)
+                        strlist.Add(str);
+
+                }
+
+                serviceResponse.diaryInfo.addrs = strlist;
+
             }
 
             response.responseObj = serviceResponse;

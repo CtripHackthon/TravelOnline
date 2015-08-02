@@ -34,8 +34,8 @@ namespace TravelService.Service.Travel
             for (int i = 0; i < count; i++)
             {
                 Category c = new Category();
-                c.categoryId = (int)ds.Tables["table1"].Rows[0][0];
-                c.categoryName = (string)ds.Tables["table1"].Rows[0][1];
+                c.categoryId = (int)ds.Tables["table1"].Rows[i][0];
+                c.categoryName = (string)ds.Tables["table1"].Rows[i][1];
                 list.Add(c);
             }
 
