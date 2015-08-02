@@ -76,6 +76,10 @@ namespace TravelService.Service.ServiceRepository
 
             entity = new CollectTravelDiary();
             repositoy.storeServiceEntity(service_type.COLLECT_TRAVEL_DIARY, entity);
+
+            entity = new ReserveProduct();
+            repositoy.storeServiceEntity(service_type.RESERVE_PRODUCT, entity);
+            
             return;
         }
 

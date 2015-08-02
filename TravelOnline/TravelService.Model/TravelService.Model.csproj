@@ -44,6 +44,7 @@
     <Compile Include="Base\Common\UserInfo.cs" />
     <Compile Include="Base\Travel\TravelDiary.cs" />
     <Compile Include="Base\Travel\TravelDiarySummary.cs" />
+    <Compile Include="Base\Travel\TravelProduct.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ServiceModel\CollectTravelDiaryRequest.cs" />
     <Compile Include="ServiceModel\CollectTravelDiaryResponse.cs" />

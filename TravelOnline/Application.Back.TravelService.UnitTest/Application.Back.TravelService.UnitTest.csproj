@@ -59,6 +59,8 @@
     <Compile Include="PublishDiaryUnitTest.cs" />
     <Compile Include="GetCategoryUnitTest.cs" />
     <Compile Include="CollectTravelDiaryTestMethod.cs" />
+    <Compile Include="ReserveProductUnitTest.cs" />
+    <Compile Include="GetTravelDiaryDetailInfoUnitTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\TravelService.DataService\TravelService.DataService.csproj">
