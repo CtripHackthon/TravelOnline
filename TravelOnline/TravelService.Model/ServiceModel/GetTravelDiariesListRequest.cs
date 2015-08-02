@@ -12,6 +12,8 @@ namespace TravelService.Model.ServiceModel
 
         public long diaryId { get; set; }
 
+        public List<long> categoryIds { get; set; }
+
         public DateTime startTime { get; set; }
 
         public DateTime endTime { get; set; }

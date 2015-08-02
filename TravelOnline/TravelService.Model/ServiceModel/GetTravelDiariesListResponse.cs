@@ -10,6 +10,6 @@ namespace TravelService.Model.ServiceModel
 {
     public class GetTravelDiariesListResponse
     {
-        public List<TravelDiarySummary> diaries { get; set; }
+        public List<CategoryDiary> diaries { get; set; }
     }
 }
