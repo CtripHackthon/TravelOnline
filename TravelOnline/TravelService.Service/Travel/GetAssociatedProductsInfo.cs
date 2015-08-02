@@ -24,18 +24,18 @@ namespace TravelService.Service.Travel
 
             GetAssociatedProductsInfoRequest serviceRequest = (GetAssociatedProductsInfoRequest)request.requestObj;
 
-            if (serviceRequest.tags != null && serviceRequest.tags.Length > 0)
+          //  if (serviceRequest.tags != null && serviceRequest.tags.Length > 0)
             {
                 GetAssociatedProductsInfoResponse serviceResponse = new GetAssociatedProductsInfoResponse();
                 List<TravelProduct> products = new List<TravelProduct>();
                 //Mock Data
                 List<TravelProduct> raw_products  = new List<TravelProduct>();
-                MockData(products);
+                MockData(raw_products);
 
                 int seed = 10;
                 Random rand = new Random(seed);
 
-                int num = rand.Next(5, 10);
+                int num = rand.Next(4, 7);
 
                 for (int i = 0; i < num; i++)
                 {
