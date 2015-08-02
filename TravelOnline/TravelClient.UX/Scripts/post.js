@@ -17,7 +17,7 @@
 
         var articleTitle;
         var articleCategory = {};
-        var articleTags;
+        var articleTags="";
         var articleContent;
         var currentTime = mytime;
         var articleImages = [];
@@ -206,7 +206,7 @@
 
             $('#savetag').live('click', function (e) {
                 // send post to add tag
-                articleTags += $('#tagname').val()+";";
+                articleTags+=$('#tagname').val()+";";
                 // show tags in th list
                 var str2 = "<li><a class='newtaga'>" + $('#tagname').val() + "</a></li>";
                 $('#addedtags').append(str2);
@@ -285,7 +285,6 @@
                     },
                     success: function (result) {
                         if (result != null) {
-                            alert(result);
                             window.location.href = "../Posts/PostDetail.aspx?id="+result;
                         }
                     },

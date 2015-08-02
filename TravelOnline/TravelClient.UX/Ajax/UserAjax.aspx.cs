@@ -25,16 +25,16 @@ namespace TravelClient.UX.Ajax
                 Response.Write(RegisterNewUser());
             }
 
-            //if (Request.Params["queryType"] == "login")
-            //{
-            //    Response.Write(LoginUser());
-            //}
+            if (Request.Params["queryType"] == "login")
+            {
+                Response.Write(LoginUser());
+            }
 
 
-            //if (Request.Params["queryType"] == "signoff")
-            //{
-            //    Response.Write(signOff());
-            //}
+            if (Request.Params["queryType"] == "signoff")
+            {
+                Response.Write(signOff());
+            }
         }
 
         private string RegisterNewUser() {
@@ -51,10 +51,14 @@ namespace TravelClient.UX.Ajax
            
 
             service.process(request, response);
-            
+
+            RegistUserResponse responseU = (RegistUserResponse)response.responseObj;
+
              if (response.returnCode==0)
              {
                  // Login successfully
+                 Session["UserName"] = user.username;
+                 Session["UserId"] = responseU.userId;
                  return "{\"register\":1}";
              }
              else
@@ -66,35 +70,40 @@ namespace TravelClient.UX.Ajax
 
         private string LoginUser() {
 
-            //JavaScriptSerializer jss = new JavaScriptSerializer();
-            //UserModel user = jss.Deserialize<UserModel>(Request.Params["user"]);
+            JavaScriptSerializer jss = new JavaScriptSerializer();
+            UserInfo user = jss.Deserialize<UserInfo>(Request.Params["user"]);
+
+            UserLoginRequest registerReq = new UserLoginRequest();
+            registerReq.username = user.username;
+            registerReq.password = user.password;
+
+            ServiceRequest request = new ServiceRequest(registerReq);
+            ServiceResponse response = new ServiceResponse();
+
+            IService service = ServiceFactory.getInstance().getService(service_type.USER_LOGIN);
 
 
-            //using (MainDBUnitWorkContext context = new MainDBUnitWorkContext()) {
-            //    UserRepository ur = new UserRepository(context);
-            //    UserService uservice = new UserService(ur);
-            //    bool success = uservice.LoginUser(new AppUser() { UserName = user.UserName, UserPassword = user.Password });
-
-            //    if (success)
-            //    {
-            //        Session["UserName"] = user.UserName;
-
-            //        // Login successfully
-            //        return "{\"login\":1}";
-            //    }
-            //    else
-            //    {
-            //        return "{\"login\":0}";
- 
-            //    }
-            //}
-
-            return "";
+            service.process(request, response);
+            UserLoginResponse responseU = (UserLoginResponse)response.responseObj;
+            
+            if (response.returnCode == 0)
+            {
+                // Login successfully
+                Session["UserName"] = user.username;
+                Session["UserId"] = responseU.userId;
+                return "{\"login\":1}";
+            }
+            else
+            {
+                return "{\"login\":0}";
+            }
 
         }
 
         private string signOff() {
             Session.Remove("UserName");
+            Session.Remove("UserId");
+
             return "";
         }
     }

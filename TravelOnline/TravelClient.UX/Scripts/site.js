@@ -68,7 +68,6 @@
         this.userLoad = function (sessionUser, sessionid) {
             if (sessionUser != null && sessionUser != "") {
                 $('#usersession').val(sessionUser);
-                alert(sessionid);
                 $('#usersessionid').val(sessionid);
 
                 // logined user

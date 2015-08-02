@@ -920,8 +920,8 @@
             <!-- 右侧漂浮导航 -->
             <div style="display: block; top: 200px;" class="nav-right">
                 <div class="nav-right-nav">
-                    <ul class="clearfix">
-                        <li class="active">
+                    <ul id="clist" class="clearfix">
+                        <%--<li class="active">
                             <h3>门票</h3>
                         </li>
                         <li class="">
@@ -935,15 +935,13 @@
                         </li>
                         <li class="last">
                             <h3>攻略</h3>
-                        </li>
+                        </li>--%>
                     </ul>
                 </div>
             </div>
             <!-- 公用js-->
             <script src="//hm.baidu.com/hm.js?cb09ebb4692b521604e77f4bf0a61013"></script>
             <script src="http://pic.lvmama.com/stacac/ga.js" async="" type="text/javascript"></script>
-
-
         </div>
 
 
@@ -951,16 +949,14 @@
 
         <script src="Scripts/site.js"></script>
         <script src="Scripts/test.js"></script>
-
+<script src="Scripts/home.js"></script>
        
 
         <script type="text/javascript">
 
-            (function (site, $, undefined) {
+            (function (site, home, $, undefined) {
 
-            })(window.site = window.site || {}, $, undefined);
-
-
+            })(window.site = window.site || {}, window.home = window.home || {}, $, undefined);
 
             $(function () {
 
@@ -969,7 +965,6 @@
 
                 site.init(sessionUser, sessionUserId);
 
-           
             });
         </script>
     </form>
