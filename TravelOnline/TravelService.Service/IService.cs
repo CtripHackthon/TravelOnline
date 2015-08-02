@@ -26,5 +26,6 @@ namespace TravelService.Service
         GET_ASSOCIATED_PRODUCT = 10,
         GET_DISPLAY_CATEGORY = 11,
         COLLECT_TRAVEL_DIARY = 12,
+        RESERVE_PRODUCT = 13,
     }
 }
