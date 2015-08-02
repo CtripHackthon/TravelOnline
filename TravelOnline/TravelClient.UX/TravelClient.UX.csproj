@@ -73,6 +73,7 @@
     <Content Include="Ajax\UserAjax.aspx" />
     <Content Include="Content\game.css" />
     <Content Include="Content\home.css" />
+    <Content Include="Content\home2.css" />
     <Content Include="Content\login.css" />
     <Content Include="Content\newpost.css" />
     <Content Include="Content\personal.css" />
@@ -113,6 +114,11 @@
     <Content Include="Global.asax" />
     <Content Include="Home.aspx" />
     <Content Include="Images\1.png" />
+    <Content Include="Images\100_150%2810%29.jpg" />
+    <Content Include="Images\100_150%286%29.jpg" />
+    <Content Include="Images\100_150%287%29.jpg" />
+    <Content Include="Images\100_150%288%29.jpg" />
+    <Content Include="Images\100_150%289%29.jpg" />
     <Content Include="Images\add-pic.png" />
     <Content Include="Images\add2.png" />
     <Content Include="Images\loading40.gif" />
@@ -123,7 +129,9 @@
     <Content Include="Images\person\4.jpg" />
     <Content Include="Images\person\5.jpg" />
     <Content Include="Images\reg.jpg" />
+    <Content Include="Images\sy01-mdd-sh.jpg" />
     <Content Include="Plugins\css\fonts\icomoon.svg" />
+    <Content Include="Plugins\css\hui.css" />
     <Content Include="Plugins\css\lvmm1.css" />
     <Content Include="Plugins\css\lvmm2.css" />
     <Content Include="Plugins\css\metro-bootstrap.css" />
@@ -189,6 +197,7 @@
     <Content Include="Scripts\personal.js" />
     <Content Include="Scripts\post.js" />
     <Content Include="Scripts\postdetail.js" />
+    <Content Include="Scripts\products.js" />
     <Content Include="Scripts\site.js" />
     <Content Include="Plugins\scripts\jquery.bpopup.min.js" />
     <Content Include="Plugins\scripts\jquery.pin.js" />

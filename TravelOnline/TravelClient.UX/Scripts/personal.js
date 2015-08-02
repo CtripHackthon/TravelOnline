@@ -82,6 +82,8 @@
                         $(this).find('dl').addClass("tile-selected");
                     }
                     OnTileSelected();
+
+
                 }
                 );
             OnTileSelected();

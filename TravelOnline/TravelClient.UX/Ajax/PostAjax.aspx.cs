@@ -24,6 +24,11 @@ namespace TravelClient.UX.Ajax
                 Response.Write(AddPicture());
             }
 
+            if (Request["queryType"] == "getproducts")
+            {
+                Response.Write(GetProducts());
+            }
+            
 
              if (Request["queryType"] == "removePicture")
             {
@@ -60,7 +65,24 @@ namespace TravelClient.UX.Ajax
             JavaScriptSerializer jss = new JavaScriptSerializer();
             var paramDes = jss.Deserialize<TravelDiary>(Request["queryParam"]);
 
+            return "";
+        }
 
+        private string GetProducts() {
+            JavaScriptSerializer jss = new JavaScriptSerializer();
+
+            GetAssociatedProductsInfoRequest registerReq = new GetAssociatedProductsInfoRequest();
+
+
+            ServiceRequest request = new ServiceRequest(registerReq);
+            ServiceResponse response = new ServiceResponse();
+
+            IService service = ServiceFactory.getInstance().getService(service_type.GET_ASSOCIATED_PRODUCT);
+
+
+            service.process(request, response);
+            GetAssociatedProductsInfoResponse responseU = (GetAssociatedProductsInfoResponse)response.responseObj;
+            return jss.Serialize(responseU.products.ToString());
         }
         private string SubmitArticle() {
 
