@@ -67,7 +67,14 @@ namespace TravelService.Service.Travel
             command.Connection = conn;
 
             command.ExecuteNonQuery();
-            
+
+            sqlStr = String.Format("update diary set categoryID={0} where diaryId={1}", serviceRequest.diary.belongCategory.categoryId, diaryId);
+
+            command = new MySqlCommand();
+            command.CommandText = sqlStr;
+            command.Connection = conn;
+
+            command.ExecuteNonQuery();
             conn.Close();
 
 

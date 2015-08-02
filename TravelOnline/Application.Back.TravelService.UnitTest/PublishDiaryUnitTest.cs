@@ -20,7 +20,7 @@ namespace Application.Back.TravelService.UnitTest
             PublishTravelDiaryRequest serviceRequest = new PublishTravelDiaryRequest();
 
             TravelDiary td = new TravelDiary();
-            td.userId = 5;
+            td.userId = 9;
             td.tags = "3452,532,df3";
             td.content = "fajlsfjlkjl3kj4lk3j4l34lj343";
             td.title = "zhangzhenrep9834";

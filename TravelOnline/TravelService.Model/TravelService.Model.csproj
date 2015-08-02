@@ -42,6 +42,7 @@
     <Compile Include="Base\Common\Category.cs" />
     <Compile Include="Base\Common\TravelComment.cs" />
     <Compile Include="Base\Common\UserInfo.cs" />
+    <Compile Include="Base\Travel\CategoryDiary.cs" />
     <Compile Include="Base\Travel\TravelDiary.cs" />
     <Compile Include="Base\Travel\TravelDiarySummary.cs" />
     <Compile Include="Base\Travel\TravelProduct.cs" />
